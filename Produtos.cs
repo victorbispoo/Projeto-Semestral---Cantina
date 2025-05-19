@@ -11,15 +11,17 @@ namespace Projeto_Semestral___Cantina
         public int Id { get; set; }
         public string Nome { get; set; }
         public double Preco { get; set; }
-    public Produto(int id, string nome, double preco)
+        public int Quantidade { get; set; } = 0;
+        public Produto(int id, string nome, double preco,int quantidade)
         {
             Id = id;
             Nome = nome;
             Preco = preco;
+            Quantidade = quantidade;
         }
         public override string ToString()
         {
-            return $"{Nome} - R$ {Preco:F2}";
+            return $"{Nome} - R$ {Preco:F2} - Qtd:{Quantidade}";
         }
     }
 }
