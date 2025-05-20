@@ -12,6 +12,9 @@ namespace Projeto_Semestral___Cantina
 {
     public partial class Concluindo_pedido : Form
     {
+        public DateTime HorarioPedido { get; private set; }
+        public string tipoPedido { get; private set; }
+        public double Troco { get; private set; }
         private double totalPedido;
         public Concluindo_pedido(double total)
         {
@@ -33,16 +36,30 @@ namespace Projeto_Semestral___Cantina
 
         private void button1_Click(object sender, EventArgs e)
         {
-      
+            if (radioButton6.Checked)
+            {
+              tipoPedido = "Para viagem";
+            }
+            else if (radioButton5.Checked)
+            {
+                tipoPedido = "Para comer aqui";
+            }
+            else
+            {
+                MessageBox.Show("Selecione um tipo de pedido!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+           
             if (pagDinheiro.Checked)
             {
-                string precoCliente = Microsoft.VisualBasic.Interaction.InputBox("Digite o valor do pagamento", "Pagamento", "Insira o valor recebido");
+                string precoCliente = Microsoft.VisualBasic.Interaction.InputBox($"Digite o valor do pagamento\nValor a ser cobrado: R${totalPedido:F2}", "Pagamento", "Insira o valor recebido");
                 if (double.TryParse(precoCliente, out double valorRecebido))
                 {
-                    if (valorRecebido > totalPedido)
+                    if (valorRecebido >= totalPedido)
                     {
-                        double troco = valorRecebido - totalPedido;
-                        MessageBox.Show($"Pagamento recebido com sucesso! \nTroco: R$ {troco:F2}", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Troco = valorRecebido - totalPedido;
+                        MessageBox.Show($"Pagamento recebido com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.DialogResult = DialogResult.OK;
                         this.Close();
                     }
                     else
@@ -72,6 +89,7 @@ namespace Projeto_Semestral___Cantina
                 MessageBox.Show("Selecione um método de pagamento!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
+            HorarioPedido = DateTime.Now;
         }
 
         private void pagDinheiro_CheckedChanged(object sender, EventArgs e)

@@ -101,32 +101,56 @@
         private void CantBtnFin_Click(object sender, EventArgs e)
         {
 
-          
+
             if (CantCarrinho.Items.Count == 0)
             {
                 MessageBox.Show("O carrinho está vazio!", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-                string nomeUsuario = Microsoft.VisualBasic.Interaction.InputBox("Digite o nome do usuário", "Cadastro", "Insira o nome do cliente");
-                if (string.IsNullOrWhiteSpace(nomeUsuario)||nomeUsuario=="Insira o nome do cliente")
+                string nomeCliente = Microsoft.VisualBasic.Interaction.InputBox("Digite o nome do usuário", "Cadastro", "Insira o nome do cliente");
+      
+                if (string.IsNullOrWhiteSpace(nomeCliente) || nomeCliente == "Insira o nome do cliente"|| nomeCliente.Length>15)
                 {
                     MessageBox.Show("Operação cancelada ou nome inválido!", "Cancelado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
                 Concluindo_pedido concluindo_Pedido = new Concluindo_pedido(total);
-                concluindo_Pedido.ShowDialog();
-                string mensagem = "Produtos:\n";
-                foreach (Produto produto in CantCarrinho.Items)
+                if (concluindo_Pedido.ShowDialog() == DialogResult.OK)
                 {
-                    mensagem += $"{produto.Nome} - R${produto.Preco:F2} - Qtd {produto.Quantidade}\n";
+                    double troco = concluindo_Pedido.Troco;
+                    string tipodePedido = concluindo_Pedido.tipoPedido;
+                    string mensagem = "Produtos:\n";
+                    foreach (Produto produto in CantCarrinho.Items)
+                    {
+                        mensagem += $"{produto.Nome} - R${produto.Preco:F2} - Qtd {produto.Quantidade}\n";
+                    }
+                    var horarioPedido = concluindo_Pedido.HorarioPedido;
+                    MessageBox.Show($"{horarioPedido}\nExtrato do pedido de {nomeCliente} - {tipodePedido} \n{mensagem}\nTotal: R$" + total.ToString("F2") + $"\nTroco: R$ {troco:F2}", "Extrato", MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    CantCarrinho.Items.Clear();
+                    CantCarrinho.ClearSelected();
+                    total = 0;
+                    CtnLblTotal.Text = "Total: R$" + total.ToString("F2");
                 }
-                MessageBox.Show($"Aqui está um resumo do pedido de {nomeUsuario}\n{mensagem}\nTotal: R$" + total.ToString("F2"), "✅ Extrato", MessageBoxButtons.OK);
-                CantCarrinho.Items.Clear();
-                CantCarrinho.ClearSelected();
-                total = 0;
-                CtnLblTotal.Text = "Total: R$" + total.ToString("F2");
-            }
+                else
+                {
+                    MessageBox.Show("Operação cancelada!", "Cancelado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
 
+            }
+        }
+
+        private void CantLimparCarrinho_Click(object sender, EventArgs e)
+        {
+            if (CantCarrinho.Items.Count == 0)
+            {
+                MessageBox.Show("O carrinho já está vazio!", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            CantCarrinho.Items.Clear();
+            CantCarrinho.ClearSelected();
+            total = 0;
+            CtnLblTotal.Text = "Total: R$" + total.ToString("F2");
         }
     }
 }

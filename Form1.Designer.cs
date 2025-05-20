@@ -37,6 +37,7 @@
             label2 = new Label();
             CtnLblTotal = new Label();
             pictureBox1 = new PictureBox();
+            CantLimparCarrinho = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -83,7 +84,7 @@
             CantBtnRemov.ForeColor = Color.FromArgb(17, 25, 12);
             CantBtnRemov.Location = new Point(604, 324);
             CantBtnRemov.Name = "CantBtnRemov";
-            CantBtnRemov.Size = new Size(172, 37);
+            CantBtnRemov.Size = new Size(157, 37);
             CantBtnRemov.TabIndex = 3;
             CantBtnRemov.Text = "❌ Remover";
             CantBtnRemov.UseVisualStyleBackColor = false;
@@ -121,7 +122,7 @@
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Inter SemiBold", 15.75F, FontStyle.Bold);
             label2.ForeColor = Color.Black;
-            label2.Location = new Point(420, 57);
+            label2.Location = new Point(382, 57);
             label2.Name = "label2";
             label2.Size = new Size(135, 30);
             label2.TabIndex = 6;
@@ -150,12 +151,25 @@
             pictureBox1.TabIndex = 8;
             pictureBox1.TabStop = false;
             // 
+            // CantLimparCarrinho
+            // 
+            CantLimparCarrinho.Font = new Font("Inter SemiBold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            CantLimparCarrinho.ForeColor = Color.Black;
+            CantLimparCarrinho.Location = new Point(654, 57);
+            CantLimparCarrinho.Name = "CantLimparCarrinho";
+            CantLimparCarrinho.Size = new Size(122, 30);
+            CantLimparCarrinho.TabIndex = 9;
+            CantLimparCarrinho.Text = "Limpar Carrinho";
+            CantLimparCarrinho.UseVisualStyleBackColor = true;
+            CantLimparCarrinho.Click += CantLimparCarrinho_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(243, 241, 238);
             ClientSize = new Size(800, 450);
+            Controls.Add(CantLimparCarrinho);
             Controls.Add(pictureBox1);
             Controls.Add(CtnLblTotal);
             Controls.Add(label2);
@@ -185,5 +199,6 @@
         private Label label2;
         private Label CtnLblTotal;
         private PictureBox pictureBox1;
+        private Button CantLimparCarrinho;
     }
 }
