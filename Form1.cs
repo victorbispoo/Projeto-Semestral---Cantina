@@ -25,7 +25,7 @@
             CantCardapio.Items.Add(new Produto(9, "X-Tudo", 12.00, 0));
             CantCardapio.Items.Add(new Produto(10, "Água Mineral", 2.50, 0));
         }
-        private double total = 0;
+        public double total { get; private set; } = 0;
         private void CantBtnAdd_Click(object sender, EventArgs e)
         {
             bool encontrado = false;
@@ -109,8 +109,8 @@
             else
             {
                 string nomeCliente = Microsoft.VisualBasic.Interaction.InputBox("Digite o nome do usuário", "Cadastro", "Insira o nome do cliente");
-      
-                if (string.IsNullOrWhiteSpace(nomeCliente) || nomeCliente == "Insira o nome do cliente"|| nomeCliente.Length>15)
+
+                if (string.IsNullOrWhiteSpace(nomeCliente) || nomeCliente == "Insira o nome do cliente" || nomeCliente.Length > 15)
                 {
                     MessageBox.Show("Operação cancelada ou nome inválido!", "Cancelado", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
@@ -126,11 +126,12 @@
                         mensagem += $"{produto.Nome} - R${produto.Preco:F2} - Qtd {produto.Quantidade}\n";
                     }
                     var horarioPedido = concluindo_Pedido.HorarioPedido;
-                    MessageBox.Show($"{horarioPedido}\nExtrato do pedido de {nomeCliente} - {tipodePedido} \n{mensagem}\nTotal: R$" + total.ToString("F2") + $"\nTroco: R$ {troco:F2}", "Extrato", MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    MessageBox.Show($"{horarioPedido}\nExtrato do pedido de {nomeCliente} - {tipodePedido} \n{mensagem}\nTotal: R$" + total.ToString("F2") + $"\nTroco: R$ {troco:F2}", "Extrato", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     CantCarrinho.Items.Clear();
                     CantCarrinho.ClearSelected();
                     total = 0;
                     CtnLblTotal.Text = "Total: R$" + total.ToString("F2");
+                    Pedido novoPedido = new Pedido(idPedido, nomeCliente, "Pendente");
                 }
                 else
                 {
@@ -151,6 +152,13 @@
             CantCarrinho.ClearSelected();
             total = 0;
             CtnLblTotal.Text = "Total: R$" + total.ToString("F2");
+        }
+
+        private void BtnVoltar_Click(object sender, EventArgs e)
+        {
+            Tela_Login tela_Login = new Tela_Login();
+            tela_Login.Show();
+            this.Hide();
         }
     }
 }

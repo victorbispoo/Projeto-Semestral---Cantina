@@ -50,7 +50,8 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Inter SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(22, 77);
+            label1.Location = new Point(35, 128);
+            label1.Margin = new Padding(5, 0, 5, 0);
             label1.Name = "label1";
             label1.Size = new Size(260, 23);
             label1.TabIndex = 2;
@@ -60,7 +61,8 @@
             // 
             ListaTipoPedido.AutoSize = true;
             ListaTipoPedido.Font = new Font("Inter SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            ListaTipoPedido.Location = new Point(380, 77);
+            ListaTipoPedido.Location = new Point(597, 128);
+            ListaTipoPedido.Margin = new Padding(5, 0, 5, 0);
             ListaTipoPedido.Name = "ListaTipoPedido";
             ListaTipoPedido.Size = new Size(212, 23);
             ListaTipoPedido.TabIndex = 3;
@@ -70,7 +72,8 @@
             // 
             pagDinheiro.AutoSize = true;
             pagDinheiro.Font = new Font("Inter SemiBold", 12F, FontStyle.Bold);
-            pagDinheiro.Location = new Point(6, 22);
+            pagDinheiro.Location = new Point(9, 37);
+            pagDinheiro.Margin = new Padding(5);
             pagDinheiro.Name = "pagDinheiro";
             pagDinheiro.Size = new Size(120, 27);
             pagDinheiro.TabIndex = 4;
@@ -83,7 +86,8 @@
             // 
             pagDebito.AutoSize = true;
             pagDebito.Font = new Font("Inter SemiBold", 12F, FontStyle.Bold);
-            pagDebito.Location = new Point(6, 58);
+            pagDebito.Location = new Point(9, 97);
+            pagDebito.Margin = new Padding(5);
             pagDebito.Name = "pagDebito";
             pagDebito.Size = new Size(106, 27);
             pagDebito.TabIndex = 5;
@@ -95,7 +99,8 @@
             // 
             pagPix.AutoSize = true;
             pagPix.Font = new Font("Inter SemiBold", 12F, FontStyle.Bold);
-            pagPix.Location = new Point(148, 22);
+            pagPix.Location = new Point(233, 37);
+            pagPix.Margin = new Padding(5);
             pagPix.Name = "pagPix";
             pagPix.Size = new Size(72, 27);
             pagPix.TabIndex = 6;
@@ -107,7 +112,8 @@
             // 
             pagCredito.AutoSize = true;
             pagCredito.Font = new Font("Inter SemiBold", 12F, FontStyle.Bold);
-            pagCredito.Location = new Point(148, 58);
+            pagCredito.Location = new Point(233, 97);
+            pagCredito.Margin = new Padding(5);
             pagCredito.Name = "pagCredito";
             pagCredito.Size = new Size(112, 27);
             pagCredito.TabIndex = 7;
@@ -118,9 +124,10 @@
             // radioButton5
             // 
             radioButton5.AutoSize = true;
-            radioButton5.Location = new Point(6, 26);
+            radioButton5.Location = new Point(9, 43);
+            radioButton5.Margin = new Padding(5);
             radioButton5.Name = "radioButton5";
-            radioButton5.Size = new Size(200, 27);
+            radioButton5.Size = new Size(221, 29);
             radioButton5.TabIndex = 8;
             radioButton5.TabStop = true;
             radioButton5.Text = "🏪 Consumo imediato";
@@ -131,7 +138,8 @@
             radioButton6.AutoSize = true;
             radioButton6.BackColor = Color.White;
             radioButton6.Font = new Font("Inter SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            radioButton6.Location = new Point(6, 59);
+            radioButton6.Location = new Point(9, 98);
+            radioButton6.Margin = new Padding(5);
             radioButton6.Name = "radioButton6";
             radioButton6.Size = new Size(148, 27);
             radioButton6.TabIndex = 9;
@@ -147,10 +155,12 @@
             groupBox1.Controls.Add(pagPix);
             groupBox1.Controls.Add(pagDinheiro);
             groupBox1.Controls.Add(pagDebito);
-            groupBox1.Font = new Font("Inter SemiBold", 12F, FontStyle.Bold);
-            groupBox1.Location = new Point(22, 103);
+            groupBox1.Font = new Font("Agrandir Narrow", 14.2499981F, FontStyle.Bold);
+            groupBox1.Location = new Point(35, 172);
+            groupBox1.Margin = new Padding(5);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(286, 101);
+            groupBox1.Padding = new Padding(5);
+            groupBox1.Size = new Size(449, 168);
             groupBox1.TabIndex = 10;
             groupBox1.TabStop = false;
             // 
@@ -159,19 +169,22 @@
             groupBox2.BackColor = Color.White;
             groupBox2.Controls.Add(radioButton6);
             groupBox2.Controls.Add(radioButton5);
-            groupBox2.Font = new Font("Inter SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            groupBox2.Location = new Point(380, 103);
+            groupBox2.Font = new Font("Agrandir Narrow", 14.2499981F, FontStyle.Bold);
+            groupBox2.Location = new Point(597, 172);
+            groupBox2.Margin = new Padding(5);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(212, 101);
+            groupBox2.Padding = new Padding(5);
+            groupBox2.Size = new Size(333, 168);
             groupBox2.TabIndex = 11;
             groupBox2.TabStop = false;
             // 
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.bolt;
-            pictureBox1.Location = new Point(18, 12);
+            pictureBox1.Location = new Point(28, 20);
+            pictureBox1.Margin = new Padding(5);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(148, 48);
+            pictureBox1.Size = new Size(152, 58);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 12;
             pictureBox1.TabStop = false;
@@ -181,9 +194,10 @@
             button1.BackColor = Color.FromArgb(230, 255, 0);
             button1.Font = new Font("Inter SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.Black;
-            button1.Location = new Point(380, 227);
+            button1.Location = new Point(597, 378);
+            button1.Margin = new Padding(5);
             button1.Name = "button1";
-            button1.Size = new Size(212, 41);
+            button1.Size = new Size(333, 68);
             button1.TabIndex = 13;
             button1.Text = "Finalizar pedido";
             button1.UseVisualStyleBackColor = false;
@@ -191,18 +205,20 @@
             // 
             // Concluindo_pedido
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(11F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(243, 241, 238);
-            ClientSize = new Size(604, 280);
+            ClientSize = new Size(949, 467);
             Controls.Add(button1);
             Controls.Add(pictureBox1);
             Controls.Add(ListaTipoPedido);
             Controls.Add(label1);
             Controls.Add(groupBox1);
             Controls.Add(groupBox2);
+            Font = new Font("Agrandir Narrow", 14.2499981F, FontStyle.Bold);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(5);
             Name = "Concluindo_pedido";
             Text = "Conclusão Pedido";
             Load += Concluindo_pedido_Load;

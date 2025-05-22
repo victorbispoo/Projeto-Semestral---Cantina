@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             CantCardapio = new ListBox();
             CantCarrinho = new ListBox();
             CantBtnAdd = new Button();
@@ -38,28 +39,29 @@
             CtnLblTotal = new Label();
             pictureBox1 = new PictureBox();
             CantLimparCarrinho = new Button();
+            BtnVoltar = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // CantCardapio
             // 
-            CantCardapio.Font = new Font("Inter SemiBold", 9.75F, FontStyle.Bold);
+            CantCardapio.Font = new Font("Agrandir Narrow", 14.2499981F, FontStyle.Bold);
             CantCardapio.FormattingEnabled = true;
-            CantCardapio.ItemHeight = 18;
+            CantCardapio.ItemHeight = 25;
             CantCardapio.Location = new Point(21, 90);
             CantCardapio.Name = "CantCardapio";
-            CantCardapio.Size = new Size(323, 310);
+            CantCardapio.Size = new Size(369, 304);
             CantCardapio.TabIndex = 0;
             CantCardapio.SelectedIndexChanged += CantCardapio_SelectedIndexChanged;
             // 
             // CantCarrinho
             // 
-            CantCarrinho.Font = new Font("Inter SemiBold", 9.75F, FontStyle.Bold);
+            CantCarrinho.Font = new Font("Agrandir Narrow", 14.2499981F, FontStyle.Bold);
             CantCarrinho.FormattingEnabled = true;
-            CantCarrinho.ItemHeight = 18;
-            CantCarrinho.Location = new Point(382, 90);
+            CantCarrinho.ItemHeight = 25;
+            CantCarrinho.Location = new Point(451, 96);
             CantCarrinho.Name = "CantCarrinho";
-            CantCarrinho.Size = new Size(394, 220);
+            CantCarrinho.Size = new Size(450, 204);
             CantCarrinho.TabIndex = 1;
             // 
             // CantBtnAdd
@@ -68,9 +70,9 @@
             CantBtnAdd.BackColor = Color.White;
             CantBtnAdd.Font = new Font("Inter SemiBold", 9.75F, FontStyle.Bold);
             CantBtnAdd.ForeColor = Color.FromArgb(17, 25, 12);
-            CantBtnAdd.Location = new Point(382, 324);
+            CantBtnAdd.Location = new Point(451, 315);
             CantBtnAdd.Name = "CantBtnAdd";
-            CantBtnAdd.Size = new Size(173, 37);
+            CantBtnAdd.Size = new Size(197, 37);
             CantBtnAdd.TabIndex = 2;
             CantBtnAdd.Text = "➕ Adicionar";
             CantBtnAdd.UseVisualStyleBackColor = false;
@@ -82,9 +84,9 @@
             CantBtnRemov.BackColor = Color.White;
             CantBtnRemov.Font = new Font("Inter SemiBold", 9.75F, FontStyle.Bold);
             CantBtnRemov.ForeColor = Color.FromArgb(17, 25, 12);
-            CantBtnRemov.Location = new Point(604, 324);
+            CantBtnRemov.Location = new Point(726, 315);
             CantBtnRemov.Name = "CantBtnRemov";
-            CantBtnRemov.Size = new Size(157, 37);
+            CantBtnRemov.Size = new Size(175, 37);
             CantBtnRemov.TabIndex = 3;
             CantBtnRemov.Text = "❌ Remover";
             CantBtnRemov.UseVisualStyleBackColor = false;
@@ -108,9 +110,9 @@
             CantBtnFin.BackColor = Color.FromArgb(230, 255, 0);
             CantBtnFin.Font = new Font("Inter SemiBold", 9.75F, FontStyle.Bold);
             CantBtnFin.ForeColor = Color.FromArgb(17, 25, 12);
-            CantBtnFin.Location = new Point(382, 367);
+            CantBtnFin.Location = new Point(451, 361);
             CantBtnFin.Name = "CantBtnFin";
-            CantBtnFin.Size = new Size(173, 37);
+            CantBtnFin.Size = new Size(197, 37);
             CantBtnFin.TabIndex = 5;
             CantBtnFin.Text = "💵 Meios de pagamento";
             CantBtnFin.UseVisualStyleBackColor = false;
@@ -122,7 +124,7 @@
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Inter SemiBold", 15.75F, FontStyle.Bold);
             label2.ForeColor = Color.Black;
-            label2.Location = new Point(382, 57);
+            label2.Location = new Point(451, 57);
             label2.Name = "label2";
             label2.Size = new Size(135, 30);
             label2.TabIndex = 6;
@@ -134,7 +136,7 @@
             CtnLblTotal.AutoSize = true;
             CtnLblTotal.Font = new Font("Inter SemiBold", 15.75F, FontStyle.Bold);
             CtnLblTotal.ForeColor = Color.Black;
-            CtnLblTotal.Location = new Point(604, 370);
+            CtnLblTotal.Location = new Point(726, 364);
             CtnLblTotal.Name = "CtnLblTotal";
             CtnLblTotal.Size = new Size(149, 30);
             CtnLblTotal.TabIndex = 7;
@@ -146,7 +148,7 @@
             pictureBox1.Image = Properties.Resources.bolt;
             pictureBox1.Location = new Point(21, 12);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(141, 38);
+            pictureBox1.Size = new Size(141, 42);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 8;
             pictureBox1.TabStop = false;
@@ -155,7 +157,7 @@
             // 
             CantLimparCarrinho.Font = new Font("Inter SemiBold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             CantLimparCarrinho.ForeColor = Color.Black;
-            CantLimparCarrinho.Location = new Point(654, 57);
+            CantLimparCarrinho.Location = new Point(779, 60);
             CantLimparCarrinho.Name = "CantLimparCarrinho";
             CantLimparCarrinho.Size = new Size(122, 30);
             CantLimparCarrinho.TabIndex = 9;
@@ -163,12 +165,25 @@
             CantLimparCarrinho.UseVisualStyleBackColor = true;
             CantLimparCarrinho.Click += CantLimparCarrinho_Click;
             // 
+            // BtnVoltar
+            // 
+            BtnVoltar.Font = new Font("Inter SemiBold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            BtnVoltar.ForeColor = Color.Black;
+            BtnVoltar.Location = new Point(21, 430);
+            BtnVoltar.Name = "BtnVoltar";
+            BtnVoltar.Size = new Size(87, 29);
+            BtnVoltar.TabIndex = 10;
+            BtnVoltar.Text = "🔙 Voltar";
+            BtnVoltar.UseVisualStyleBackColor = true;
+            BtnVoltar.Click += BtnVoltar_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(243, 241, 238);
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(952, 471);
+            Controls.Add(BtnVoltar);
             Controls.Add(CantLimparCarrinho);
             Controls.Add(pictureBox1);
             Controls.Add(CtnLblTotal);
@@ -180,8 +195,9 @@
             Controls.Add(CantCarrinho);
             Controls.Add(CantCardapio);
             ForeColor = Color.FromArgb(243, 241, 238);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
-            Text = "Form1";
+            Text = "Cantina BOLT";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
@@ -200,5 +216,6 @@
         private Label CtnLblTotal;
         private PictureBox pictureBox1;
         private Button CantLimparCarrinho;
+        private Button BtnVoltar;
     }
 }
