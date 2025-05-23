@@ -48,7 +48,7 @@
             CantCardapio.Font = new Font("Agrandir Narrow", 14.2499981F, FontStyle.Bold);
             CantCardapio.FormattingEnabled = true;
             CantCardapio.ItemHeight = 25;
-            CantCardapio.Location = new Point(21, 90);
+            CantCardapio.Location = new Point(21, 96);
             CantCardapio.Name = "CantCardapio";
             CantCardapio.Size = new Size(369, 304);
             CantCardapio.TabIndex = 0;

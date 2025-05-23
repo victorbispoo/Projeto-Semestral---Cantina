@@ -36,9 +36,9 @@
             // 
             // btnTelaVendas
             // 
-            btnTelaVendas.Location = new Point(405, 167);
+            btnTelaVendas.Location = new Point(129, 195);
             btnTelaVendas.Name = "btnTelaVendas";
-            btnTelaVendas.Size = new Size(75, 23);
+            btnTelaVendas.Size = new Size(175, 89);
             btnTelaVendas.TabIndex = 0;
             btnTelaVendas.Text = "Vendas";
             btnTelaVendas.UseVisualStyleBackColor = true;
@@ -46,9 +46,9 @@
             // 
             // BtnCozinha
             // 
-            BtnCozinha.Location = new Point(229, 167);
+            BtnCozinha.Location = new Point(450, 195);
             BtnCozinha.Name = "BtnCozinha";
-            BtnCozinha.Size = new Size(75, 23);
+            BtnCozinha.Size = new Size(175, 89);
             BtnCozinha.TabIndex = 1;
             BtnCozinha.Text = "Cozinha";
             BtnCozinha.UseVisualStyleBackColor = true;
@@ -57,9 +57,9 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.bolt;
-            pictureBox1.Location = new Point(229, 42);
+            pictureBox1.Location = new Point(214, 64);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(251, 97);
+            pictureBox1.Size = new Size(299, 97);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;

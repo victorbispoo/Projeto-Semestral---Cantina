@@ -21,7 +21,7 @@ namespace Projeto_Semestral___Cantina
         }
         public override string ToString()
         {
-            return $"{Nome} - R$ {Preco:F2} - Qtd:{Quantidade}";
+            return $"{Nome} - Qtd: {Quantidade} - R$ {Preco:F2}";
         }
     }
 }

@@ -1,26 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Projeto_Semestral___Cantina
 {
     internal class Pedido
     {
-        public int IdPedido { get; set; }
+        public int Id { get; set; }
         public string NomeCliente { get; set; }
+        public List<Produto> ProdutosPedido { get; set; } = new List<Produto>();
         public string Status { get; set; } = "";
-        public Pedido(int idPedido, string nomeCliente,string status)
+        public DateTime DataHora { get; set; }
+
+        public Pedido(int id, string nomeCliente, string status, List<Produto> produtos,DateTime dataHora)
         {
-            IdPedido = idPedido;
+            Id = id;
             NomeCliente = nomeCliente;
             Status = status;
+            ProdutosPedido = produtos ?? new List<Produto>();
+            DataHora = dataHora;
         }
 
         public override string ToString()
         {
-            return $"Pedido ID: {IdPedido} - Cliente: {NomeCliente} - Status: {Status}";
+            return $"Pedido ID: {Id} - Cliente: {NomeCliente} - Status: {Status}";
         }
     }
 }

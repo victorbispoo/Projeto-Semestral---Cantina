@@ -30,9 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cozinha));
             listBoxPedidos = new ListBox();
-            textBoxComanda = new TextBox();
             labelPedidos = new Label();
             label1 = new Label();
+            listBoxComanda = new ListBox();
             SuspendLayout();
             // 
             // listBoxPedidos
@@ -44,15 +44,7 @@
             listBoxPedidos.Name = "listBoxPedidos";
             listBoxPedidos.Size = new Size(346, 298);
             listBoxPedidos.TabIndex = 0;
-            // 
-            // textBoxComanda
-            // 
-            textBoxComanda.Font = new Font("Agrandir Narrow", 12F, FontStyle.Bold);
-            textBoxComanda.Location = new Point(518, 94);
-            textBoxComanda.Multiline = true;
-            textBoxComanda.Name = "textBoxComanda";
-            textBoxComanda.Size = new Size(380, 202);
-            textBoxComanda.TabIndex = 1;
+            listBoxPedidos.SelectedIndexChanged += listBoxPedidos_SelectedIndexChanged;
             // 
             // labelPedidos
             // 
@@ -74,14 +66,23 @@
             label1.TabIndex = 3;
             label1.Text = "🗒️ Comanda";
             // 
+            // listBoxComanda
+            // 
+            listBoxComanda.FormattingEnabled = true;
+            listBoxComanda.ItemHeight = 15;
+            listBoxComanda.Location = new Point(518, 94);
+            listBoxComanda.Name = "listBoxComanda";
+            listBoxComanda.Size = new Size(346, 199);
+            listBoxComanda.TabIndex = 4;
+            // 
             // Cozinha
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(947, 464);
+            Controls.Add(listBoxComanda);
             Controls.Add(label1);
             Controls.Add(labelPedidos);
-            Controls.Add(textBoxComanda);
             Controls.Add(listBoxPedidos);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Cozinha";
@@ -94,8 +95,8 @@
         #endregion
 
         private ListBox listBoxPedidos;
-        private TextBox textBoxComanda;
         private Label labelPedidos;
         private Label label1;
+        private ListBox listBoxComanda;
     }
 }

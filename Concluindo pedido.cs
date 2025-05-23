@@ -71,22 +71,25 @@ namespace Projeto_Semestral___Cantina
             else if (pagCredito.Checked)
             {
                 MessageBox.Show("Pagamento recebido com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.DialogResult = DialogResult.OK;
                 this.Close();
             }
             else if (pagDebito.Checked)
             {
                 MessageBox.Show("Pagamento recebido com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.DialogResult = DialogResult.OK;
                 this.Close();
             }
             else if (pagPix.Checked)
             {
                 MessageBox.Show("Pagamento recebido com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.DialogResult = DialogResult.OK;
                 this.Close();
             }
             else
             {
                 MessageBox.Show("Selecione um método de pagamento!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                this.DialogResult = DialogResult.Cancel;
             }
             HorarioPedido = DateTime.Now;
         }

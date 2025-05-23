@@ -15,10 +15,29 @@ namespace Projeto_Semestral___Cantina
         public Cozinha()
         {
             InitializeComponent();
-        }
-        private void Cozinha_Load(object sender, EventArgs e)
-        {
 
         }
+
+        private void Cozinha_Load(object sender, EventArgs e)
+        {
+            listBoxPedidos.Items.Clear();
+            foreach (Pedido pedido in PersistenciaPedido.pedidos)
+            {
+                listBoxPedidos.Items.Add(pedido);
+            }
+
+        }
+        private void listBoxPedidos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            listBoxComanda.Items.Clear();
+            if (listBoxPedidos.SelectedItem is Pedido pedidoSelecionado)
+            {
+                // Corrija para acessar os produtos do pedido selecionado
+                foreach (Produto prod in pedidoSelecionado.ProdutosPedido)
+                {
+                    listBoxComanda.Items.Add(prod);
+                }
+            }
+        }
     }
-}
+    }

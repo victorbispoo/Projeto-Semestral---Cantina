@@ -131,8 +131,23 @@
                     CantCarrinho.ClearSelected();
                     total = 0;
                     CtnLblTotal.Text = "Total: R$" + total.ToString("F2");
-                    Pedido novoPedido = new Pedido(idPedido, nomeCliente, "Pendente");
-                }
+                    int idPedido = PersistenciaPedido.pedidos.Count + 1;
+                    string status = "Pendente";
+                    List<Produto> produtos = new List<Produto>();
+                    foreach (Produto p in CantCarrinho.Items)
+                    {
+                        produtos.Add(new Produto(p.Id, p.Nome, p.Preco, p.Quantidade));
+                    }
+
+                    Pedido pedido = new Pedido(idPedido, nomeCliente, status, produtos,DateTime.Now);
+                    PersistenciaPedido.pedidos.Add(pedido);
+
+                    // Limpar carrinho e atualizar total
+                    CantCarrinho.Items.Clear();
+                    CantCarrinho.ClearSelected();
+                    total = 0;
+                    CtnLblTotal.Text = "Total: R$" + total.ToString("F2");
+            }
                 else
                 {
                     MessageBox.Show("Operação cancelada!", "Cancelado", MessageBoxButtons.OK, MessageBoxIcon.Error);
