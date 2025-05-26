@@ -14,16 +14,17 @@
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            CantCardapio.Items.Add(new Produto(1, "Pão de Queijo", 3.50, 0));
-            CantCardapio.Items.Add(new Produto(2, "Coxinha", 5.00, 0));
-            CantCardapio.Items.Add(new Produto(3, "Pastel de Carne", 6.00, 0));
-            CantCardapio.Items.Add(new Produto(4, "Pastel de  Queijo", 5.50, 0));
-            CantCardapio.Items.Add(new Produto(5, "Suco Natural", 4.00, 0));
-            CantCardapio.Items.Add(new Produto(6, "Refrigerante Lata", 4.50, 0));
-            CantCardapio.Items.Add(new Produto(7, "Hamburguer Simples", 8.00, 0));
-            CantCardapio.Items.Add(new Produto(8, "Hamburguer com Queijo", 9.00, 0));
-            CantCardapio.Items.Add(new Produto(9, "X-Tudo", 12.00, 0));
-            CantCardapio.Items.Add(new Produto(10, "Água Mineral", 2.50, 0));
+            CantCardapio.Items.Add(new Produto(1, "Pão de Queijo", 3.50, 0,false));
+            CantCardapio.Items.Add(new Produto(2, "Coxinha", 5.00, 0,false));
+            CantCardapio.Items.Add(new Produto(3, "Pastel de Carne", 6.00, 0, true));
+            CantCardapio.Items.Add(new Produto(4, "Pastel de  Queijo", 5.50, 0, true));
+            CantCardapio.Items.Add(new Produto(5, "Suco Natural", 4.00, 0, false));
+            CantCardapio.Items.Add(new Produto(6, "Refrigerante Lata", 4.50, 0, false));
+            CantCardapio.Items.Add(new Produto(7, "Hamburguer Simples", 8.00, 0, true));
+            CantCardapio.Items.Add(new Produto(8, "Hamburguer com Queijo", 9.00, 0,true));
+            CantCardapio.Items.Add(new Produto(9, "X-Tudo", 12.00, 0,true));
+            CantCardapio.Items.Add(new Produto(10, "Água Mineral", 2.50, 0, false));
+            int idProduto= CantCardapio.Items.Count+ 1;
         }
         public double total { get; private set; } = 0;
         private void CantBtnAdd_Click(object sender, EventArgs e)
@@ -46,7 +47,7 @@
                 }
                 if (!encontrado)
                 {
-                    Produto novoItem = new Produto(produtoSelecionado.Id, produtoSelecionado.Nome, produtoSelecionado.Preco, 1);
+                    Produto novoItem = new Produto(produtoSelecionado.Id, produtoSelecionado.Nome, produtoSelecionado.Preco, 1, produtoSelecionado.IsChapa);
                     CantCarrinho.Items.Add(novoItem);
                 }
                 total = 0;
@@ -127,22 +128,17 @@
                     }
                     var horarioPedido = concluindo_Pedido.HorarioPedido;
                     MessageBox.Show($"{horarioPedido}\nExtrato do pedido de {nomeCliente} - {tipodePedido} \n{mensagem}\nTotal: R$" + total.ToString("F2") + $"\nTroco: R$ {troco:F2}", "Extrato", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    CantCarrinho.Items.Clear();
-                    CantCarrinho.ClearSelected();
                     total = 0;
                     CtnLblTotal.Text = "Total: R$" + total.ToString("F2");
                     int idPedido = PersistenciaPedido.pedidos.Count + 1;
                     string status = "Pendente";
-                    List<Produto> produtos = new List<Produto>();
+                    Pedido pedido = new Pedido(idPedido, nomeCliente, status, new List<Produto>(), DateTime.Now, false,tipodePedido);
                     foreach (Produto p in CantCarrinho.Items)
                     {
-                        produtos.Add(new Produto(p.Id, p.Nome, p.Preco, p.Quantidade));
+                        pedido.ProdutosPedido.Add(new Produto(p.Id, p.Nome, p.Preco, p.Quantidade,p.IsChapa));
                     }
-
-                    Pedido pedido = new Pedido(idPedido, nomeCliente, status, produtos,DateTime.Now);
+                    pedido.IsChapa = pedido.ProdutosPedido.Any(prod => prod.IsChapa);
                     PersistenciaPedido.pedidos.Add(pedido);
-
-                    // Limpar carrinho e atualizar total
                     CantCarrinho.Items.Clear();
                     CantCarrinho.ClearSelected();
                     total = 0;

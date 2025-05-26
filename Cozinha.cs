@@ -20,24 +20,68 @@ namespace Projeto_Semestral___Cantina
 
         private void Cozinha_Load(object sender, EventArgs e)
         {
-            listBoxPedidos.Items.Clear();
             foreach (Pedido pedido in PersistenciaPedido.pedidos)
             {
-                listBoxPedidos.Items.Add(pedido);
+                if (pedido.IsChapa == true)
+                {
+                    listBoxPedidos.Items.Add(pedido);
+                }
             }
-
         }
         private void listBoxPedidos_SelectedIndexChanged(object sender, EventArgs e)
         {
             listBoxComanda.Items.Clear();
             if (listBoxPedidos.SelectedItem is Pedido pedidoSelecionado)
             {
-                // Corrija para acessar os produtos do pedido selecionado
                 foreach (Produto prod in pedidoSelecionado.ProdutosPedido)
                 {
                     listBoxComanda.Items.Add(prod);
                 }
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Tela_Login tela_Login = new Tela_Login();
+            tela_Login.Show();
+            this.Hide();
+        }
+        private void BtnFinalizar_Click(object sender, EventArgs e)
+        {
+            if (listBoxPedidos.SelectedItem is Pedido pedidoSelecionado)
+            {
+                pedidoSelecionado.Status = "Concluido";
+                listPedidosProntos.Items.Add(pedidoSelecionado);
+                PersistenciaPedido.pedidos.Remove(pedidoSelecionado);
+                listBoxPedidos.Items.Remove(pedidoSelecionado);
+                listBoxComanda.Items.Clear();
+                MessageBox.Show("Pedido finalizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            else
+            {
+                MessageBox.Show("Selecione um pedido para finalizar.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void BtnPreparar_Click(object sender, EventArgs e)
+        {
+            if (listBoxPedidos.SelectedItem == null)
+            {
+                MessageBox.Show("Selecione um pedido para preparar.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (listBoxPedidos.SelectedItem is Pedido pedidoSelecionado)
+            {
+                pedidoSelecionado.Status = "Em preparo";
+                int idx = listBoxPedidos.SelectedIndex;
+                listBoxPedidos.Items[idx] = pedidoSelecionado;
+                MessageBox.Show("Pedido em preparo!", "Preparando", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void listBoxComanda_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
-    }
+}

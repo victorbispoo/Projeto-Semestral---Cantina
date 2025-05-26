@@ -45,23 +45,23 @@
             // 
             // CantCardapio
             // 
-            CantCardapio.Font = new Font("Agrandir Narrow", 14.2499981F, FontStyle.Bold);
+            CantCardapio.Font = new Font("Agrandir Narrow", 12F, FontStyle.Bold);
             CantCardapio.FormattingEnabled = true;
-            CantCardapio.ItemHeight = 25;
+            CantCardapio.ItemHeight = 21;
             CantCardapio.Location = new Point(21, 96);
             CantCardapio.Name = "CantCardapio";
-            CantCardapio.Size = new Size(369, 304);
+            CantCardapio.Size = new Size(369, 298);
             CantCardapio.TabIndex = 0;
             CantCardapio.SelectedIndexChanged += CantCardapio_SelectedIndexChanged;
             // 
             // CantCarrinho
             // 
-            CantCarrinho.Font = new Font("Agrandir Narrow", 14.2499981F, FontStyle.Bold);
+            CantCarrinho.Font = new Font("Agrandir Narrow", 12F, FontStyle.Bold);
             CantCarrinho.FormattingEnabled = true;
-            CantCarrinho.ItemHeight = 25;
+            CantCarrinho.ItemHeight = 21;
             CantCarrinho.Location = new Point(451, 96);
             CantCarrinho.Name = "CantCarrinho";
-            CantCarrinho.Size = new Size(450, 204);
+            CantCarrinho.Size = new Size(450, 193);
             CantCarrinho.TabIndex = 1;
             // 
             // CantBtnAdd

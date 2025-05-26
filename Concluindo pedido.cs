@@ -20,7 +20,7 @@ namespace Projeto_Semestral___Cantina
         {
             InitializeComponent();
             radioButton5.Checked = true;
-            pagDinheiro.Checked = true;
+            pagDebito.Checked = true;
             totalPedido = total;
         }
 

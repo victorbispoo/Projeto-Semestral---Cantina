@@ -181,10 +181,10 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.bolt;
-            pictureBox1.Location = new Point(28, 20);
+            pictureBox1.Location = new Point(28, 29);
             pictureBox1.Margin = new Padding(5);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(152, 58);
+            pictureBox1.Size = new Size(152, 49);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 12;
             pictureBox1.TabStop = false;
@@ -199,7 +199,7 @@
             button1.Name = "button1";
             button1.Size = new Size(333, 68);
             button1.TabIndex = 13;
-            button1.Text = "Finalizar pedido";
+            button1.Text = "💸 Finalizar pagamento";
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
@@ -220,7 +220,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(5);
             Name = "Concluindo_pedido";
-            Text = "Conclusão Pedido";
+            Text = "Pagamento";
             Load += Concluindo_pedido_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
