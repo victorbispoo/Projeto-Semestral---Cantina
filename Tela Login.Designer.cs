@@ -31,12 +31,13 @@
             btnTelaVendas = new Button();
             BtnCozinha = new Button();
             pictureBox1 = new PictureBox();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // btnTelaVendas
             // 
-            btnTelaVendas.Location = new Point(129, 195);
+            btnTelaVendas.Location = new Point(12, 195);
             btnTelaVendas.Name = "btnTelaVendas";
             btnTelaVendas.Size = new Size(175, 89);
             btnTelaVendas.TabIndex = 0;
@@ -46,7 +47,7 @@
             // 
             // BtnCozinha
             // 
-            BtnCozinha.Location = new Point(450, 195);
+            BtnCozinha.Location = new Point(613, 195);
             BtnCozinha.Name = "BtnCozinha";
             BtnCozinha.Size = new Size(175, 89);
             BtnCozinha.TabIndex = 1;
@@ -57,18 +58,28 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.bolt;
-            pictureBox1.Location = new Point(214, 64);
+            pictureBox1.Location = new Point(164, 12);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(299, 97);
+            pictureBox1.Size = new Size(477, 155);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(321, 195);
+            button1.Name = "button1";
+            button1.Size = new Size(175, 89);
+            button1.TabIndex = 3;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
             // 
             // Tela_Login
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button1);
             Controls.Add(pictureBox1);
             Controls.Add(BtnCozinha);
             Controls.Add(btnTelaVendas);
@@ -83,5 +94,6 @@
         private Button btnTelaVendas;
         private Button BtnCozinha;
         private PictureBox pictureBox1;
+        private Button button1;
     }
 }

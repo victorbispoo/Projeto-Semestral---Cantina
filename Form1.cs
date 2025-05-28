@@ -121,33 +121,47 @@
                 {
                     double troco = concluindo_Pedido.Troco;
                     string tipodePedido = concluindo_Pedido.tipoPedido;
+                    DateTime horarioPedido = concluindo_Pedido.HorarioPedido;
+
                     string mensagem = "Produtos:\n";
                     foreach (Produto produto in CantCarrinho.Items)
                     {
                         mensagem += $"{produto.Nome} - R${produto.Preco:F2} - Qtd {produto.Quantidade}\n";
                     }
-                    var horarioPedido = concluindo_Pedido.HorarioPedido;
-                    MessageBox.Show($"{horarioPedido}\nExtrato do pedido de {nomeCliente} - {tipodePedido} \n{mensagem}\nTotal: R$" + total.ToString("F2") + $"\nTroco: R$ {troco:F2}", "Extrato", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    MessageBox.Show(
+                        $"{horarioPedido}\nExtrato do pedido de {nomeCliente} - {tipodePedido}\n{mensagem}\nTotal: R${total:F2}\nTroco: R${troco:F2}",
+                        "Extrato",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information
+                    );
+
                     total = 0;
-                    CtnLblTotal.Text = "Total: R$" + total.ToString("F2");
-                    int idPedido = PersistenciaPedido.pedidos.Count + 1;
-                    string status = "Pendente";
-                    Pedido pedido = new Pedido(idPedido, nomeCliente, status, new List<Produto>(), DateTime.Now, false,tipodePedido);
+                    CtnLblTotal.Text = "Total: R$0,00";
+
+                    List<Produto> produtos = new List<Produto>();
                     foreach (Produto p in CantCarrinho.Items)
                     {
-                        pedido.ProdutosPedido.Add(new Produto(p.Id, p.Nome, p.Preco, p.Quantidade,p.IsChapa));
+                        produtos.Add(new Produto(p.Id, p.Nome, p.Preco, p.Quantidade, p.IsChapa));
                     }
-                    pedido.IsChapa = pedido.ProdutosPedido.Any(prod => prod.IsChapa);
+
+                    bool isChapa = produtos.Any(prod => prod.IsChapa);
+                    string status = isChapa ? "Pendente" : "Pronto";
+
+
+                    int idPedido = PersistenciaPedido.pedidos.Count + 1;
+                    Pedido pedido = new Pedido(idPedido, nomeCliente, status, produtos, DateTime.Now, isChapa, tipodePedido);
                     PersistenciaPedido.pedidos.Add(pedido);
+
                     CantCarrinho.Items.Clear();
                     CantCarrinho.ClearSelected();
-                    total = 0;
-                    CtnLblTotal.Text = "Total: R$" + total.ToString("F2");
-            }
+                    CtnLblTotal.Text = "Total: R$0,00";
+                }
                 else
                 {
                     MessageBox.Show("Operação cancelada!", "Cancelado", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+
 
             }
         }
@@ -167,8 +181,8 @@
 
         private void BtnVoltar_Click(object sender, EventArgs e)
         {
-            Tela_Login tela_Login = new Tela_Login();
-            tela_Login.Show();
+            Menu menu = new Menu();
+            menu.Show();
             this.Hide();
         }
     }

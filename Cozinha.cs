@@ -33,25 +33,26 @@ namespace Projeto_Semestral___Cantina
             listBoxComanda.Items.Clear();
             if (listBoxPedidos.SelectedItem is Pedido pedidoSelecionado)
             {
-                foreach (Produto prod in pedidoSelecionado.ProdutosPedido)
+                foreach (Produto prod in pedidoSelecionado.ProdutosPedido.Where(vaipara => vaipara.IsChapa))
                 {
-                    listBoxComanda.Items.Add(prod);
+                    listBoxComanda.Items.Add($"ID: {prod.Id} - {prod.Nome}- Quantidade: {prod.Quantidade}");
                 }
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Tela_Login tela_Login = new Tela_Login();
-            tela_Login.Show();
+            Menu menu = new Menu();
+            menu.Show();
             this.Hide();
         }
         private void BtnFinalizar_Click(object sender, EventArgs e)
         {
             if (listBoxPedidos.SelectedItem is Pedido pedidoSelecionado)
             {
-                pedidoSelecionado.Status = "Concluido";
+                pedidoSelecionado.Status = "Pronto";
                 listPedidosProntos.Items.Add(pedidoSelecionado);
+                PersistenciaPedido.pedidosConcluidos.Add(pedidoSelecionado);
                 PersistenciaPedido.pedidos.Remove(pedidoSelecionado);
                 listBoxPedidos.Items.Remove(pedidoSelecionado);
                 listBoxComanda.Items.Clear();
@@ -75,6 +76,7 @@ namespace Projeto_Semestral___Cantina
                 pedidoSelecionado.Status = "Em preparo";
                 int idx = listBoxPedidos.SelectedIndex;
                 listBoxPedidos.Items[idx] = pedidoSelecionado;
+
                 MessageBox.Show("Pedido em preparo!", "Preparando", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
@@ -82,6 +84,30 @@ namespace Projeto_Semestral___Cantina
         private void listBoxComanda_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void BtnCancelar_Click(object sender, EventArgs e)
+        {
+            if (listBoxPedidos.SelectedItem is Pedido pedidoSelecionado)
+            {
+                if (DialogResult.Yes == MessageBox.Show("Deseja cancelar este pedido?", "Cancelar pedido", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+                {
+                    if (pedidoSelecionado.Status == "Em preparo")
+                    {
+                        MessageBox.Show("Não é possível cancelar um pedido em preparo.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        PersistenciaPedido.pedidos.Remove(pedidoSelecionado);
+                        listBoxPedidos.Items.Remove(pedidoSelecionado);
+                        listBoxComanda.Items.Clear();
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Selecione um pedido para cancelar.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

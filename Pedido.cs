@@ -20,6 +20,7 @@ namespace Projeto_Semestral___Cantina
             ProdutosPedido = produtos ?? new List<Produto>();
             DataHora = dataHora;
             IsChapa = isChapa;
+            TipoPedido = tipoPedido;
         }
 
         public override string ToString()

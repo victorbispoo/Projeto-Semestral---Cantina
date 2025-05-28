@@ -88,7 +88,7 @@
             // button1
             // 
             button1.Font = new Font("Inter SemiBold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(37, 424);
+            button1.Location = new Point(37, 410);
             button1.Name = "button1";
             button1.Size = new Size(90, 28);
             button1.TabIndex = 5;
@@ -116,6 +116,7 @@
             BtnCancelar.TabIndex = 7;
             BtnCancelar.Text = "❌ Cancelar Pedido";
             BtnCancelar.UseVisualStyleBackColor = true;
+            BtnCancelar.Click += BtnCancelar_Click;
             // 
             // BtnFinalizar
             // 
@@ -154,7 +155,7 @@
             pictureBox1.Image = Properties.Resources.bolt;
             pictureBox1.Location = new Point(37, 12);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(118, 36);
+            pictureBox1.Size = new Size(128, 39);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 11;
             pictureBox1.TabStop = false;
