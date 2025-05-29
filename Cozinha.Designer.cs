@@ -40,6 +40,7 @@
             listPedidosProntos = new ListBox();
             label2 = new Label();
             pictureBox1 = new PictureBox();
+            label3 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -50,7 +51,7 @@
             listBoxPedidos.ItemHeight = 21;
             listBoxPedidos.Location = new Point(37, 94);
             listBoxPedidos.Name = "listBoxPedidos";
-            listBoxPedidos.Size = new Size(415, 193);
+            listBoxPedidos.Size = new Size(576, 193);
             listBoxPedidos.TabIndex = 0;
             listBoxPedidos.SelectedIndexChanged += listBoxPedidos_SelectedIndexChanged;
             // 
@@ -68,7 +69,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Inter SemiBold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(518, 64);
+            label1.Location = new Point(673, 64);
             label1.Name = "label1";
             label1.Size = new Size(133, 27);
             label1.TabIndex = 3;
@@ -79,7 +80,7 @@
             listBoxComanda.Font = new Font("Agrandir Narrow", 12F, FontStyle.Bold);
             listBoxComanda.FormattingEnabled = true;
             listBoxComanda.ItemHeight = 21;
-            listBoxComanda.Location = new Point(518, 94);
+            listBoxComanda.Location = new Point(673, 94);
             listBoxComanda.Name = "listBoxComanda";
             listBoxComanda.Size = new Size(346, 193);
             listBoxComanda.TabIndex = 4;
@@ -99,7 +100,7 @@
             // BtnPreparar
             // 
             BtnPreparar.Font = new Font("Inter SemiBold", 9.75F, FontStyle.Bold);
-            BtnPreparar.Location = new Point(518, 320);
+            BtnPreparar.Location = new Point(673, 320);
             BtnPreparar.Name = "BtnPreparar";
             BtnPreparar.Size = new Size(173, 35);
             BtnPreparar.TabIndex = 6;
@@ -110,7 +111,7 @@
             // BtnCancelar
             // 
             BtnCancelar.Font = new Font("Inter SemiBold", 9.75F, FontStyle.Bold);
-            BtnCancelar.Location = new Point(690, 320);
+            BtnCancelar.Location = new Point(845, 320);
             BtnCancelar.Name = "BtnCancelar";
             BtnCancelar.Size = new Size(174, 35);
             BtnCancelar.TabIndex = 7;
@@ -122,7 +123,7 @@
             // 
             BtnFinalizar.BackColor = Color.FromArgb(230, 255, 0);
             BtnFinalizar.Font = new Font("Inter SemiBold", 9.75F, FontStyle.Bold);
-            BtnFinalizar.Location = new Point(518, 353);
+            BtnFinalizar.Location = new Point(673, 358);
             BtnFinalizar.Name = "BtnFinalizar";
             BtnFinalizar.Size = new Size(346, 34);
             BtnFinalizar.TabIndex = 8;
@@ -135,9 +136,9 @@
             listPedidosProntos.Font = new Font("Agrandir Narrow", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             listPedidosProntos.FormattingEnabled = true;
             listPedidosProntos.ItemHeight = 17;
-            listPedidosProntos.Location = new Point(37, 315);
+            listPedidosProntos.Location = new Point(37, 320);
             listPedidosProntos.Name = "listPedidosProntos";
-            listPedidosProntos.Size = new Size(415, 72);
+            listPedidosProntos.Size = new Size(576, 72);
             listPedidosProntos.TabIndex = 9;
             // 
             // label2
@@ -160,11 +161,24 @@
             pictureBox1.TabIndex = 11;
             pictureBox1.TabStop = false;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
+            label3.FlatStyle = FlatStyle.Flat;
+            label3.Font = new Font("Inter Black", 22.25F, FontStyle.Bold);
+            label3.Location = new Point(156, 12);
+            label3.Name = "label3";
+            label3.Size = new Size(161, 43);
+            label3.TabIndex = 18;
+            label3.Text = "| Cozinha";
+            // 
             // Cozinha
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(947, 464);
+            BackColor = SystemColors.Control;
+            ClientSize = new Size(1099, 464);
             Controls.Add(pictureBox1);
             Controls.Add(label2);
             Controls.Add(listPedidosProntos);
@@ -176,6 +190,7 @@
             Controls.Add(label1);
             Controls.Add(labelPedidos);
             Controls.Add(listBoxPedidos);
+            Controls.Add(label3);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Cozinha";
             Text = "Cozinha";
@@ -198,5 +213,8 @@
         private ListBox listPedidosProntos;
         private Label label2;
         private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox3;
+        private Label label3;
     }
 }

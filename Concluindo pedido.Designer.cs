@@ -50,7 +50,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Inter SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(35, 128);
+            label1.Location = new Point(35, 144);
             label1.Margin = new Padding(5, 0, 5, 0);
             label1.Name = "label1";
             label1.Size = new Size(260, 23);
@@ -61,7 +61,7 @@
             // 
             ListaTipoPedido.AutoSize = true;
             ListaTipoPedido.Font = new Font("Inter SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            ListaTipoPedido.Location = new Point(597, 128);
+            ListaTipoPedido.Location = new Point(597, 144);
             ListaTipoPedido.Margin = new Padding(5, 0, 5, 0);
             ListaTipoPedido.Name = "ListaTipoPedido";
             ListaTipoPedido.Size = new Size(212, 23);
@@ -72,7 +72,7 @@
             // 
             pagDinheiro.AutoSize = true;
             pagDinheiro.Font = new Font("Inter SemiBold", 12F, FontStyle.Bold);
-            pagDinheiro.Location = new Point(9, 37);
+            pagDinheiro.Location = new Point(25, 97);
             pagDinheiro.Margin = new Padding(5);
             pagDinheiro.Name = "pagDinheiro";
             pagDinheiro.Size = new Size(120, 27);
@@ -86,7 +86,7 @@
             // 
             pagDebito.AutoSize = true;
             pagDebito.Font = new Font("Inter SemiBold", 12F, FontStyle.Bold);
-            pagDebito.Location = new Point(9, 97);
+            pagDebito.Location = new Point(25, 43);
             pagDebito.Margin = new Padding(5);
             pagDebito.Name = "pagDebito";
             pagDebito.Size = new Size(106, 27);
@@ -99,7 +99,7 @@
             // 
             pagPix.AutoSize = true;
             pagPix.Font = new Font("Inter SemiBold", 12F, FontStyle.Bold);
-            pagPix.Location = new Point(233, 37);
+            pagPix.Location = new Point(233, 43);
             pagPix.Margin = new Padding(5);
             pagPix.Name = "pagPix";
             pagPix.Size = new Size(72, 27);

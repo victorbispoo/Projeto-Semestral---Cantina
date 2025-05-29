@@ -40,6 +40,7 @@
             pictureBox1 = new PictureBox();
             CantLimparCarrinho = new Button();
             BtnVoltar = new Button();
+            label3 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -169,13 +170,26 @@
             // 
             BtnVoltar.Font = new Font("Inter SemiBold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             BtnVoltar.ForeColor = Color.Black;
-            BtnVoltar.Location = new Point(21, 430);
+            BtnVoltar.Location = new Point(21, 418);
             BtnVoltar.Name = "BtnVoltar";
             BtnVoltar.Size = new Size(87, 29);
             BtnVoltar.TabIndex = 10;
             BtnVoltar.Text = "🔙 Voltar";
             BtnVoltar.UseVisualStyleBackColor = true;
             BtnVoltar.Click += BtnVoltar_Click;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
+            label3.FlatStyle = FlatStyle.Flat;
+            label3.Font = new Font("Inter Black", 22.25F, FontStyle.Bold);
+            label3.ForeColor = Color.Black;
+            label3.Location = new Point(157, 12);
+            label3.Name = "label3";
+            label3.Size = new Size(150, 43);
+            label3.TabIndex = 18;
+            label3.Text = "| Vendas";
             // 
             // Form1
             // 
@@ -194,6 +208,7 @@
             Controls.Add(CantBtnAdd);
             Controls.Add(CantCarrinho);
             Controls.Add(CantCardapio);
+            Controls.Add(label3);
             ForeColor = Color.FromArgb(243, 241, 238);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
@@ -217,5 +232,6 @@
         private PictureBox pictureBox1;
         private Button CantLimparCarrinho;
         private Button BtnVoltar;
+        private Label label3;
     }
 }

@@ -76,5 +76,17 @@ namespace Projeto_Semestral___Cantina
         {
 
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+        }
+
+        private void listBoxPedidospraEntrega_DrawItem(object sender, DrawItemEventArgs e)
+        {
+        }
+
+        private void listBoxPedidosEntregues_DrawItem(object sender, DrawItemEventArgs e)
+        {
+        }
     }
 }

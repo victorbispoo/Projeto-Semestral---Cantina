@@ -37,11 +37,11 @@ namespace Projeto_Semestral___Cantina
         {
             if (radioButton6.Checked)
             {
-              tipoPedido = "Para viagem";
+              tipoPedido = "Viagem";
             }
             else if (radioButton5.Checked)
             {
-                tipoPedido = "Para comer aqui";
+                tipoPedido = "Consumo";
             }
             else
             {
@@ -70,19 +70,19 @@ namespace Projeto_Semestral___Cantina
             }
             else if (pagCredito.Checked)
             {
-                MessageBox.Show("Pagamento recebido com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"Faça a cobrança de R$ {totalPedido:F2} no Crédito", "Crédito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
             else if (pagDebito.Checked)
             {
-                MessageBox.Show("Pagamento recebido com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"Faça a cobrança de R${totalPedido:F2} no Débito", "Débito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
             else if (pagPix.Checked)
             {
-                MessageBox.Show("Pagamento recebido com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"Faça a cobrança de R${totalPedido:F2} no Pix", "Pix", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
