@@ -21,5 +21,31 @@ namespace Projeto_Semestral___Cantina
         {
 
         }
+
+        private void TelaoRetirada_Load(object sender, EventArgs e)
+        {
+            foreach (Pedido pedido in PersistenciaPedido.pedidosProntos)
+            {
+                listPedidosProntos.Items.Add($"ID: {pedido.Id} - Cliente: {pedido.NomeCliente} - Tipo: {pedido.TipoPedido}");
+            }
+            foreach (Pedido pedido in PersistenciaPedido.pedidos)
+            {
+                if (pedido.IsChapa == true)
+                {
+                    listPedidosPreparo.Items.Add($"ID: {pedido.Id} - Cliente: {pedido.NomeCliente} - Tipo: {pedido.TipoPedido}");
+                }
+            }
+            foreach (Pedido pedido in PersistenciaPedido.pedidosEntregues)
+            {
+                listPedidosEntregues.Items.Add($"ID: {pedido.Id} - Cliente:  {pedido.NomeCliente}  - Tipo:  {pedido.TipoPedido}");
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Menu menu = new Menu();
+            menu.Show();
+            this.Hide();
+        }
     }
 }

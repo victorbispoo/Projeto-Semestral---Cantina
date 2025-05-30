@@ -37,5 +37,12 @@ namespace Projeto_Semestral___Cantina
             balcao.Show();
             this.Hide();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            TelaoRetirada telaoRetirada = new TelaoRetirada();
+            telaoRetirada.Show();
+            this.Hide();
+        }
     }
 }

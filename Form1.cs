@@ -149,9 +149,23 @@
                     string status = isChapa ? "Pendente" : "Pronto";
 
 
-                    int idPedido = PersistenciaPedido.pedidos.Count + 1;
-                    Pedido pedido = new Pedido(idPedido, nomeCliente, status, produtos, DateTime.Now, isChapa, tipodePedido);
-                    PersistenciaPedido.pedidos.Add(pedido);
+                    int novoId = PersistenciaPedido.pedidos
+                        .Concat(PersistenciaPedido.pedidosProntos)
+                        .Select(p => p.Id)
+                        .DefaultIfEmpty(0)
+                        .Max() + 1;
+
+                    Pedido pedido = new Pedido(novoId, nomeCliente, status, produtos, DateTime.Now, isChapa, tipodePedido);
+
+                    if (!isChapa)
+                    {
+                        PersistenciaPedido.pedidosProntos.Add(pedido);
+                    }
+                    else
+                    {
+                        PersistenciaPedido.pedidos.Add(pedido);
+                    }
+
 
                     CantCarrinho.Items.Clear();
                     CantCarrinho.ClearSelected();

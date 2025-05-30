@@ -50,14 +50,9 @@ namespace Projeto_Semestral___Cantina
         {
             if (listBoxPedidos.SelectedItem is Pedido pedidoSelecionado)
             {
-                if(pedidoSelecionado.Status == "Pendente")
-                {
-                    MessageBox.Show("Não é possível finalizar um pedido que ainda está em preparo.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
                 pedidoSelecionado.Status = "Pronto";
                 listPedidosProntos.Items.Add(pedidoSelecionado);
-                PersistenciaPedido.pedidosConcluidos.Add(pedidoSelecionado);
+                PersistenciaPedido.pedidosProntos.Add(pedidoSelecionado);
                 PersistenciaPedido.pedidos.Remove(pedidoSelecionado);
                 listBoxPedidos.Items.Remove(pedidoSelecionado);
                 listBoxComanda.Items.Clear();

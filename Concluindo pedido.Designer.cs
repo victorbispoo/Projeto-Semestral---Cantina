@@ -150,7 +150,7 @@
             // 
             // groupBox1
             // 
-            groupBox1.BackColor = Color.White;
+            groupBox1.BackColor = SystemColors.Window;
             groupBox1.Controls.Add(pagCredito);
             groupBox1.Controls.Add(pagPix);
             groupBox1.Controls.Add(pagDinheiro);
@@ -166,7 +166,7 @@
             // 
             // groupBox2
             // 
-            groupBox2.BackColor = Color.White;
+            groupBox2.BackColor = SystemColors.Window;
             groupBox2.Controls.Add(radioButton6);
             groupBox2.Controls.Add(radioButton5);
             groupBox2.Font = new Font("Agrandir Narrow", 14.2499981F, FontStyle.Bold);
