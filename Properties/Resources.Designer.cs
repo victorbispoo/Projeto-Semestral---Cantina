@@ -73,6 +73,16 @@ namespace Projeto_Semestral___Cantina.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Adobe_Express___file {
+            get {
+                object obj = ResourceManager.GetObject("Adobe Express - file", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ampulheta {
             get {
                 object obj = ResourceManager.GetObject("ampulheta", resourceCulture);
@@ -193,6 +203,16 @@ namespace Projeto_Semestral___Cantina.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap digital_payment {
+            get {
+                object obj = ResourceManager.GetObject("digital-payment", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap dinheiro {
             get {
                 object obj = ResourceManager.GetObject("dinheiro", resourceCulture);
@@ -243,6 +263,16 @@ namespace Projeto_Semestral___Cantina.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap expense {
+            get {
+                object obj = ResourceManager.GetObject("expense", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap finalizaer {
             get {
                 object obj = ResourceManager.GetObject("finalizaer", resourceCulture);
@@ -263,9 +293,39 @@ namespace Projeto_Semestral___Cantina.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap hamburger_soda {
+            get {
+                object obj = ResourceManager.GetObject("hamburger-soda", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap hamburger1 {
             get {
                 object obj = ResourceManager.GetObject("hamburger1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_foto_480 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-foto-480", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap land_layer_location {
+            get {
+                object obj = ResourceManager.GetObject("land-layer-location", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -313,6 +373,16 @@ namespace Projeto_Semestral___Cantina.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap marketplace_alt {
+            get {
+                object obj = ResourceManager.GetObject("marketplace-alt", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pedidos_prontos {
             get {
                 object obj = ResourceManager.GetObject("pedidos prontos", resourceCulture);
@@ -326,6 +396,16 @@ namespace Projeto_Semestral___Cantina.Properties {
         internal static System.Drawing.Bitmap pedidos_prontos1 {
             get {
                 object obj = ResourceManager.GetObject("pedidos prontos1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap plane {
+            get {
+                object obj = ResourceManager.GetObject("plane", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -366,6 +446,16 @@ namespace Projeto_Semestral___Cantina.Properties {
         internal static System.Drawing.Bitmap remover_carronhp {
             get {
                 object obj = ResourceManager.GetObject("remover carronhp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap shopping_cart {
+            get {
+                object obj = ResourceManager.GetObject("shopping-cart", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

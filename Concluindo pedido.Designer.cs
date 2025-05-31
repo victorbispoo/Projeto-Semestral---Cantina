@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Concluindo_pedido));
             label1 = new Label();
             ListaTipoPedido = new Label();
@@ -41,41 +44,48 @@
             groupBox2 = new GroupBox();
             pictureBox1 = new PictureBox();
             button1 = new Button();
+            guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            Debito = new Guna.UI2.WinForms.Guna2RadioButton();
+            Credito = new Guna.UI2.WinForms.Guna2RadioButton();
+            Dinheiro = new Guna.UI2.WinForms.Guna2RadioButton();
+            Pix = new Guna.UI2.WinForms.Guna2RadioButton();
+            guna2ResizeForm1 = new Guna.UI2.WinForms.Guna2ResizeForm(components);
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            guna2GroupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Inter SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(35, 144);
             label1.Margin = new Padding(5, 0, 5, 0);
             label1.Name = "label1";
-            label1.Size = new Size(260, 23);
+            label1.Size = new Size(274, 20);
             label1.TabIndex = 2;
             label1.Text = "Selecione a forma de pagamento";
             // 
             // ListaTipoPedido
             // 
             ListaTipoPedido.AutoSize = true;
-            ListaTipoPedido.Font = new Font("Inter SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ListaTipoPedido.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             ListaTipoPedido.Location = new Point(597, 144);
             ListaTipoPedido.Margin = new Padding(5, 0, 5, 0);
             ListaTipoPedido.Name = "ListaTipoPedido";
-            ListaTipoPedido.Size = new Size(212, 23);
+            ListaTipoPedido.Size = new Size(222, 20);
             ListaTipoPedido.TabIndex = 3;
             ListaTipoPedido.Text = "Selecione o tipo de pedido";
             // 
             // pagDinheiro
             // 
             pagDinheiro.AutoSize = true;
-            pagDinheiro.Font = new Font("Inter SemiBold", 12F, FontStyle.Bold);
+            pagDinheiro.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
             pagDinheiro.Location = new Point(25, 97);
             pagDinheiro.Margin = new Padding(5);
             pagDinheiro.Name = "pagDinheiro";
-            pagDinheiro.Size = new Size(120, 27);
+            pagDinheiro.Size = new Size(116, 24);
             pagDinheiro.TabIndex = 4;
             pagDinheiro.TabStop = true;
             pagDinheiro.Text = "💵 Dinheiro";
@@ -85,11 +95,11 @@
             // pagDebito
             // 
             pagDebito.AutoSize = true;
-            pagDebito.Font = new Font("Inter SemiBold", 12F, FontStyle.Bold);
+            pagDebito.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
             pagDebito.Location = new Point(25, 43);
             pagDebito.Margin = new Padding(5);
             pagDebito.Name = "pagDebito";
-            pagDebito.Size = new Size(106, 27);
+            pagDebito.Size = new Size(102, 24);
             pagDebito.TabIndex = 5;
             pagDebito.TabStop = true;
             pagDebito.Text = "💳 Débito";
@@ -98,11 +108,11 @@
             // pagPix
             // 
             pagPix.AutoSize = true;
-            pagPix.Font = new Font("Inter SemiBold", 12F, FontStyle.Bold);
+            pagPix.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
             pagPix.Location = new Point(233, 43);
             pagPix.Margin = new Padding(5);
             pagPix.Name = "pagPix";
-            pagPix.Size = new Size(72, 27);
+            pagPix.Size = new Size(67, 24);
             pagPix.TabIndex = 6;
             pagPix.TabStop = true;
             pagPix.Text = "❖ Pix";
@@ -111,11 +121,11 @@
             // pagCredito
             // 
             pagCredito.AutoSize = true;
-            pagCredito.Font = new Font("Inter SemiBold", 12F, FontStyle.Bold);
+            pagCredito.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
             pagCredito.Location = new Point(233, 97);
             pagCredito.Margin = new Padding(5);
             pagCredito.Name = "pagCredito";
-            pagCredito.Size = new Size(112, 27);
+            pagCredito.Size = new Size(107, 24);
             pagCredito.TabIndex = 7;
             pagCredito.TabStop = true;
             pagCredito.Text = "💳 Crédito";
@@ -127,7 +137,7 @@
             radioButton5.Location = new Point(9, 43);
             radioButton5.Margin = new Padding(5);
             radioButton5.Name = "radioButton5";
-            radioButton5.Size = new Size(221, 29);
+            radioButton5.Size = new Size(230, 28);
             radioButton5.TabIndex = 8;
             radioButton5.TabStop = true;
             radioButton5.Text = "🏪 Consumo imediato";
@@ -137,11 +147,11 @@
             // 
             radioButton6.AutoSize = true;
             radioButton6.BackColor = Color.White;
-            radioButton6.Font = new Font("Inter SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            radioButton6.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             radioButton6.Location = new Point(9, 98);
             radioButton6.Margin = new Padding(5);
             radioButton6.Name = "radioButton6";
-            radioButton6.Size = new Size(148, 27);
+            radioButton6.Size = new Size(147, 24);
             radioButton6.TabIndex = 9;
             radioButton6.TabStop = true;
             radioButton6.Text = "✈️ Para viagem";
@@ -155,7 +165,7 @@
             groupBox1.Controls.Add(pagPix);
             groupBox1.Controls.Add(pagDinheiro);
             groupBox1.Controls.Add(pagDebito);
-            groupBox1.Font = new Font("Agrandir Narrow", 14.2499981F, FontStyle.Bold);
+            groupBox1.Font = new Font("Microsoft Sans Serif", 14.2499981F, FontStyle.Bold);
             groupBox1.Location = new Point(35, 172);
             groupBox1.Margin = new Padding(5);
             groupBox1.Name = "groupBox1";
@@ -169,7 +179,7 @@
             groupBox2.BackColor = SystemColors.Window;
             groupBox2.Controls.Add(radioButton6);
             groupBox2.Controls.Add(radioButton5);
-            groupBox2.Font = new Font("Agrandir Narrow", 14.2499981F, FontStyle.Bold);
+            groupBox2.Font = new Font("Microsoft Sans Serif", 14.2499981F, FontStyle.Bold);
             groupBox2.Location = new Point(597, 172);
             groupBox2.Margin = new Padding(5);
             groupBox2.Name = "groupBox2";
@@ -192,7 +202,7 @@
             // button1
             // 
             button1.BackColor = Color.FromArgb(230, 255, 0);
-            button1.Font = new Font("Inter SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.Black;
             button1.Location = new Point(597, 378);
             button1.Margin = new Padding(5);
@@ -203,19 +213,135 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
+            // guna2GroupBox1
+            // 
+            guna2GroupBox1.BorderRadius = 8;
+            guna2GroupBox1.BorderThickness = 0;
+            guna2GroupBox1.Controls.Add(Pix);
+            guna2GroupBox1.Controls.Add(Dinheiro);
+            guna2GroupBox1.Controls.Add(Credito);
+            guna2GroupBox1.Controls.Add(Debito);
+            guna2GroupBox1.CustomBorderColor = Color.Transparent;
+            guna2GroupBox1.CustomizableEdges = customizableEdges1;
+            guna2GroupBox1.Font = new Font("Segoe UI", 9F);
+            guna2GroupBox1.ForeColor = Color.Transparent;
+            guna2GroupBox1.Location = new Point(35, 172);
+            guna2GroupBox1.Name = "guna2GroupBox1";
+            guna2GroupBox1.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2GroupBox1.Size = new Size(449, 168);
+            guna2GroupBox1.TabIndex = 14;
+            guna2GroupBox1.Text = "guna2GroupBox1";
+            // 
+            // Debito
+            // 
+            Debito.AutoSize = true;
+            Debito.BackColor = Color.Transparent;
+            Debito.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
+            Debito.CheckedState.BorderThickness = 0;
+            Debito.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
+            Debito.CheckedState.InnerColor = Color.White;
+            Debito.CheckedState.InnerOffset = -4;
+            Debito.FlatStyle = FlatStyle.Flat;
+            Debito.Font = new Font("Inter", 14.25F, FontStyle.Bold);
+            Debito.ForeColor = Color.Black;
+            Debito.Location = new Point(15, 16);
+            Debito.Name = "Debito";
+            Debito.Size = new Size(92, 27);
+            Debito.TabIndex = 16;
+            Debito.Text = " Débito";
+            Debito.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
+            Debito.UncheckedState.BorderThickness = 2;
+            Debito.UncheckedState.FillColor = Color.Transparent;
+            Debito.UncheckedState.InnerColor = Color.Transparent;
+            Debito.UseVisualStyleBackColor = false;
+            // 
+            // Credito
+            // 
+            Credito.AutoSize = true;
+            Credito.BackColor = Color.Transparent;
+            Credito.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
+            Credito.CheckedState.BorderThickness = 0;
+            Credito.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
+            Credito.CheckedState.InnerColor = Color.White;
+            Credito.CheckedState.InnerOffset = -4;
+            Credito.FlatStyle = FlatStyle.Flat;
+            Credito.Font = new Font("Inter", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Credito.ForeColor = Color.Black;
+            Credito.Location = new Point(228, 16);
+            Credito.Name = "Credito";
+            Credito.Size = new Size(100, 27);
+            Credito.TabIndex = 17;
+            Credito.Text = " Crédito";
+            Credito.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
+            Credito.UncheckedState.BorderThickness = 2;
+            Credito.UncheckedState.FillColor = Color.Transparent;
+            Credito.UncheckedState.InnerColor = Color.Transparent;
+            Credito.UseVisualStyleBackColor = false;
+            // 
+            // Dinheiro
+            // 
+            Dinheiro.AutoSize = true;
+            Dinheiro.BackColor = Color.Transparent;
+            Dinheiro.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
+            Dinheiro.CheckedState.BorderThickness = 0;
+            Dinheiro.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
+            Dinheiro.CheckedState.InnerColor = Color.White;
+            Dinheiro.CheckedState.InnerOffset = -4;
+            Dinheiro.FlatStyle = FlatStyle.Flat;
+            Dinheiro.Font = new Font("Inter", 14.25F, FontStyle.Bold);
+            Dinheiro.ForeColor = Color.Black;
+            Dinheiro.Location = new Point(15, 102);
+            Dinheiro.Name = "Dinheiro";
+            Dinheiro.Size = new Size(110, 27);
+            Dinheiro.TabIndex = 18;
+            Dinheiro.Text = " Dinheiro";
+            Dinheiro.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
+            Dinheiro.UncheckedState.BorderThickness = 2;
+            Dinheiro.UncheckedState.FillColor = Color.Transparent;
+            Dinheiro.UncheckedState.InnerColor = Color.Transparent;
+            Dinheiro.UseVisualStyleBackColor = false;
+            // 
+            // Pix
+            // 
+            Pix.AutoSize = true;
+            Pix.BackColor = Color.Transparent;
+            Pix.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
+            Pix.CheckedState.BorderThickness = 0;
+            Pix.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
+            Pix.CheckedState.InnerColor = Color.White;
+            Pix.CheckedState.InnerOffset = -4;
+            Pix.FlatStyle = FlatStyle.Flat;
+            Pix.Font = new Font("Inter", 14.25F, FontStyle.Bold);
+            Pix.ForeColor = Color.Black;
+            Pix.Location = new Point(228, 102);
+            Pix.Name = "Pix";
+            Pix.Size = new Size(59, 27);
+            Pix.TabIndex = 19;
+            Pix.Text = " Pix";
+            Pix.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
+            Pix.UncheckedState.BorderThickness = 2;
+            Pix.UncheckedState.FillColor = Color.Transparent;
+            Pix.UncheckedState.InnerColor = Color.Transparent;
+            Pix.UseVisualStyleBackColor = false;
+            // 
+            // guna2ResizeForm1
+            // 
+            guna2ResizeForm1.TargetForm = this;
+            // 
             // Concluindo_pedido
             // 
-            AutoScaleDimensions = new SizeF(11F, 25F);
+            AutoScaleDimensions = new SizeF(12F, 24F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(243, 241, 238);
             ClientSize = new Size(949, 467);
+            Controls.Add(guna2GroupBox1);
             Controls.Add(button1);
             Controls.Add(pictureBox1);
             Controls.Add(ListaTipoPedido);
             Controls.Add(label1);
             Controls.Add(groupBox1);
             Controls.Add(groupBox2);
-            Font = new Font("Agrandir Narrow", 14.2499981F, FontStyle.Bold);
+            Font = new Font("Microsoft Sans Serif", 14.2499981F, FontStyle.Bold);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(5);
@@ -227,6 +353,8 @@
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            guna2GroupBox1.ResumeLayout(false);
+            guna2GroupBox1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -244,5 +372,11 @@
         private GroupBox groupBox2;
         private PictureBox pictureBox1;
         private Button button1;
+        private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
+        private Guna.UI2.WinForms.Guna2RadioButton Pix;
+        private Guna.UI2.WinForms.Guna2RadioButton Dinheiro;
+        private Guna.UI2.WinForms.Guna2RadioButton Credito;
+        private Guna.UI2.WinForms.Guna2RadioButton Debito;
+        private Guna.UI2.WinForms.Guna2ResizeForm guna2ResizeForm1;
     }
 }

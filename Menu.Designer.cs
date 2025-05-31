@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -46,6 +47,7 @@
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             BtnBalcao = new Guna.UI2.WinForms.Guna2Button();
             btnTelaVendas = new Guna.UI2.WinForms.Guna2Button();
+            guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -62,10 +64,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Agrandir Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Microsoft Sans Serif", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(353, 102);
             label1.Name = "label1";
-            label1.Size = new Size(154, 36);
+            label1.Size = new Size(170, 31);
             label1.TabIndex = 7;
             label1.Text = "Menu Inicial";
             // 
@@ -82,7 +84,7 @@
             button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             button1.FillColor = SystemColors.Window;
-            button1.Font = new Font("Inter SemiBold", 14.25F, FontStyle.Bold);
+            button1.Font = new Font("Inter", 18F, FontStyle.Bold);
             button1.ForeColor = Color.Black;
             button1.Image = Properties.Resources.telão;
             button1.Location = new Point(574, 155);
@@ -107,7 +109,7 @@
             btnEstoque.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnEstoque.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnEstoque.FillColor = SystemColors.Window;
-            btnEstoque.Font = new Font("Inter SemiBold", 14.25F, FontStyle.Bold);
+            btnEstoque.Font = new Font("Inter", 18F, FontStyle.Bold);
             btnEstoque.ForeColor = Color.Black;
             btnEstoque.Image = Properties.Resources.estoque;
             btnEstoque.Location = new Point(293, 277);
@@ -131,7 +133,7 @@
             guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             guna2Button1.FillColor = SystemColors.Window;
-            guna2Button1.Font = new Font("Inter SemiBold", 14.25F, FontStyle.Bold);
+            guna2Button1.Font = new Font("Inter", 18F, FontStyle.Bold);
             guna2Button1.ForeColor = Color.Black;
             guna2Button1.Image = Properties.Resources.cozinha;
             guna2Button1.Location = new Point(293, 155);
@@ -156,7 +158,7 @@
             BtnBalcao.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             BtnBalcao.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             BtnBalcao.FillColor = SystemColors.Window;
-            BtnBalcao.Font = new Font("Inter SemiBold", 14.25F, FontStyle.Bold);
+            BtnBalcao.Font = new Font("Inter", 18F, FontStyle.Bold);
             BtnBalcao.ForeColor = Color.Black;
             BtnBalcao.Image = Properties.Resources.Loja;
             BtnBalcao.Location = new Point(12, 155);
@@ -181,7 +183,7 @@
             btnTelaVendas.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnTelaVendas.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnTelaVendas.FillColor = SystemColors.Window;
-            btnTelaVendas.Font = new Font("Inter SemiBold", 14.25F, FontStyle.Bold);
+            btnTelaVendas.Font = new Font("Inter", 18F, FontStyle.Bold);
             btnTelaVendas.ForeColor = Color.Black;
             btnTelaVendas.Image = Properties.Resources.vendas;
             btnTelaVendas.Location = new Point(12, 277);
@@ -193,10 +195,17 @@
             btnTelaVendas.Text = " Vendas";
             btnTelaVendas.Click += btnTelaVendas_Click;
             // 
+            // guna2BorderlessForm1
+            // 
+            guna2BorderlessForm1.ContainerControl = this;
+            guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
+            guna2BorderlessForm1.TransparentWhileDrag = true;
+            // 
             // Menu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(243, 241, 238);
             ClientSize = new Size(862, 445);
             Controls.Add(btnTelaVendas);
             Controls.Add(BtnBalcao);
@@ -205,7 +214,7 @@
             Controls.Add(button1);
             Controls.Add(label1);
             Controls.Add(pictureBox1);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
+            FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Menu";
             Text = "Menu";
@@ -222,5 +231,6 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2Button BtnBalcao;
         private Guna.UI2.WinForms.Guna2Button btnTelaVendas;
+        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
     }
 }
