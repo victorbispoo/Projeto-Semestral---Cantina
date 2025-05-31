@@ -1,4 +1,6 @@
-﻿namespace Projeto_Semestral___Cantina
+﻿using Guna.UI2.WinForms;
+
+namespace Projeto_Semestral___Cantina
 {
     public partial class Form1 : Form
     {
@@ -55,7 +57,7 @@
                 {
                     total += item.Preco * item.Quantidade;
                 }
-                CtnLblTotal.Text = "Total: R$" + total.ToString("F2");
+                CtnLblTotal.Text = "R$" + total.ToString("F2");
             }
             else
             {
@@ -96,7 +98,7 @@
                     total -= produtoSelecionado.Preco;
                 }
             }
-            CtnLblTotal.Text = "Total: R$" + total.ToString("F2");
+            CtnLblTotal.Text = "R$" + total.ToString("F2");
         }
 
         private void CantBtnFin_Click(object sender, EventArgs e)
@@ -137,7 +139,8 @@
                     );
 
                     total = 0;
-                    CtnLblTotal.Text = "Total: R$0,00";
+                    CtnLblTotal.Text = "R$0,00";
+
 
                     List<Produto> produtos = new List<Produto>();
                     foreach (Produto p in CantCarrinho.Items)
@@ -169,10 +172,11 @@
 
                     CantCarrinho.Items.Clear();
                     CantCarrinho.ClearSelected();
-                    CtnLblTotal.Text = "Total: R$0,00";
+                    CtnLblTotal.Text = "R$0,00";
                 }
                 else
                 {
+                    
                     MessageBox.Show("Operação cancelada!", "Cancelado", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
@@ -190,7 +194,7 @@
             CantCarrinho.Items.Clear();
             CantCarrinho.ClearSelected();
             total = 0;
-            CtnLblTotal.Text = "Total: R$" + total.ToString("F2");
+            CtnLblTotal.Text = "R$" + total.ToString("F2");
         }
 
         private void BtnVoltar_Click(object sender, EventArgs e)

@@ -12,6 +12,7 @@ namespace Projeto_Semestral___Cantina
 {
     public partial class TelaoRetirada : Form
     {
+        private Guna.UI2.WinForms.Guna2Transition transition;
         public TelaoRetirada()
         {
             InitializeComponent();
@@ -19,7 +20,6 @@ namespace Projeto_Semestral___Cantina
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
         }
 
         private void TelaoRetirada_Load(object sender, EventArgs e)
@@ -37,12 +37,13 @@ namespace Projeto_Semestral___Cantina
             }
             foreach (Pedido pedido in PersistenciaPedido.pedidosEntregues)
             {
-                listPedidosEntregues.Items.Add($"ID: {pedido.Id} - Cliente:  {pedido.NomeCliente}  - Tipo:  {pedido.TipoPedido}");
+                listPedidosEntregues.Items.Add($"ID: {pedido.Id} - Cliente: {pedido.NomeCliente} - Tipo: {pedido.TipoPedido}");
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+
             Menu menu = new Menu();
             menu.Show();
             this.Hide();

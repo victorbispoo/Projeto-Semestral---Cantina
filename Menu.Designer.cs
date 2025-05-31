@@ -64,10 +64,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Microsoft Sans Serif", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Inter", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(353, 102);
             label1.Name = "label1";
-            label1.Size = new Size(170, 31);
+            label1.Size = new Size(174, 33);
             label1.TabIndex = 7;
             label1.Text = "Menu Inicial";
             // 
@@ -85,7 +85,7 @@
             button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             button1.FillColor = SystemColors.Window;
             button1.Font = new Font("Inter", 18F, FontStyle.Bold);
-            button1.ForeColor = Color.Black;
+            button1.ForeColor = Color.FromArgb(17, 25, 12);
             button1.Image = Properties.Resources.telão;
             button1.Location = new Point(574, 155);
             button1.Name = "button1";
@@ -110,7 +110,7 @@
             btnEstoque.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnEstoque.FillColor = SystemColors.Window;
             btnEstoque.Font = new Font("Inter", 18F, FontStyle.Bold);
-            btnEstoque.ForeColor = Color.Black;
+            btnEstoque.ForeColor = Color.FromArgb(17, 25, 12);
             btnEstoque.Image = Properties.Resources.estoque;
             btnEstoque.Location = new Point(293, 277);
             btnEstoque.Name = "btnEstoque";
@@ -134,7 +134,7 @@
             guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             guna2Button1.FillColor = SystemColors.Window;
             guna2Button1.Font = new Font("Inter", 18F, FontStyle.Bold);
-            guna2Button1.ForeColor = Color.Black;
+            guna2Button1.ForeColor = Color.FromArgb(17, 25, 12);
             guna2Button1.Image = Properties.Resources.cozinha;
             guna2Button1.Location = new Point(293, 155);
             guna2Button1.Name = "guna2Button1";
@@ -159,7 +159,7 @@
             BtnBalcao.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             BtnBalcao.FillColor = SystemColors.Window;
             BtnBalcao.Font = new Font("Inter", 18F, FontStyle.Bold);
-            BtnBalcao.ForeColor = Color.Black;
+            BtnBalcao.ForeColor = Color.FromArgb(17, 25, 12);
             BtnBalcao.Image = Properties.Resources.Loja;
             BtnBalcao.Location = new Point(12, 155);
             BtnBalcao.Name = "BtnBalcao";
@@ -184,7 +184,7 @@
             btnTelaVendas.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnTelaVendas.FillColor = SystemColors.Window;
             btnTelaVendas.Font = new Font("Inter", 18F, FontStyle.Bold);
-            btnTelaVendas.ForeColor = Color.Black;
+            btnTelaVendas.ForeColor = Color.FromArgb(17, 25, 12);
             btnTelaVendas.Image = Properties.Resources.vendas;
             btnTelaVendas.Location = new Point(12, 277);
             btnTelaVendas.Name = "btnTelaVendas";
@@ -214,6 +214,7 @@
             Controls.Add(button1);
             Controls.Add(label1);
             Controls.Add(pictureBox1);
+            ForeColor = Color.FromArgb(17, 25, 12);
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Menu";

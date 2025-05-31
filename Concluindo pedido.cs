@@ -19,8 +19,8 @@ namespace Projeto_Semestral___Cantina
         public Concluindo_pedido(double total)
         {
             InitializeComponent();
-            radioButton5.Checked = true;
-            pagDebito.Checked = true;
+            gunaRbtConsumo.Checked = true;
+            Debito.Checked = true;
             totalPedido = total;
         }
 
@@ -35,11 +35,11 @@ namespace Projeto_Semestral___Cantina
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (radioButton6.Checked)
+            if (gunaRtnViagem.Checked)
             {
               tipoPedido = "Viagem";
             }
-            else if (radioButton5.Checked)
+            else if (gunaRbtConsumo.Checked)
             {
                 tipoPedido = "Consumo";
             }
@@ -49,7 +49,7 @@ namespace Projeto_Semestral___Cantina
                 return;
             }
            
-            if (pagDinheiro.Checked)
+            if (Dinheiro.Checked)
             {
                 string precoCliente = Microsoft.VisualBasic.Interaction.InputBox($"Digite o valor do pagamento\nValor a ser cobrado: R${totalPedido:F2}", "Pagamento", "Insira o valor recebido");
                 if (double.TryParse(precoCliente, out double valorRecebido))
@@ -68,19 +68,19 @@ namespace Projeto_Semestral___Cantina
                     }
                 }
             }
-            else if (pagCredito.Checked)
+            else if (Credito.Checked)
             {
                 MessageBox.Show($"Faça a cobrança de R$ {totalPedido:F2} no Crédito", "Crédito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
-            else if (pagDebito.Checked)
+            else if (Debito.Checked)
             {
                 MessageBox.Show($"Faça a cobrança de R${totalPedido:F2} no Débito", "Débito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
-            else if (pagPix.Checked)
+            else if (Pix.Checked)
             {
                 MessageBox.Show($"Faça a cobrança de R${totalPedido:F2} no Pix", "Pix", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.DialogResult = DialogResult.OK;

@@ -121,7 +121,7 @@
   <data name="btnVoltarMenu.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAABitSURBVHhe7d17
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAABitSURBVHhe7d17
         lO1lfd/x4X61XFQEo+ghTRCxsSpgg0oUWZqIFrXaoiIxJBrEGO2ylXatukTN0gQjatYiGgOCMTEKamNQ
         MdikVtGgRlBoqHIxUS6mXJSL3M7h0H6eIxLOnO/hzGVffpfXe63XP3v27JnZe9bzPLPn9/s9C5IkSZIk
         SZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIk
@@ -233,10 +233,13 @@
   <metadata name="guna2BorderlessForm1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>81</value>
+  </metadata>
   <data name="btnFinalizarPedido.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAABuwSURBVHhe7d0L
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAABuwSURBVHhe7d0L
         1H33fOfxJ3GLaIjQCq00QqkoiqEItVqjVOlMW5fRMRbVTglKu0qNWW1TqxezZly73C06RjqE0ZKRhQR1
         K1bH/V4iBIlrihAhks7nF554kv/3n/9zOZe9f7/Xe63XWlm/PP/ncs4++/c7++yzz4akbjsy7hoPi6fE
         yfH2eH+cHl//gfbfbaz9v1fHk+N34xfjOiFJkiZcm/AfGM+Pj8e/LsjH4rnxm2FBIEnSBLpGPCjas/sL
