@@ -44,7 +44,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             listBoxPedidos = new ListBox();
             labelPedidos = new Label();
-            label1 = new Label();
             listBoxComanda = new ListBox();
             listPedidosProntos = new ListBox();
             pictureBox1 = new PictureBox();
@@ -70,7 +69,7 @@
             listBoxPedidos.ItemHeight = 23;
             listBoxPedidos.Location = new Point(37, 91);
             listBoxPedidos.Name = "listBoxPedidos";
-            listBoxPedidos.Size = new Size(576, 161);
+            listBoxPedidos.Size = new Size(647, 161);
             listBoxPedidos.TabIndex = 0;
             listBoxPedidos.DrawItem += listBoxPedidos_DrawItem;
             listBoxPedidos.SelectedIndexChanged += listBoxPedidos_SelectedIndexChanged;
@@ -85,16 +84,6 @@
             labelPedidos.TabIndex = 2;
             labelPedidos.Text = "🛎️ Pedidos";
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(673, 64);
-            label1.Name = "label1";
-            label1.Size = new Size(127, 24);
-            label1.TabIndex = 3;
-            label1.Text = "🗒️ Comanda";
-            // 
             // listBoxComanda
             // 
             listBoxComanda.BorderStyle = BorderStyle.None;
@@ -102,10 +91,11 @@
             listBoxComanda.Font = new Font("Inter", 12F, FontStyle.Bold);
             listBoxComanda.ForeColor = Color.FromArgb(17, 25, 12);
             listBoxComanda.FormattingEnabled = true;
-            listBoxComanda.ItemHeight = 23;
-            listBoxComanda.Location = new Point(673, 91);
+            listBoxComanda.ItemHeight = 19;
+            listBoxComanda.Location = new Point(724, 91);
             listBoxComanda.Name = "listBoxComanda";
-            listBoxComanda.Size = new Size(346, 161);
+            listBoxComanda.SelectionMode = SelectionMode.None;
+            listBoxComanda.Size = new Size(346, 152);
             listBoxComanda.TabIndex = 4;
             listBoxComanda.SelectedIndexChanged += listBoxComanda_SelectedIndexChanged;
             // 
@@ -120,7 +110,8 @@
             listPedidosProntos.ItemHeight = 23;
             listPedidosProntos.Location = new Point(37, 295);
             listPedidosProntos.Name = "listPedidosProntos";
-            listPedidosProntos.Size = new Size(576, 92);
+            listPedidosProntos.SelectionMode = SelectionMode.None;
+            listPedidosProntos.Size = new Size(647, 92);
             listPedidosProntos.TabIndex = 9;
             listPedidosProntos.DrawItem += listPedidosProntos_DrawItem;
             // 
@@ -139,12 +130,12 @@
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
             label3.FlatStyle = FlatStyle.Flat;
-            label3.Font = new Font("Agrandir Narrow", 27.75F, FontStyle.Bold);
+            label3.Font = new Font("Microsoft Sans Serif", 27.75F, FontStyle.Bold);
             label3.ForeColor = Color.FromArgb(17, 25, 12);
             label3.Location = new Point(160, 3);
             label3.Name = "label3";
             label3.Padding = new Padding(1);
-            label3.Size = new Size(169, 52);
+            label3.Size = new Size(187, 44);
             label3.TabIndex = 18;
             label3.Text = "| Cozinha";
             // 
@@ -163,11 +154,11 @@
             btnFinalizarPedido.Font = new Font("Inter", 13.75F, FontStyle.Bold);
             btnFinalizarPedido.ForeColor = Color.FromArgb(17, 25, 12);
             btnFinalizarPedido.Image = Properties.Resources.check_positivo;
-            btnFinalizarPedido.Location = new Point(673, 340);
+            btnFinalizarPedido.Location = new Point(724, 319);
             btnFinalizarPedido.Name = "btnFinalizarPedido";
             btnFinalizarPedido.PressedColor = SystemColors.Control;
             btnFinalizarPedido.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnFinalizarPedido.Size = new Size(346, 47);
+            btnFinalizarPedido.Size = new Size(346, 68);
             btnFinalizarPedido.TabIndex = 20;
             btnFinalizarPedido.Text = " Finalizar Pedido";
             btnFinalizarPedido.Click += BtnFinalizar_Click;
@@ -186,11 +177,11 @@
             btnPreparar.Font = new Font("Inter", 13.75F, FontStyle.Bold);
             btnPreparar.ForeColor = Color.FromArgb(17, 25, 12);
             btnPreparar.Image = Properties.Resources.ampulheta;
-            btnPreparar.Location = new Point(673, 287);
+            btnPreparar.Location = new Point(724, 249);
             btnPreparar.Name = "btnPreparar";
             btnPreparar.PressedColor = Color.FromArgb(230, 255, 0);
             btnPreparar.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnPreparar.Size = new Size(346, 47);
+            btnPreparar.Size = new Size(346, 64);
             btnPreparar.TabIndex = 21;
             btnPreparar.Text = " Preparar Pedido";
             btnPreparar.Click += BtnPreparar_Click;
@@ -264,7 +255,7 @@
             guna2TextBox1.ForeColor = Color.FromArgb(17, 25, 12);
             guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox1.IconLeft = Properties.Resources.Recibo;
-            guna2TextBox1.Location = new Point(673, 59);
+            guna2TextBox1.Location = new Point(724, 59);
             guna2TextBox1.Margin = new Padding(9, 8, 9, 8);
             guna2TextBox1.Name = "guna2TextBox1";
             guna2TextBox1.PlaceholderText = "";
@@ -324,7 +315,6 @@
             Controls.Add(pictureBox1);
             Controls.Add(listPedidosProntos);
             Controls.Add(listBoxComanda);
-            Controls.Add(label1);
             Controls.Add(labelPedidos);
             Controls.Add(listBoxPedidos);
             Controls.Add(label3);
@@ -343,7 +333,6 @@
 
         private ListBox listBoxPedidos;
         private Label labelPedidos;
-        private Label label1;
         private ListBox listBoxComanda;
         private ListBox listPedidosProntos;
         private PictureBox pictureBox1;

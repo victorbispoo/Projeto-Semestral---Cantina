@@ -1,4 +1,5 @@
 ﻿using Guna.UI2.WinForms;
+using MaterialSkin.Controls;
 
 namespace Projeto_Semestral___Cantina
 {
@@ -8,7 +9,80 @@ namespace Projeto_Semestral___Cantina
         {
             InitializeComponent();
         }
+        public static void alterarFundodaLista(object sender, DrawItemEventArgs e)
+        {
+            {
+                if (e.Index < 0 || ((ListBox)sender).Items.Count == 0) return;
 
+                // Define o fundo: LightGray para seleção, fundo padrão para não selecionado
+                if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+                {
+                    e.Graphics.FillRectangle(new SolidBrush(Color.LightGray), e.Bounds);
+                }
+                else
+                {
+                    e.Graphics.FillRectangle(new SolidBrush(((ListBox)sender).BackColor), e.Bounds);
+                }
+
+                string itemText = ((ListBox)sender).Items[e.Index].ToString();
+                string status = "";
+                Color statusColor = Color.Black;
+
+                // Identifica o status e define a cor
+                if (itemText.Contains("Pendente"))
+                {
+                    status = "Pendente";
+                    statusColor = Color.Orange;
+                }
+                else if (itemText.Contains("Em preparo"))
+                {
+                    status = "Em preparo";
+                    statusColor = Color.Yellow;
+                }
+                else if (itemText.Contains("Pronto"))
+                {
+                    status = "Pronto";
+                    statusColor = Color.Green;
+                }
+
+                // Se não houver status, desenha tudo em preto
+                if (string.IsNullOrEmpty(status))
+                {
+                    using (Brush blackBrush = new SolidBrush(Color.Black))
+                    {
+                        e.Graphics.DrawString(itemText, e.Font, blackBrush, e.Bounds);
+                    }
+
+                    return;
+                }
+
+                // Divide o texto: antes, status e depois
+                int statusIndex = itemText.IndexOf(status);
+                string beforeStatus = statusIndex > 0 ? itemText.Substring(0, statusIndex) : "";
+                string afterStatus = statusIndex + status.Length < itemText.Length ? itemText.Substring(statusIndex + status.Length) : "";
+
+                // Desenha cada parte
+                float x = e.Bounds.X;
+                float y = e.Bounds.Y;
+                using (Brush blackBrush = new SolidBrush(Color.Black))
+                using (Brush statusBrush = new SolidBrush(statusColor))
+                {
+                    if (!string.IsNullOrEmpty(beforeStatus))
+                    {
+                        e.Graphics.DrawString(beforeStatus, e.Font, blackBrush, x, y);
+                        x += e.Graphics.MeasureString(beforeStatus, e.Font).Width;
+                    }
+                    e.Graphics.DrawString(status, e.Font, statusBrush, x, y);
+                    x += e.Graphics.MeasureString(status, e.Font).Width;
+                    if (!string.IsNullOrEmpty(afterStatus))
+                    {
+                        e.Graphics.DrawString(afterStatus, e.Font, blackBrush, x, y);
+                    }
+                }
+
+
+            }
+        }
         private void CantCardapio_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -16,17 +90,17 @@ namespace Projeto_Semestral___Cantina
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            CantCardapio.Items.Add(new Produto(1, "Pão de Queijo", 3.50, 0,false));
-            CantCardapio.Items.Add(new Produto(2, "Coxinha", 5.00, 0,false));
+
+            CantCardapio.Items.Add(new Produto(1, "Pão de Queijo", 3.50, 0, false));
+            CantCardapio.Items.Add(new Produto(2, "Coxinha", 5.00, 0, false));
             CantCardapio.Items.Add(new Produto(3, "Pastel de Carne", 6.00, 0, true));
             CantCardapio.Items.Add(new Produto(4, "Pastel de  Queijo", 5.50, 0, true));
             CantCardapio.Items.Add(new Produto(5, "Suco Natural", 4.00, 0, false));
             CantCardapio.Items.Add(new Produto(6, "Refrigerante Lata", 4.50, 0, false));
             CantCardapio.Items.Add(new Produto(7, "Hamburguer Simples", 8.00, 0, true));
-            CantCardapio.Items.Add(new Produto(8, "Hamburguer com Queijo", 9.00, 0,true));
-            CantCardapio.Items.Add(new Produto(9, "X-Tudo", 12.00, 0,true));
+            CantCardapio.Items.Add(new Produto(8, "Hamburguer com Queijo", 9.00, 0, true));
+            CantCardapio.Items.Add(new Produto(9, "X-Tudo", 12.00, 0, true));
             CantCardapio.Items.Add(new Produto(10, "Água Mineral", 2.50, 0, false));
-            int idProduto= CantCardapio.Items.Count+ 1;
         }
         public double total { get; private set; } = 0;
         private void CantBtnAdd_Click(object sender, EventArgs e)
@@ -128,9 +202,9 @@ namespace Projeto_Semestral___Cantina
                     string mensagem = "Produtos:\n";
                     foreach (Produto produto in CantCarrinho.Items)
                     {
-                        mensagem += $"{produto.Nome} - R${produto.Preco:F2} - Qtd {produto.Quantidade}\n";
+                        mensagem += $"{produto.Nome} | R${produto.Preco:F2} | Qtd {produto.Quantidade}\n";
                     }
-
+                    
                     MessageBox.Show(
                         $"{horarioPedido}\nExtrato do pedido de {nomeCliente} - {tipodePedido}\n{mensagem}\nTotal: R${total:F2}\nTroco: R${troco:F2}",
                         "Extrato",
@@ -154,6 +228,7 @@ namespace Projeto_Semestral___Cantina
 
                     int novoId = PersistenciaPedido.pedidos
                         .Concat(PersistenciaPedido.pedidosProntos)
+                        .Concat(PersistenciaPedido.pedidosEntregues)
                         .Select(p => p.Id)
                         .DefaultIfEmpty(0)
                         .Max() + 1;
@@ -172,11 +247,10 @@ namespace Projeto_Semestral___Cantina
 
                     CantCarrinho.Items.Clear();
                     CantCarrinho.ClearSelected();
-                    CtnLblTotal.Text = "R$0,00";
                 }
                 else
                 {
-                    
+
                     MessageBox.Show("Operação cancelada!", "Cancelado", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
@@ -202,6 +276,16 @@ namespace Projeto_Semestral___Cantina
             Menu menu = new Menu();
             menu.Show();
             this.Hide();
+        }
+
+        private void CantCardapio_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            alterarFundodaLista(sender, e);
+        }
+
+        private void CantCarrinho_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            alterarFundodaLista(sender, e);
         }
     }
 }

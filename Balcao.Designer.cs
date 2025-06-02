@@ -66,8 +66,7 @@
             listBoxPedidospraEntrega.Location = new Point(47, 108);
             listBoxPedidospraEntrega.Margin = new Padding(4);
             listBoxPedidospraEntrega.Name = "listBoxPedidospraEntrega";
-            listBoxPedidospraEntrega.SelectionMode = SelectionMode.MultiSimple;
-            listBoxPedidospraEntrega.Size = new Size(544, 161);
+            listBoxPedidospraEntrega.Size = new Size(608, 161);
             listBoxPedidospraEntrega.TabIndex = 1;
             listBoxPedidospraEntrega.DrawItem += listBoxPedidospraEntrega_DrawItem;
             listBoxPedidospraEntrega.SelectedIndexChanged += listBoxPedidospraEntrega_SelectedIndexChanged;
@@ -80,11 +79,12 @@
             listBoxComanda.Font = new Font("Inter", 12F, FontStyle.Bold);
             listBoxComanda.ForeColor = Color.FromArgb(17, 25, 12);
             listBoxComanda.FormattingEnabled = true;
-            listBoxComanda.ItemHeight = 23;
-            listBoxComanda.Location = new Point(656, 108);
+            listBoxComanda.ItemHeight = 19;
+            listBoxComanda.Location = new Point(711, 108);
             listBoxComanda.Margin = new Padding(4);
             listBoxComanda.Name = "listBoxComanda";
-            listBoxComanda.Size = new Size(417, 161);
+            listBoxComanda.SelectionMode = SelectionMode.None;
+            listBoxComanda.Size = new Size(350, 171);
             listBoxComanda.TabIndex = 5;
             // 
             // listBoxPedidosEntregues
@@ -100,7 +100,8 @@
             listBoxPedidosEntregues.Location = new Point(47, 304);
             listBoxPedidosEntregues.Margin = new Padding(4);
             listBoxPedidosEntregues.Name = "listBoxPedidosEntregues";
-            listBoxPedidosEntregues.Size = new Size(544, 92);
+            listBoxPedidosEntregues.SelectionMode = SelectionMode.None;
+            listBoxPedidosEntregues.Size = new Size(608, 92);
             listBoxPedidosEntregues.TabIndex = 10;
             listBoxPedidosEntregues.DrawItem += listBoxPedidosEntregues_DrawItem;
             // 
@@ -120,11 +121,11 @@
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
             label3.FlatStyle = FlatStyle.Flat;
-            label3.Font = new Font("Agrandir Narrow", 27.75F, FontStyle.Bold);
-            label3.Location = new Point(204, 11);
+            label3.Font = new Font("Microsoft Sans Serif", 27.75F, FontStyle.Bold);
+            label3.Location = new Point(196, 17);
             label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
-            label3.Size = new Size(149, 50);
+            label3.Size = new Size(161, 42);
             label3.TabIndex = 17;
             label3.Text = "| Balcão";
             // 
@@ -167,12 +168,12 @@
             btnFinalizarPedido.Font = new Font("Inter", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnFinalizarPedido.ForeColor = Color.FromArgb(17, 25, 12);
             btnFinalizarPedido.Image = (Image)resources.GetObject("btnFinalizarPedido.Image");
-            btnFinalizarPedido.Location = new Point(656, 314);
+            btnFinalizarPedido.Location = new Point(711, 304);
             btnFinalizarPedido.Margin = new Padding(4);
             btnFinalizarPedido.Name = "btnFinalizarPedido";
             btnFinalizarPedido.PressedColor = SystemColors.Control;
             btnFinalizarPedido.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnFinalizarPedido.Size = new Size(417, 92);
+            btnFinalizarPedido.Size = new Size(350, 92);
             btnFinalizarPedido.TabIndex = 19;
             btnFinalizarPedido.Text = " Entregar Pedido";
             btnFinalizarPedido.Click += button1_Click;
@@ -189,17 +190,17 @@
             guna2TextBox1.Enabled = false;
             guna2TextBox1.FillColor = SystemColors.Control;
             guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold);
+            guna2TextBox1.Font = new Font("Inter", 14F, FontStyle.Bold);
             guna2TextBox1.ForeColor = Color.FromArgb(17, 25, 12);
             guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox1.IconLeft = Properties.Resources.Recibo;
-            guna2TextBox1.Location = new Point(656, 72);
-            guna2TextBox1.Margin = new Padding(5);
+            guna2TextBox1.Location = new Point(711, 75);
+            guna2TextBox1.Margin = new Padding(8, 7, 8, 7);
             guna2TextBox1.Name = "guna2TextBox1";
             guna2TextBox1.PlaceholderText = "";
             guna2TextBox1.SelectedText = "";
             guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2TextBox1.Size = new Size(141, 27);
+            guna2TextBox1.Size = new Size(139, 27);
             guna2TextBox1.TabIndex = 20;
             guna2TextBox1.TabStop = false;
             // 
@@ -218,18 +219,18 @@
             guna2TextBox2.Enabled = false;
             guna2TextBox2.FillColor = SystemColors.Control;
             guna2TextBox2.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox2.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold);
+            guna2TextBox2.Font = new Font("Inter", 14.25F, FontStyle.Bold);
             guna2TextBox2.ForeColor = Color.FromArgb(17, 25, 12);
             guna2TextBox2.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox2.IconLeft = Properties.Resources.sino;
-            guna2TextBox2.Location = new Point(47, 72);
-            guna2TextBox2.Margin = new Padding(5);
+            guna2TextBox2.Location = new Point(47, 75);
+            guna2TextBox2.Margin = new Padding(9, 8, 9, 8);
             guna2TextBox2.Name = "guna2TextBox2";
             guna2TextBox2.PlaceholderForeColor = Color.Transparent;
             guna2TextBox2.PlaceholderText = "";
             guna2TextBox2.SelectedText = "";
             guna2TextBox2.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2TextBox2.Size = new Size(248, 27);
+            guna2TextBox2.Size = new Size(242, 27);
             guna2TextBox2.TabIndex = 21;
             guna2TextBox2.TabStop = false;
             // 
@@ -245,17 +246,17 @@
             guna2TextBox3.Enabled = false;
             guna2TextBox3.FillColor = SystemColors.Control;
             guna2TextBox3.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox3.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold);
+            guna2TextBox3.Font = new Font("Inter", 14.25F, FontStyle.Bold);
             guna2TextBox3.ForeColor = Color.FromArgb(17, 25, 12);
             guna2TextBox3.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox3.IconLeft = Properties.Resources.pedidos_prontos;
-            guna2TextBox3.Location = new Point(47, 268);
-            guna2TextBox3.Margin = new Padding(5);
+            guna2TextBox3.Location = new Point(47, 270);
+            guna2TextBox3.Margin = new Padding(9, 8, 9, 8);
             guna2TextBox3.Name = "guna2TextBox3";
             guna2TextBox3.PlaceholderText = "";
             guna2TextBox3.SelectedText = "";
             guna2TextBox3.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            guna2TextBox3.Size = new Size(292, 27);
+            guna2TextBox3.Size = new Size(294, 32);
             guna2TextBox3.TabIndex = 22;
             guna2TextBox3.TabStop = false;
             // 
@@ -267,9 +268,9 @@
             // 
             // Balcao
             // 
-            AutoScaleDimensions = new SizeF(10F, 23F);
+            AutoScaleDimensions = new SizeF(10F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1122, 454);
+            ClientSize = new Size(1106, 454);
             Controls.Add(guna2TextBox3);
             Controls.Add(guna2TextBox1);
             Controls.Add(btnFinalizarPedido);
