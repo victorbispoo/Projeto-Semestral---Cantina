@@ -67,7 +67,7 @@
             label1.Font = new Font("Inter", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(353, 102);
             label1.Name = "label1";
-            label1.Size = new Size(174, 33);
+            label1.Size = new Size(176, 39);
             label1.TabIndex = 7;
             label1.Text = "Menu Inicial";
             // 
@@ -75,7 +75,7 @@
             // 
             button1.Animated = true;
             button1.BorderColor = SystemColors.Window;
-            button1.BorderRadius = 8;
+            button1.BorderRadius = 15;
             button1.BorderThickness = 1;
             button1.Cursor = Cursors.Hand;
             button1.CustomizableEdges = customizableEdges1;
@@ -99,22 +99,31 @@
             // btnEstoque
             // 
             btnEstoque.Animated = true;
+            btnEstoque.AnimatedGIF = true;
+            btnEstoque.BackColor = Color.Transparent;
             btnEstoque.BorderColor = SystemColors.Window;
-            btnEstoque.BorderRadius = 8;
+            btnEstoque.BorderRadius = 15;
             btnEstoque.BorderThickness = 1;
-            btnEstoque.Cursor = Cursors.Hand;
+            btnEstoque.CausesValidation = false;
+            btnEstoque.Cursor = Cursors.No;
+            btnEstoque.CustomImages.HoveredImage = Properties.Resources._2356480_stock_photo_smiley;
+            btnEstoque.CustomImages.ImageAlign = HorizontalAlignment.Center;
+            btnEstoque.CustomImages.ImageSize = new Size(200, 200);
             btnEstoque.CustomizableEdges = customizableEdges3;
-            btnEstoque.DisabledState.BorderColor = Color.DarkGray;
+            btnEstoque.DisabledState.BorderColor = SystemColors.Window;
             btnEstoque.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnEstoque.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnEstoque.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnEstoque.DisabledState.FillColor = Color.White;
+            btnEstoque.DisabledState.ForeColor = Color.FromArgb(17, 25, 12);
+            btnEstoque.DisabledState.Image = Properties.Resources._2356480_stock_photo_smiley;
             btnEstoque.FillColor = SystemColors.Window;
+            btnEstoque.FocusedColor = Color.Red;
             btnEstoque.Font = new Font("Inter", 18F, FontStyle.Bold);
             btnEstoque.ForeColor = Color.FromArgb(17, 25, 12);
+            btnEstoque.HoverState.Image = Properties.Resources._2356480_stock_photo_smiley;
             btnEstoque.Image = Properties.Resources.estoque;
             btnEstoque.Location = new Point(293, 277);
             btnEstoque.Name = "btnEstoque";
-            btnEstoque.PressedColor = Color.FromArgb(230, 255, 0);
+            btnEstoque.PressedColor = Color.Red;
             btnEstoque.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnEstoque.Size = new Size(275, 84);
             btnEstoque.TabIndex = 21;
@@ -124,7 +133,7 @@
             // 
             guna2Button1.Animated = true;
             guna2Button1.BorderColor = SystemColors.Window;
-            guna2Button1.BorderRadius = 8;
+            guna2Button1.BorderRadius = 15;
             guna2Button1.BorderThickness = 1;
             guna2Button1.Cursor = Cursors.Hand;
             guna2Button1.CustomizableEdges = customizableEdges5;
@@ -149,7 +158,7 @@
             // 
             BtnBalcao.Animated = true;
             BtnBalcao.BorderColor = SystemColors.Window;
-            BtnBalcao.BorderRadius = 8;
+            BtnBalcao.BorderRadius = 15;
             BtnBalcao.BorderThickness = 1;
             BtnBalcao.Cursor = Cursors.Hand;
             BtnBalcao.CustomizableEdges = customizableEdges7;
@@ -174,7 +183,7 @@
             // 
             btnTelaVendas.Animated = true;
             btnTelaVendas.BorderColor = SystemColors.Window;
-            btnTelaVendas.BorderRadius = 8;
+            btnTelaVendas.BorderRadius = 15;
             btnTelaVendas.BorderThickness = 1;
             btnTelaVendas.Cursor = Cursors.Hand;
             btnTelaVendas.CustomizableEdges = customizableEdges9;
@@ -210,10 +219,10 @@
             Controls.Add(btnTelaVendas);
             Controls.Add(BtnBalcao);
             Controls.Add(guna2Button1);
-            Controls.Add(btnEstoque);
             Controls.Add(button1);
             Controls.Add(label1);
             Controls.Add(pictureBox1);
+            Controls.Add(btnEstoque);
             ForeColor = Color.FromArgb(17, 25, 12);
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -233,5 +242,7 @@
         private Guna.UI2.WinForms.Guna2Button BtnBalcao;
         private Guna.UI2.WinForms.Guna2Button btnTelaVendas;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
+        private Guna.UI2.WinForms.Guna2WinProgressIndicator guna2WinProgressIndicator1;
+        private PictureBox pictureBox2;
     }
 }

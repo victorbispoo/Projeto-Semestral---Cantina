@@ -25,7 +25,7 @@ namespace Projeto_Semestral___Cantina
 
         public override string ToString()
         {
-            return $"Pedido ID: {Id} - Cliente: {NomeCliente}  - Tipo: {TipoPedido} - Status: {Status} -  {DataHora:HH:mm}";
+            return $"Pedido ID: {Id} | Cliente: {NomeCliente}  | Tipo: {TipoPedido} | Status: {Status} |  {DataHora:HH:mm}";
         }
     }
 }

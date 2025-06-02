@@ -29,27 +29,25 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            Guna.UI2.AnimatorNS.Animation animation1 = new Guna.UI2.AnimatorNS.Animation();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Concluindo_pedido));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.AnimatorNS.Animation animation1 = new Guna.UI2.AnimatorNS.Animation();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Concluindo_pedido));
             pictureBox1 = new PictureBox();
-            guna2ResizeForm1 = new Guna.UI2.WinForms.Guna2ResizeForm(components);
-            guna2Transition1 = new Guna.UI2.WinForms.Guna2Transition();
             guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             guna2ImageRadioButton4 = new Guna.UI2.WinForms.Guna2ImageRadioButton();
             guna2ImageRadioButton3 = new Guna.UI2.WinForms.Guna2ImageRadioButton();
@@ -67,6 +65,8 @@
             guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
             btnFinalizarPedido = new Guna.UI2.WinForms.Guna2Button();
+            guna2Transition1 = new Guna.UI2.WinForms.Guna2Transition();
+            guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             guna2GroupBox1.SuspendLayout();
             guna2GroupBox2.SuspendLayout();
@@ -76,41 +76,17 @@
             // 
             guna2Transition1.SetDecoration(pictureBox1, Guna.UI2.AnimatorNS.DecorationType.None);
             pictureBox1.Image = Properties.Resources.bolt;
-            pictureBox1.Location = new Point(28, 29);
+            pictureBox1.Location = new Point(35, 35);
             pictureBox1.Margin = new Padding(5);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(152, 49);
+            pictureBox1.Size = new Size(175, 49);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 12;
             pictureBox1.TabStop = false;
             // 
-            // guna2ResizeForm1
-            // 
-            guna2ResizeForm1.TargetForm = this;
-            // 
-            // guna2Transition1
-            // 
-            guna2Transition1.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = (PointF)resources.GetObject("animation1.BlindCoeff");
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = (PointF)resources.GetObject("animation1.MosaicCoeff");
-            animation1.MosaicShift = (PointF)resources.GetObject("animation1.MosaicShift");
-            animation1.MosaicSize = 0;
-            animation1.Padding = new Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = (PointF)resources.GetObject("animation1.ScaleCoeff");
-            animation1.SlideCoeff = (PointF)resources.GetObject("animation1.SlideCoeff");
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            guna2Transition1.DefaultAnimation = animation1;
-            // 
             // guna2GroupBox1
             // 
-            guna2GroupBox1.BorderRadius = 8;
+            guna2GroupBox1.BorderRadius = 15;
             guna2GroupBox1.BorderThickness = 0;
             guna2GroupBox1.Controls.Add(guna2ImageRadioButton4);
             guna2GroupBox1.Controls.Add(guna2ImageRadioButton3);
@@ -141,7 +117,7 @@
             guna2ImageRadioButton4.Image = Properties.Resources.cartão;
             guna2ImageRadioButton4.ImageOffset = new Point(0, 0);
             guna2ImageRadioButton4.ImageRotate = 0F;
-            guna2ImageRadioButton4.Location = new Point(72, 40);
+            guna2ImageRadioButton4.Location = new Point(72, 44);
             guna2ImageRadioButton4.Name = "guna2ImageRadioButton4";
             guna2ImageRadioButton4.ShadowDecoration.CustomizableEdges = customizableEdges1;
             guna2ImageRadioButton4.Size = new Size(24, 24);
@@ -157,7 +133,7 @@
             guna2ImageRadioButton3.Image = Properties.Resources.dinheiro;
             guna2ImageRadioButton3.ImageOffset = new Point(0, 0);
             guna2ImageRadioButton3.ImageRotate = 0F;
-            guna2ImageRadioButton3.Location = new Point(70, 102);
+            guna2ImageRadioButton3.Location = new Point(70, 106);
             guna2ImageRadioButton3.Name = "guna2ImageRadioButton3";
             guna2ImageRadioButton3.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2ImageRadioButton3.Size = new Size(24, 24);
@@ -173,7 +149,7 @@
             guna2ImageRadioButton2.Image = Properties.Resources.cartão;
             guna2ImageRadioButton2.ImageOffset = new Point(0, 0);
             guna2ImageRadioButton2.ImageRotate = 0F;
-            guna2ImageRadioButton2.Location = new Point(301, 40);
+            guna2ImageRadioButton2.Location = new Point(301, 44);
             guna2ImageRadioButton2.Name = "guna2ImageRadioButton2";
             guna2ImageRadioButton2.ShadowDecoration.CustomizableEdges = customizableEdges3;
             guna2ImageRadioButton2.Size = new Size(24, 24);
@@ -183,13 +159,14 @@
             // guna2ImageRadioButton1
             // 
             guna2ImageRadioButton1.BackColor = Color.Transparent;
+            guna2ImageRadioButton1.CausesValidation = false;
             guna2ImageRadioButton1.CheckedState.Image = (Image)resources.GetObject("resource.Image3");
             guna2Transition1.SetDecoration(guna2ImageRadioButton1, Guna.UI2.AnimatorNS.DecorationType.None);
             guna2ImageRadioButton1.Enabled = false;
             guna2ImageRadioButton1.Image = Properties.Resources.icons8_foto_480;
             guna2ImageRadioButton1.ImageOffset = new Point(0, 0);
             guna2ImageRadioButton1.ImageRotate = 0F;
-            guna2ImageRadioButton1.Location = new Point(301, 102);
+            guna2ImageRadioButton1.Location = new Point(301, 106);
             guna2ImageRadioButton1.Name = "guna2ImageRadioButton1";
             guna2ImageRadioButton1.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2ImageRadioButton1.Size = new Size(24, 24);
@@ -211,7 +188,7 @@
             Pix.ForeColor = Color.FromArgb(17, 25, 12);
             Pix.Location = new Point(279, 102);
             Pix.Name = "Pix";
-            Pix.Size = new Size(83, 27);
+            Pix.Size = new Size(85, 31);
             Pix.TabIndex = 19;
             Pix.Text = "       Pix";
             Pix.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
@@ -235,7 +212,7 @@
             Dinheiro.ForeColor = Color.FromArgb(17, 25, 12);
             Dinheiro.Location = new Point(50, 102);
             Dinheiro.Name = "Dinheiro";
-            Dinheiro.Size = new Size(134, 27);
+            Dinheiro.Size = new Size(136, 31);
             Dinheiro.TabIndex = 18;
             Dinheiro.Text = "       Dinheiro";
             Dinheiro.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
@@ -259,7 +236,7 @@
             Credito.ForeColor = Color.FromArgb(17, 25, 12);
             Credito.Location = new Point(279, 40);
             Credito.Name = "Credito";
-            Credito.Size = new Size(124, 27);
+            Credito.Size = new Size(126, 31);
             Credito.TabIndex = 17;
             Credito.Text = "       Crédito";
             Credito.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
@@ -283,7 +260,7 @@
             Debito.ForeColor = Color.FromArgb(17, 25, 12);
             Debito.Location = new Point(50, 40);
             Debito.Name = "Debito";
-            Debito.Size = new Size(116, 27);
+            Debito.Size = new Size(118, 31);
             Debito.TabIndex = 16;
             Debito.Text = "       Débito";
             Debito.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
@@ -294,20 +271,20 @@
             // 
             // guna2GroupBox2
             // 
-            guna2GroupBox2.BorderRadius = 8;
+            guna2GroupBox2.BorderRadius = 15;
             guna2GroupBox2.BorderThickness = 0;
             guna2GroupBox2.Controls.Add(guna2ImageRadioButton5);
             guna2GroupBox2.Controls.Add(guna2ImageRadioButton6);
             guna2GroupBox2.Controls.Add(gunaRtnViagem);
             guna2GroupBox2.Controls.Add(gunaRbtConsumo);
             guna2GroupBox2.CustomBorderColor = Color.Transparent;
-            guna2GroupBox2.CustomizableEdges = customizableEdges15;
+            guna2GroupBox2.CustomizableEdges = customizableEdges9;
             guna2Transition1.SetDecoration(guna2GroupBox2, Guna.UI2.AnimatorNS.DecorationType.None);
             guna2GroupBox2.Font = new Font("Segoe UI", 9F);
             guna2GroupBox2.ForeColor = Color.Transparent;
             guna2GroupBox2.Location = new Point(575, 172);
             guna2GroupBox2.Name = "guna2GroupBox2";
-            guna2GroupBox2.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            guna2GroupBox2.ShadowDecoration.CustomizableEdges = customizableEdges10;
             guna2GroupBox2.Size = new Size(312, 168);
             guna2GroupBox2.TabIndex = 24;
             guna2GroupBox2.Text = "guna2GroupBox2";
@@ -321,9 +298,9 @@
             guna2ImageRadioButton5.Image = Properties.Resources.land_layer_location;
             guna2ImageRadioButton5.ImageOffset = new Point(0, 0);
             guna2ImageRadioButton5.ImageRotate = 0F;
-            guna2ImageRadioButton5.Location = new Point(72, 40);
+            guna2ImageRadioButton5.Location = new Point(72, 43);
             guna2ImageRadioButton5.Name = "guna2ImageRadioButton5";
-            guna2ImageRadioButton5.ShadowDecoration.CustomizableEdges = customizableEdges13;
+            guna2ImageRadioButton5.ShadowDecoration.CustomizableEdges = customizableEdges7;
             guna2ImageRadioButton5.Size = new Size(24, 24);
             guna2ImageRadioButton5.TabIndex = 23;
             guna2ImageRadioButton5.TabStop = false;
@@ -337,9 +314,9 @@
             guna2ImageRadioButton6.Image = Properties.Resources.plane;
             guna2ImageRadioButton6.ImageOffset = new Point(0, 0);
             guna2ImageRadioButton6.ImageRotate = 0F;
-            guna2ImageRadioButton6.Location = new Point(70, 102);
+            guna2ImageRadioButton6.Location = new Point(70, 105);
             guna2ImageRadioButton6.Name = "guna2ImageRadioButton6";
-            guna2ImageRadioButton6.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            guna2ImageRadioButton6.ShadowDecoration.CustomizableEdges = customizableEdges8;
             guna2ImageRadioButton6.Size = new Size(24, 24);
             guna2ImageRadioButton6.TabIndex = 22;
             guna2ImageRadioButton6.TabStop = false;
@@ -359,7 +336,7 @@
             gunaRtnViagem.ForeColor = Color.FromArgb(17, 25, 12);
             gunaRtnViagem.Location = new Point(50, 102);
             gunaRtnViagem.Name = "gunaRtnViagem";
-            gunaRtnViagem.Size = new Size(168, 27);
+            gunaRtnViagem.Size = new Size(170, 31);
             gunaRtnViagem.TabIndex = 18;
             gunaRtnViagem.Text = "       Para viagem";
             gunaRtnViagem.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
@@ -383,7 +360,7 @@
             gunaRbtConsumo.ForeColor = Color.FromArgb(17, 25, 12);
             gunaRbtConsumo.Location = new Point(50, 40);
             gunaRbtConsumo.Name = "gunaRbtConsumo";
-            gunaRbtConsumo.Size = new Size(193, 27);
+            gunaRbtConsumo.Size = new Size(195, 31);
             gunaRbtConsumo.TabIndex = 16;
             gunaRbtConsumo.Text = "       Consumo local";
             gunaRbtConsumo.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
@@ -424,7 +401,7 @@
             // guna2TextBox2
             // 
             guna2TextBox2.BorderColor = SystemColors.Control;
-            guna2TextBox2.CustomizableEdges = customizableEdges9;
+            guna2TextBox2.CustomizableEdges = customizableEdges13;
             guna2Transition1.SetDecoration(guna2TextBox2, Guna.UI2.AnimatorNS.DecorationType.None);
             guna2TextBox2.DefaultText = " Selecione o tipo do pedido";
             guna2TextBox2.DisabledState.BorderColor = SystemColors.Control;
@@ -445,7 +422,7 @@
             guna2TextBox2.PlaceholderText = "";
             guna2TextBox2.ReadOnly = true;
             guna2TextBox2.SelectedText = "";
-            guna2TextBox2.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            guna2TextBox2.ShadowDecoration.CustomizableEdges = customizableEdges14;
             guna2TextBox2.Size = new Size(325, 34);
             guna2TextBox2.TabIndex = 26;
             guna2TextBox2.TabStop = false;
@@ -454,9 +431,9 @@
             // 
             btnFinalizarPedido.Animated = true;
             btnFinalizarPedido.BorderColor = SystemColors.Window;
-            btnFinalizarPedido.BorderRadius = 8;
+            btnFinalizarPedido.BorderRadius = 15;
             btnFinalizarPedido.Cursor = Cursors.Hand;
-            btnFinalizarPedido.CustomizableEdges = customizableEdges7;
+            btnFinalizarPedido.CustomizableEdges = customizableEdges15;
             guna2Transition1.SetDecoration(btnFinalizarPedido, Guna.UI2.AnimatorNS.DecorationType.None);
             btnFinalizarPedido.DisabledState.BorderColor = Color.DarkGray;
             btnFinalizarPedido.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -469,11 +446,37 @@
             btnFinalizarPedido.Location = new Point(575, 366);
             btnFinalizarPedido.Name = "btnFinalizarPedido";
             btnFinalizarPedido.PressedColor = SystemColors.Control;
-            btnFinalizarPedido.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btnFinalizarPedido.ShadowDecoration.CustomizableEdges = customizableEdges16;
             btnFinalizarPedido.Size = new Size(312, 73);
             btnFinalizarPedido.TabIndex = 27;
             btnFinalizarPedido.Text = " Finalizar pagamento";
             btnFinalizarPedido.Click += button1_Click;
+            // 
+            // guna2Transition1
+            // 
+            guna2Transition1.Cursor = null;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = (PointF)resources.GetObject("animation1.BlindCoeff");
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = (PointF)resources.GetObject("animation1.MosaicCoeff");
+            animation1.MosaicShift = (PointF)resources.GetObject("animation1.MosaicShift");
+            animation1.MosaicSize = 0;
+            animation1.Padding = new Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = (PointF)resources.GetObject("animation1.ScaleCoeff");
+            animation1.SlideCoeff = (PointF)resources.GetObject("animation1.SlideCoeff");
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            guna2Transition1.DefaultAnimation = animation1;
+            // 
+            // guna2BorderlessForm1
+            // 
+            guna2BorderlessForm1.ContainerControl = this;
+            guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
+            guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
             // Concluindo_pedido
             // 
@@ -489,7 +492,7 @@
             Controls.Add(pictureBox1);
             guna2Transition1.SetDecoration(this, Guna.UI2.AnimatorNS.DecorationType.None);
             Font = new Font("Microsoft Sans Serif", 14.2499981F, FontStyle.Bold);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
+            FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(5);
             Name = "Concluindo_pedido";
@@ -505,8 +508,6 @@
 
         #endregion
         private PictureBox pictureBox1;
-        private Guna.UI2.WinForms.Guna2ResizeForm guna2ResizeForm1;
-        private Guna.UI2.WinForms.Guna2Transition guna2Transition1;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox2;
         private Guna.UI2.WinForms.Guna2ImageRadioButton guna2ImageRadioButton5;
         private Guna.UI2.WinForms.Guna2ImageRadioButton guna2ImageRadioButton6;
@@ -524,5 +525,7 @@
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private Guna.UI2.WinForms.Guna2Button btnFinalizarPedido;
+        private Guna.UI2.WinForms.Guna2Transition guna2Transition1;
+        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
     }
 }

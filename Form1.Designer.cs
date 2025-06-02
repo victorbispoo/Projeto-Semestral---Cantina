@@ -40,16 +40,15 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             CantCardapio = new ListBox();
             CantCarrinho = new ListBox();
             label1 = new Label();
-            label2 = new Label();
             CtnLblTotal = new Label();
             pictureBox1 = new PictureBox();
             label3 = new Label();
@@ -58,10 +57,10 @@
             btnFinalizarPedido = new Guna.UI2.WinForms.Guna2Button();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             btnVoltarMenu = new Guna.UI2.WinForms.Guna2Button();
-            guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
             guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
             guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
+            guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -70,10 +69,10 @@
             CantCardapio.BorderStyle = BorderStyle.None;
             CantCardapio.Font = new Font("Inter", 12F);
             CantCardapio.FormattingEnabled = true;
-            CantCardapio.ItemHeight = 19;
+            CantCardapio.ItemHeight = 23;
             CantCardapio.Location = new Point(21, 96);
             CantCardapio.Name = "CantCardapio";
-            CantCardapio.Size = new Size(369, 304);
+            CantCardapio.Size = new Size(369, 299);
             CantCardapio.TabIndex = 0;
             CantCardapio.SelectedIndexChanged += CantCardapio_SelectedIndexChanged;
             // 
@@ -82,10 +81,10 @@
             CantCarrinho.BorderStyle = BorderStyle.None;
             CantCarrinho.Font = new Font("Inter", 12F);
             CantCarrinho.FormattingEnabled = true;
-            CantCarrinho.ItemHeight = 19;
-            CantCarrinho.Location = new Point(451, 96);
+            CantCarrinho.ItemHeight = 23;
+            CantCarrinho.Location = new Point(420, 96);
             CantCarrinho.Name = "CantCarrinho";
-            CantCarrinho.Size = new Size(450, 171);
+            CantCarrinho.Size = new Size(481, 161);
             CantCarrinho.TabIndex = 1;
             // 
             // label1
@@ -100,30 +99,17 @@
             label1.TabIndex = 4;
             label1.Text = "\U0001f956 Produtos";
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold);
-            label2.ForeColor = Color.Black;
-            label2.Location = new Point(451, 57);
-            label2.Name = "label2";
-            label2.Size = new Size(132, 25);
-            label2.TabIndex = 6;
-            label2.Text = "\U0001f6d2 Carrinho";
-            label2.Click += label2_Click;
-            // 
             // CtnLblTotal
             // 
             CtnLblTotal.AutoSize = true;
             CtnLblTotal.BackColor = SystemColors.Window;
             CtnLblTotal.Font = new Font("Inter", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             CtnLblTotal.ForeColor = Color.Black;
-            CtnLblTotal.Location = new Point(754, 371);
+            CtnLblTotal.Location = new Point(754, 366);
             CtnLblTotal.Name = "CtnLblTotal";
-            CtnLblTotal.Size = new Size(68, 19);
+            CtnLblTotal.Size = new Size(69, 23);
             CtnLblTotal.TabIndex = 7;
-            CtnLblTotal.Text = "R$0.00";
+            CtnLblTotal.Text = "R$0,00";
             CtnLblTotal.Click += CtnLblTotal_Click;
             // 
             // pictureBox1
@@ -131,7 +117,7 @@
             pictureBox1.Image = Properties.Resources.bolt;
             pictureBox1.Location = new Point(21, 12);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(141, 42);
+            pictureBox1.Size = new Size(137, 42);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 8;
             pictureBox1.TabStop = false;
@@ -141,18 +127,18 @@
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
             label3.FlatStyle = FlatStyle.Flat;
-            label3.Font = new Font("Microsoft Sans Serif", 22.25F, FontStyle.Bold);
+            label3.Font = new Font("Agrandir Narrow", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.Black;
-            label3.Location = new Point(157, 12);
+            label3.Location = new Point(164, 4);
             label3.Name = "label3";
-            label3.Size = new Size(141, 36);
+            label3.Size = new Size(156, 50);
             label3.TabIndex = 18;
             label3.Text = "| Vendas";
             // 
             // CantBtnAdd
             // 
             CantBtnAdd.Animated = true;
-            CantBtnAdd.BorderRadius = 8;
+            CantBtnAdd.BorderRadius = 15;
             CantBtnAdd.Cursor = Cursors.Hand;
             CantBtnAdd.CustomizableEdges = customizableEdges1;
             CantBtnAdd.DisabledState.BorderColor = Color.DarkGray;
@@ -163,11 +149,11 @@
             CantBtnAdd.Font = new Font("Inter", 12F, FontStyle.Bold);
             CantBtnAdd.ForeColor = Color.Black;
             CantBtnAdd.Image = Properties.Resources.adicionar;
-            CantBtnAdd.Location = new Point(451, 296);
+            CantBtnAdd.Location = new Point(420, 279);
             CantBtnAdd.Name = "CantBtnAdd";
             CantBtnAdd.PressedColor = Color.FromArgb(230, 255, 0);
             CantBtnAdd.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            CantBtnAdd.Size = new Size(221, 37);
+            CantBtnAdd.Size = new Size(221, 50);
             CantBtnAdd.TabIndex = 22;
             CantBtnAdd.Text = " Adicionar";
             CantBtnAdd.Click += CantBtnAdd_Click;
@@ -175,7 +161,7 @@
             // CantBtnRemover
             // 
             CantBtnRemover.Animated = true;
-            CantBtnRemover.BorderRadius = 8;
+            CantBtnRemover.BorderRadius = 15;
             CantBtnRemover.Cursor = Cursors.Hand;
             CantBtnRemover.CustomizableEdges = customizableEdges3;
             CantBtnRemover.DisabledState.BorderColor = Color.DarkGray;
@@ -186,11 +172,11 @@
             CantBtnRemover.Font = new Font("Inter", 12F, FontStyle.Bold);
             CantBtnRemover.ForeColor = Color.Black;
             CantBtnRemover.Image = Properties.Resources.remover_carronhp;
-            CantBtnRemover.Location = new Point(680, 296);
+            CantBtnRemover.Location = new Point(680, 279);
             CantBtnRemover.Name = "CantBtnRemover";
             CantBtnRemover.PressedColor = Color.FromArgb(230, 255, 0);
             CantBtnRemover.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            CantBtnRemover.Size = new Size(221, 37);
+            CantBtnRemover.Size = new Size(221, 50);
             CantBtnRemover.TabIndex = 23;
             CantBtnRemover.Text = " Remover";
             CantBtnRemover.Click += CantBtnRemov_Click;
@@ -199,7 +185,7 @@
             // 
             btnFinalizarPedido.Animated = true;
             btnFinalizarPedido.BorderColor = SystemColors.Window;
-            btnFinalizarPedido.BorderRadius = 8;
+            btnFinalizarPedido.BorderRadius = 15;
             btnFinalizarPedido.Cursor = Cursors.Hand;
             btnFinalizarPedido.CustomizableEdges = customizableEdges5;
             btnFinalizarPedido.DisabledState.BorderColor = Color.DarkGray;
@@ -210,11 +196,11 @@
             btnFinalizarPedido.Font = new Font("Inter", 12F, FontStyle.Bold);
             btnFinalizarPedido.ForeColor = Color.Black;
             btnFinalizarPedido.Image = Properties.Resources.finalizaer;
-            btnFinalizarPedido.Location = new Point(451, 360);
+            btnFinalizarPedido.Location = new Point(420, 352);
             btnFinalizarPedido.Name = "btnFinalizarPedido";
             btnFinalizarPedido.PressedColor = SystemColors.Control;
             btnFinalizarPedido.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btnFinalizarPedido.Size = new Size(221, 40);
+            btnFinalizarPedido.Size = new Size(221, 48);
             btnFinalizarPedido.TabIndex = 24;
             btnFinalizarPedido.Text = " Meios de pagamento";
             btnFinalizarPedido.Click += CantBtnFin_Click;
@@ -244,7 +230,7 @@
             // btnVoltarMenu
             // 
             btnVoltarMenu.Animated = true;
-            btnVoltarMenu.BorderRadius = 5;
+            btnVoltarMenu.BorderRadius = 15;
             btnVoltarMenu.Cursor = Cursors.Hand;
             btnVoltarMenu.CustomizableEdges = customizableEdges9;
             btnVoltarMenu.DisabledState.BorderColor = Color.DarkGray;
@@ -264,18 +250,12 @@
             btnVoltarMenu.Text = " Voltar";
             btnVoltarMenu.Click += BtnVoltar_Click;
             // 
-            // guna2BorderlessForm1
-            // 
-            guna2BorderlessForm1.ContainerControl = this;
-            guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
-            guna2BorderlessForm1.TransparentWhileDrag = true;
-            // 
             // guna2TextBox2
             // 
             guna2TextBox2.Animated = true;
             guna2TextBox2.BorderThickness = 0;
             guna2TextBox2.CausesValidation = false;
-            guna2TextBox2.CustomizableEdges = customizableEdges13;
+            guna2TextBox2.CustomizableEdges = customizableEdges11;
             guna2TextBox2.DefaultText = " Produtos";
             guna2TextBox2.DisabledState.BorderColor = SystemColors.Control;
             guna2TextBox2.DisabledState.FillColor = SystemColors.Control;
@@ -295,7 +275,7 @@
             guna2TextBox2.PlaceholderText = "";
             guna2TextBox2.ReadOnly = true;
             guna2TextBox2.SelectedText = "";
-            guna2TextBox2.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            guna2TextBox2.ShadowDecoration.CustomizableEdges = customizableEdges12;
             guna2TextBox2.Size = new Size(248, 27);
             guna2TextBox2.TabIndex = 27;
             guna2TextBox2.TabStop = false;
@@ -305,7 +285,7 @@
             guna2TextBox1.Animated = true;
             guna2TextBox1.BorderThickness = 0;
             guna2TextBox1.CausesValidation = false;
-            guna2TextBox1.CustomizableEdges = customizableEdges11;
+            guna2TextBox1.CustomizableEdges = customizableEdges13;
             guna2TextBox1.DefaultText = " Carrinho";
             guna2TextBox1.DisabledState.BorderColor = SystemColors.Control;
             guna2TextBox1.DisabledState.FillColor = SystemColors.Control;
@@ -318,21 +298,21 @@
             guna2TextBox1.ForeColor = Color.Black;
             guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox1.IconLeft = Properties.Resources.Carrinho;
-            guna2TextBox1.Location = new Point(451, 60);
+            guna2TextBox1.Location = new Point(420, 60);
             guna2TextBox1.Margin = new Padding(5);
             guna2TextBox1.Name = "guna2TextBox1";
             guna2TextBox1.PlaceholderForeColor = Color.Transparent;
             guna2TextBox1.PlaceholderText = "";
             guna2TextBox1.ReadOnly = true;
             guna2TextBox1.SelectedText = "";
-            guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges14;
             guna2TextBox1.Size = new Size(132, 27);
             guna2TextBox1.TabIndex = 28;
             guna2TextBox1.TabStop = false;
             // 
             // guna2TextBox3
             // 
-            guna2TextBox3.BorderRadius = 8;
+            guna2TextBox3.BorderRadius = 15;
             guna2TextBox3.BorderThickness = 0;
             guna2TextBox3.CustomizableEdges = customizableEdges15;
             guna2TextBox3.DefaultText = "";
@@ -345,16 +325,22 @@
             guna2TextBox3.Font = new Font("Inter", 12F, FontStyle.Bold);
             guna2TextBox3.ForeColor = Color.Black;
             guna2TextBox3.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox3.Location = new Point(680, 360);
+            guna2TextBox3.Location = new Point(680, 353);
             guna2TextBox3.Margin = new Padding(4);
             guna2TextBox3.Name = "guna2TextBox3";
             guna2TextBox3.PlaceholderText = "";
             guna2TextBox3.ReadOnly = true;
             guna2TextBox3.SelectedText = "";
             guna2TextBox3.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            guna2TextBox3.Size = new Size(221, 40);
+            guna2TextBox3.Size = new Size(221, 47);
             guna2TextBox3.TabIndex = 29;
             guna2TextBox3.TabStop = false;
+            // 
+            // guna2BorderlessForm1
+            // 
+            guna2BorderlessForm1.ContainerControl = this;
+            guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
+            guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
             // Form1
             // 
@@ -371,7 +357,6 @@
             Controls.Add(CantBtnAdd);
             Controls.Add(pictureBox1);
             Controls.Add(CtnLblTotal);
-            Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(CantCarrinho);
             Controls.Add(CantCardapio);
@@ -393,7 +378,6 @@
         private ListBox CantCardapio;
         private ListBox CantCarrinho;
         private Label label1;
-        private Label label2;
         private Label CtnLblTotal;
         private PictureBox pictureBox1;
         private Label label3;
@@ -402,9 +386,9 @@
         private Guna.UI2.WinForms.Guna2Button btnFinalizarPedido;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2Button btnVoltarMenu;
-        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
+        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
     }
 }

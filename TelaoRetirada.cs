@@ -26,18 +26,18 @@ namespace Projeto_Semestral___Cantina
         {
             foreach (Pedido pedido in PersistenciaPedido.pedidosProntos)
             {
-                listPedidosProntos.Items.Add($"ID: {pedido.Id} - Cliente: {pedido.NomeCliente} - Tipo: {pedido.TipoPedido}");
+                listPedidosProntos.Items.Add($"ID: {pedido.Id} | Cliente: {pedido.NomeCliente} | Tipo: {pedido.TipoPedido}");
             }
             foreach (Pedido pedido in PersistenciaPedido.pedidos)
             {
                 if (pedido.IsChapa == true)
                 {
-                    listPedidosPreparo.Items.Add($"ID: {pedido.Id} - Cliente: {pedido.NomeCliente} - Tipo: {pedido.TipoPedido}");
+                    listPedidosPreparo.Items.Add($"ID: {pedido.Id} | Cliente: {pedido.NomeCliente} | Tipo: {pedido.TipoPedido}");
                 }
             }
             foreach (Pedido pedido in PersistenciaPedido.pedidosEntregues)
             {
-                listPedidosEntregues.Items.Add($"ID: {pedido.Id} - Cliente: {pedido.NomeCliente} - Tipo: {pedido.TipoPedido}");
+                listPedidosEntregues.Items.Add($"ID: {pedido.Id} | Cliente:  {pedido.NomeCliente}  | Tipo: {pedido.TipoPedido}");
             }
         }
 
@@ -47,6 +47,29 @@ namespace Projeto_Semestral___Cantina
             Menu menu = new Menu();
             menu.Show();
             this.Hide();
+        }
+
+        private void listPedidosPreparo_DrawItem(object sender, DrawItemEventArgs e)
+        {
+        }
+
+        private void listPedidosProntos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listPedidosEntregues_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listPedidosEntregues_DrawItem(object sender, DrawItemEventArgs e)
+        {
+        }
+
+        private void listPedidosProntos_DrawItem(object sender, DrawItemEventArgs e)
+        {
+         
         }
     }
 }

@@ -109,5 +109,161 @@ namespace Projeto_Semestral___Cantina
                 MessageBox.Show("Selecione um pedido para cancelar.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void listBoxPedidos_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            {
+                if (e.Index < 0 || ((ListBox)sender).Items.Count == 0) return;
+
+                // Define o fundo: LightGray para seleção, fundo padrão para não selecionado
+                if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+                {
+                    e.Graphics.FillRectangle(new SolidBrush(Color.LightGray), e.Bounds);
+                }
+                else
+                {
+                    e.Graphics.FillRectangle(new SolidBrush(((ListBox)sender).BackColor), e.Bounds);
+                }
+
+                string itemText = ((ListBox)sender).Items[e.Index].ToString();
+                string status = "";
+                Color statusColor = Color.Black;
+
+                // Identifica o status e define a cor
+                if (itemText.Contains("Pendente"))
+                {
+                    status = "Pendente";
+                    statusColor = Color.Orange;
+                }
+                else if (itemText.Contains("Em preparo"))
+                {
+                    status = "Em preparo";
+                    statusColor = Color.Yellow;
+                }
+                else if (itemText.Contains("Pronto"))
+                {
+                    status = "Pronto";
+                    statusColor = Color.Green;
+                }
+
+                // Se não houver status, desenha tudo em preto
+                if (string.IsNullOrEmpty(status))
+                {
+                    using (Brush blackBrush = new SolidBrush(Color.Black))
+                    {
+                        e.Graphics.DrawString(itemText, e.Font, blackBrush, e.Bounds);
+                    }
+
+                    return;
+                }
+
+                // Divide o texto: antes, status e depois
+                int statusIndex = itemText.IndexOf(status);
+                string beforeStatus = statusIndex > 0 ? itemText.Substring(0, statusIndex) : "";
+                string afterStatus = statusIndex + status.Length < itemText.Length ? itemText.Substring(statusIndex + status.Length) : "";
+
+                // Desenha cada parte
+                float x = e.Bounds.X;
+                float y = e.Bounds.Y;
+                using (Brush blackBrush = new SolidBrush(Color.Black))
+                using (Brush statusBrush = new SolidBrush(statusColor))
+                {
+                    if (!string.IsNullOrEmpty(beforeStatus))
+                    {
+                        e.Graphics.DrawString(beforeStatus, e.Font, blackBrush, x, y);
+                        x += e.Graphics.MeasureString(beforeStatus, e.Font).Width;
+                    }
+                    e.Graphics.DrawString(status, e.Font, statusBrush, x, y);
+                    x += e.Graphics.MeasureString(status, e.Font).Width;
+                    if (!string.IsNullOrEmpty(afterStatus))
+                    {
+                        e.Graphics.DrawString(afterStatus, e.Font, blackBrush, x, y);
+                    }
+                }
+
+
+            }
+
+
+
+        }
+
+     
+        private void listPedidosProntos_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            {
+                if (e.Index < 0 || ((ListBox)sender).Items.Count == 0) return;
+
+                // Define o fundo: LightGray para seleção, fundo padrão para não selecionado
+                if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+                {
+                    e.Graphics.FillRectangle(new SolidBrush(Color.LightGray), e.Bounds);
+                }
+                else
+                {
+                    e.Graphics.FillRectangle(new SolidBrush(((ListBox)sender).BackColor), e.Bounds);
+                }
+
+                string itemText = ((ListBox)sender).Items[e.Index].ToString();
+                string status = "";
+                Color statusColor = Color.Black;
+
+                // Identifica o status e define a cor
+                if (itemText.Contains("Pendente"))
+                {
+                    status = "Pendente";
+                    statusColor = Color.Orange;
+                }
+                else if (itemText.Contains("Em preparo"))
+                {
+                    status = "Em preparo";
+                    statusColor = Color.Yellow;
+                }
+                else if (itemText.Contains("Pronto"))
+                {
+                    status = "Pronto";
+                    statusColor = Color.Green;
+                }
+
+                // Se não houver status, desenha tudo em preto
+                if (string.IsNullOrEmpty(status))
+                {
+                    using (Brush blackBrush = new SolidBrush(Color.Black))
+                    {
+                        e.Graphics.DrawString(itemText, e.Font, blackBrush, e.Bounds);
+                    }
+                
+                    return;
+                }
+
+                // Divide o texto: antes, status e depois
+                int statusIndex = itemText.IndexOf(status);
+                string beforeStatus = statusIndex > 0 ? itemText.Substring(0, statusIndex) : "";
+                string afterStatus = statusIndex + status.Length < itemText.Length ? itemText.Substring(statusIndex + status.Length) : "";
+
+                // Desenha cada parte
+                float x = e.Bounds.X;
+                float y = e.Bounds.Y;
+                using (Brush blackBrush = new SolidBrush(Color.Black))
+                using (Brush statusBrush = new SolidBrush(statusColor))
+                {
+                    if (!string.IsNullOrEmpty(beforeStatus))
+                    {
+                        e.Graphics.DrawString(beforeStatus, e.Font, blackBrush, x, y);
+                        x += e.Graphics.MeasureString(beforeStatus, e.Font).Width;
+                    }
+                    e.Graphics.DrawString(status, e.Font, statusBrush, x, y);
+                    x += e.Graphics.MeasureString(status, e.Font).Width;
+                    if (!string.IsNullOrEmpty(afterStatus))
+                    {
+                        e.Graphics.DrawString(afterStatus, e.Font, blackBrush, x, y);
+                    }
+                }
+
+               
+            }
+        }
+
     }
+
 }
