@@ -39,6 +39,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             pictureBox1 = new PictureBox();
             label1 = new Label();
@@ -48,6 +50,7 @@
             BtnBalcao = new Guna.UI2.WinForms.Guna2Button();
             btnTelaVendas = new Guna.UI2.WinForms.Guna2Button();
             guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
+            guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -67,7 +70,7 @@
             label1.Font = new Font("Inter", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(353, 102);
             label1.Name = "label1";
-            label1.Size = new Size(174, 33);
+            label1.Size = new Size(176, 39);
             label1.TabIndex = 7;
             label1.Text = "Menu Inicial";
             // 
@@ -84,6 +87,7 @@
             button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             button1.FillColor = SystemColors.Window;
+            button1.FocusedColor = Color.FromArgb(230, 255, 0);
             button1.Font = new Font("Inter", 18F, FontStyle.Bold);
             button1.ForeColor = Color.FromArgb(17, 25, 12);
             button1.Image = Properties.Resources.telão;
@@ -101,10 +105,10 @@
             btnEstoque.Animated = true;
             btnEstoque.AnimatedGIF = true;
             btnEstoque.BackColor = Color.Transparent;
-            btnEstoque.BorderColor = SystemColors.WindowFrame;
+            btnEstoque.BorderColor = Color.White;
             btnEstoque.BorderRadius = 15;
             btnEstoque.CausesValidation = false;
-            btnEstoque.Cursor = Cursors.No;
+            btnEstoque.Cursor = Cursors.Hand;
             btnEstoque.CustomImages.ImageAlign = HorizontalAlignment.Center;
             btnEstoque.CustomImages.ImageSize = new Size(200, 200);
             btnEstoque.CustomizableEdges = customizableEdges3;
@@ -113,18 +117,19 @@
             btnEstoque.DisabledState.FillColor = Color.DarkGray;
             btnEstoque.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnEstoque.DisabledState.Image = Properties.Resources._2356480_stock_photo_smiley;
-            btnEstoque.FillColor = Color.DarkGray;
-            btnEstoque.FocusedColor = Color.Red;
+            btnEstoque.FillColor = SystemColors.Window;
+            btnEstoque.FocusedColor = Color.FromArgb(230, 255, 0);
             btnEstoque.Font = new Font("Inter", 18F, FontStyle.Bold);
             btnEstoque.ForeColor = Color.FromArgb(17, 25, 12);
             btnEstoque.Image = Properties.Resources.estoque;
             btnEstoque.Location = new Point(293, 277);
             btnEstoque.Name = "btnEstoque";
-            btnEstoque.PressedColor = Color.Red;
+            btnEstoque.PressedColor = Color.FromArgb(230, 255, 0);
             btnEstoque.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnEstoque.Size = new Size(275, 84);
             btnEstoque.TabIndex = 21;
             btnEstoque.Text = " Estoque";
+            btnEstoque.Click += btnEstoque_Click;
             // 
             // guna2Button1
             // 
@@ -139,6 +144,7 @@
             guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             guna2Button1.FillColor = SystemColors.Window;
+            guna2Button1.FocusedColor = Color.FromArgb(230, 255, 0);
             guna2Button1.Font = new Font("Inter", 18F, FontStyle.Bold);
             guna2Button1.ForeColor = Color.FromArgb(17, 25, 12);
             guna2Button1.Image = Properties.Resources.cozinha;
@@ -164,6 +170,7 @@
             BtnBalcao.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             BtnBalcao.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             BtnBalcao.FillColor = SystemColors.Window;
+            BtnBalcao.FocusedColor = Color.FromArgb(230, 255, 0);
             BtnBalcao.Font = new Font("Inter", 18F, FontStyle.Bold);
             BtnBalcao.ForeColor = Color.FromArgb(17, 25, 12);
             BtnBalcao.Image = Properties.Resources.Loja;
@@ -189,6 +196,7 @@
             btnTelaVendas.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnTelaVendas.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnTelaVendas.FillColor = SystemColors.Window;
+            btnTelaVendas.FocusedColor = Color.FromArgb(230, 255, 0);
             btnTelaVendas.Font = new Font("Inter", 18F, FontStyle.Bold);
             btnTelaVendas.ForeColor = Color.FromArgb(17, 25, 12);
             btnTelaVendas.Image = Properties.Resources.vendas;
@@ -207,12 +215,43 @@
             guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
+            // guna2Button2
+            // 
+            guna2Button2.Animated = true;
+            guna2Button2.AnimatedGIF = true;
+            guna2Button2.BackColor = Color.Transparent;
+            guna2Button2.BorderColor = Color.White;
+            guna2Button2.BorderRadius = 15;
+            guna2Button2.CausesValidation = false;
+            guna2Button2.Cursor = Cursors.Hand;
+            guna2Button2.CustomImages.ImageAlign = HorizontalAlignment.Center;
+            guna2Button2.CustomImages.ImageSize = new Size(200, 200);
+            guna2Button2.CustomizableEdges = customizableEdges11;
+            guna2Button2.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button2.DisabledState.FillColor = Color.DarkGray;
+            guna2Button2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button2.DisabledState.Image = Properties.Resources._2356480_stock_photo_smiley;
+            guna2Button2.FillColor = SystemColors.Window;
+            guna2Button2.FocusedColor = Color.FromArgb(230, 255, 0);
+            guna2Button2.Font = new Font("Inter", 18F, FontStyle.Bold);
+            guna2Button2.ForeColor = Color.FromArgb(17, 25, 12);
+            guna2Button2.Image = Properties.Resources.user;
+            guna2Button2.Location = new Point(575, 277);
+            guna2Button2.Name = "guna2Button2";
+            guna2Button2.PressedColor = Color.FromArgb(230, 255, 0);
+            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            guna2Button2.Size = new Size(275, 84);
+            guna2Button2.TabIndex = 25;
+            guna2Button2.Text = " Logins";
+            // 
             // Menu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(243, 241, 238);
             ClientSize = new Size(862, 445);
+            Controls.Add(guna2Button2);
             Controls.Add(btnTelaVendas);
             Controls.Add(BtnBalcao);
             Controls.Add(guna2Button1);
@@ -225,6 +264,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Menu";
             Text = "Menu";
+            Load += Menu_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -241,5 +281,6 @@
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
         private Guna.UI2.WinForms.Guna2WinProgressIndicator guna2WinProgressIndicator1;
         private PictureBox pictureBox2;
+        private Guna.UI2.WinForms.Guna2Button guna2Button2;
     }
 }

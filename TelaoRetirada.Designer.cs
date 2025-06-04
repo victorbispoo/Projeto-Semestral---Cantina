@@ -54,14 +54,14 @@
             // 
             listPedidosProntos.BorderStyle = BorderStyle.None;
             listPedidosProntos.Cursor = Cursors.No;
-            listPedidosProntos.Font = new Font("Inter", 12F, FontStyle.Bold);
+            listPedidosProntos.Font = new Font("Inter Medium", 12F, FontStyle.Bold);
             listPedidosProntos.ForeColor = Color.FromArgb(17, 25, 12);
             listPedidosProntos.FormattingEnabled = true;
-            listPedidosProntos.ItemHeight = 19;
+            listPedidosProntos.ItemHeight = 23;
             listPedidosProntos.Location = new Point(428, 171);
             listPedidosProntos.Name = "listPedidosProntos";
             listPedidosProntos.SelectionMode = SelectionMode.None;
-            listPedidosProntos.Size = new Size(361, 266);
+            listPedidosProntos.Size = new Size(361, 253);
             listPedidosProntos.Sorted = true;
             listPedidosProntos.TabIndex = 2;
             listPedidosProntos.TabStop = false;
@@ -72,14 +72,14 @@
             // 
             listPedidosPreparo.BorderStyle = BorderStyle.None;
             listPedidosPreparo.Cursor = Cursors.No;
-            listPedidosPreparo.Font = new Font("Inter", 12F, FontStyle.Bold);
+            listPedidosPreparo.Font = new Font("Inter Medium", 12F, FontStyle.Bold);
             listPedidosPreparo.ForeColor = Color.FromArgb(17, 25, 12);
             listPedidosPreparo.FormattingEnabled = true;
-            listPedidosPreparo.ItemHeight = 19;
+            listPedidosPreparo.ItemHeight = 23;
             listPedidosPreparo.Location = new Point(849, 171);
             listPedidosPreparo.Name = "listPedidosPreparo";
             listPedidosPreparo.SelectionMode = SelectionMode.None;
-            listPedidosPreparo.Size = new Size(344, 266);
+            listPedidosPreparo.Size = new Size(344, 253);
             listPedidosPreparo.Sorted = true;
             listPedidosPreparo.TabIndex = 3;
             listPedidosPreparo.TabStop = false;
@@ -89,14 +89,14 @@
             // 
             listPedidosEntregues.BorderStyle = BorderStyle.None;
             listPedidosEntregues.Cursor = Cursors.No;
-            listPedidosEntregues.Font = new Font("Inter", 12F, FontStyle.Bold);
+            listPedidosEntregues.Font = new Font("Inter Medium", 12F, FontStyle.Bold);
             listPedidosEntregues.ForeColor = Color.FromArgb(17, 25, 12);
             listPedidosEntregues.FormattingEnabled = true;
-            listPedidosEntregues.ItemHeight = 19;
+            listPedidosEntregues.ItemHeight = 23;
             listPedidosEntregues.Location = new Point(25, 171);
             listPedidosEntregues.Name = "listPedidosEntregues";
             listPedidosEntregues.SelectionMode = SelectionMode.None;
-            listPedidosEntregues.Size = new Size(340, 266);
+            listPedidosEntregues.Size = new Size(340, 253);
             listPedidosEntregues.Sorted = true;
             listPedidosEntregues.TabIndex = 5;
             listPedidosEntregues.TabStop = false;

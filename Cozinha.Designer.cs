@@ -63,7 +63,7 @@
             listBoxPedidos.BorderStyle = BorderStyle.None;
             listBoxPedidos.Cursor = Cursors.Hand;
             listBoxPedidos.DrawMode = DrawMode.OwnerDrawFixed;
-            listBoxPedidos.Font = new Font("Inter", 12F, FontStyle.Bold);
+            listBoxPedidos.Font = new Font("Inter Medium", 12F, FontStyle.Bold);
             listBoxPedidos.ForeColor = Color.FromArgb(17, 25, 12);
             listBoxPedidos.FormattingEnabled = true;
             listBoxPedidos.ItemHeight = 23;
@@ -88,14 +88,14 @@
             // 
             listBoxComanda.BorderStyle = BorderStyle.None;
             listBoxComanda.Cursor = Cursors.No;
-            listBoxComanda.Font = new Font("Inter", 12F, FontStyle.Bold);
+            listBoxComanda.Font = new Font("Inter Medium", 12F, FontStyle.Bold);
             listBoxComanda.ForeColor = Color.FromArgb(17, 25, 12);
             listBoxComanda.FormattingEnabled = true;
-            listBoxComanda.ItemHeight = 19;
+            listBoxComanda.ItemHeight = 23;
             listBoxComanda.Location = new Point(724, 91);
             listBoxComanda.Name = "listBoxComanda";
             listBoxComanda.SelectionMode = SelectionMode.None;
-            listBoxComanda.Size = new Size(346, 152);
+            listBoxComanda.Size = new Size(346, 161);
             listBoxComanda.TabIndex = 4;
             listBoxComanda.SelectedIndexChanged += listBoxComanda_SelectedIndexChanged;
             // 
@@ -104,21 +104,21 @@
             listPedidosProntos.BorderStyle = BorderStyle.None;
             listPedidosProntos.Cursor = Cursors.No;
             listPedidosProntos.DrawMode = DrawMode.OwnerDrawFixed;
-            listPedidosProntos.Font = new Font("Inter", 12F, FontStyle.Bold);
+            listPedidosProntos.Font = new Font("Inter Medium", 12F, FontStyle.Bold);
             listPedidosProntos.ForeColor = Color.FromArgb(17, 25, 12);
             listPedidosProntos.FormattingEnabled = true;
             listPedidosProntos.ItemHeight = 23;
             listPedidosProntos.Location = new Point(37, 295);
             listPedidosProntos.Name = "listPedidosProntos";
             listPedidosProntos.SelectionMode = SelectionMode.None;
-            listPedidosProntos.Size = new Size(647, 92);
+            listPedidosProntos.Size = new Size(647, 115);
             listPedidosProntos.TabIndex = 9;
             listPedidosProntos.DrawItem += listPedidosProntos_DrawItem;
             // 
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.bolt;
-            pictureBox1.Location = new Point(37, 12);
+            pictureBox1.Location = new Point(37, 16);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(128, 39);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -130,12 +130,12 @@
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
             label3.FlatStyle = FlatStyle.Flat;
-            label3.Font = new Font("Microsoft Sans Serif", 27.75F, FontStyle.Bold);
+            label3.Font = new Font("Agrandir Narrow", 27.75F, FontStyle.Bold);
             label3.ForeColor = Color.FromArgb(17, 25, 12);
-            label3.Location = new Point(160, 3);
+            label3.Location = new Point(157, 6);
             label3.Name = "label3";
             label3.Padding = new Padding(1);
-            label3.Size = new Size(187, 44);
+            label3.Size = new Size(169, 52);
             label3.TabIndex = 18;
             label3.Text = "| Cozinha";
             // 
@@ -154,11 +154,11 @@
             btnFinalizarPedido.Font = new Font("Inter", 13.75F, FontStyle.Bold);
             btnFinalizarPedido.ForeColor = Color.FromArgb(17, 25, 12);
             btnFinalizarPedido.Image = Properties.Resources.check_positivo;
-            btnFinalizarPedido.Location = new Point(724, 319);
+            btnFinalizarPedido.Location = new Point(724, 295);
             btnFinalizarPedido.Name = "btnFinalizarPedido";
             btnFinalizarPedido.PressedColor = SystemColors.Control;
             btnFinalizarPedido.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnFinalizarPedido.Size = new Size(346, 68);
+            btnFinalizarPedido.Size = new Size(346, 51);
             btnFinalizarPedido.TabIndex = 20;
             btnFinalizarPedido.Text = " Finalizar Pedido";
             btnFinalizarPedido.Click += BtnFinalizar_Click;
@@ -177,11 +177,11 @@
             btnPreparar.Font = new Font("Inter", 13.75F, FontStyle.Bold);
             btnPreparar.ForeColor = Color.FromArgb(17, 25, 12);
             btnPreparar.Image = Properties.Resources.ampulheta;
-            btnPreparar.Location = new Point(724, 249);
+            btnPreparar.Location = new Point(724, 359);
             btnPreparar.Name = "btnPreparar";
             btnPreparar.PressedColor = Color.FromArgb(230, 255, 0);
             btnPreparar.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnPreparar.Size = new Size(346, 64);
+            btnPreparar.Size = new Size(346, 51);
             btnPreparar.TabIndex = 21;
             btnPreparar.Text = " Preparar Pedido";
             btnPreparar.Click += BtnPreparar_Click;
@@ -200,7 +200,7 @@
             btnVoltarMenu.Font = new Font("Inter", 12F, FontStyle.Bold);
             btnVoltarMenu.ForeColor = Color.FromArgb(17, 25, 12);
             btnVoltarMenu.Image = (Image)resources.GetObject("btnVoltarMenu.Image");
-            btnVoltarMenu.Location = new Point(37, 402);
+            btnVoltarMenu.Location = new Point(37, 434);
             btnVoltarMenu.Name = "btnVoltarMenu";
             btnVoltarMenu.PressedColor = Color.FromArgb(230, 255, 0);
             btnVoltarMenu.ShadowDecoration.CustomizableEdges = customizableEdges6;
@@ -305,7 +305,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(243, 241, 238);
-            ClientSize = new Size(1099, 464);
+            ClientSize = new Size(1099, 482);
             Controls.Add(guna2TextBox3);
             Controls.Add(guna2TextBox1);
             Controls.Add(guna2TextBox2);

@@ -59,7 +59,7 @@
             listBoxPedidospraEntrega.BackColor = SystemColors.Window;
             listBoxPedidospraEntrega.BorderStyle = BorderStyle.None;
             listBoxPedidospraEntrega.DrawMode = DrawMode.OwnerDrawFixed;
-            listBoxPedidospraEntrega.Font = new Font("Inter", 12F, FontStyle.Bold);
+            listBoxPedidospraEntrega.Font = new Font("Inter Medium", 12F, FontStyle.Bold);
             listBoxPedidospraEntrega.ForeColor = Color.FromArgb(17, 25, 12);
             listBoxPedidospraEntrega.FormattingEnabled = true;
             listBoxPedidospraEntrega.ItemHeight = 23;
@@ -76,15 +76,15 @@
             listBoxComanda.BackColor = SystemColors.Window;
             listBoxComanda.BorderStyle = BorderStyle.None;
             listBoxComanda.Cursor = Cursors.No;
-            listBoxComanda.Font = new Font("Inter", 12F, FontStyle.Bold);
+            listBoxComanda.Font = new Font("Inter Medium", 12F, FontStyle.Bold);
             listBoxComanda.ForeColor = Color.FromArgb(17, 25, 12);
             listBoxComanda.FormattingEnabled = true;
-            listBoxComanda.ItemHeight = 19;
+            listBoxComanda.ItemHeight = 23;
             listBoxComanda.Location = new Point(711, 108);
             listBoxComanda.Margin = new Padding(4);
             listBoxComanda.Name = "listBoxComanda";
             listBoxComanda.SelectionMode = SelectionMode.None;
-            listBoxComanda.Size = new Size(350, 171);
+            listBoxComanda.Size = new Size(350, 161);
             listBoxComanda.TabIndex = 5;
             // 
             // listBoxPedidosEntregues
@@ -93,7 +93,7 @@
             listBoxPedidosEntregues.BorderStyle = BorderStyle.None;
             listBoxPedidosEntregues.Cursor = Cursors.No;
             listBoxPedidosEntregues.DrawMode = DrawMode.OwnerDrawFixed;
-            listBoxPedidosEntregues.Font = new Font("Inter", 12F, FontStyle.Bold);
+            listBoxPedidosEntregues.Font = new Font("Inter Medium", 12F, FontStyle.Bold);
             listBoxPedidosEntregues.ForeColor = Color.FromArgb(17, 25, 12);
             listBoxPedidosEntregues.FormattingEnabled = true;
             listBoxPedidosEntregues.ItemHeight = 23;
@@ -121,11 +121,11 @@
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
             label3.FlatStyle = FlatStyle.Flat;
-            label3.Font = new Font("Microsoft Sans Serif", 27.75F, FontStyle.Bold);
+            label3.Font = new Font("Agrandir Narrow", 27.75F, FontStyle.Bold);
             label3.Location = new Point(196, 17);
             label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
-            label3.Size = new Size(161, 42);
+            label3.Size = new Size(149, 50);
             label3.TabIndex = 17;
             label3.Text = "| Balcão";
             // 
@@ -268,7 +268,7 @@
             // 
             // Balcao
             // 
-            AutoScaleDimensions = new SizeF(10F, 19F);
+            AutoScaleDimensions = new SizeF(10F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1106, 454);
             Controls.Add(guna2TextBox3);

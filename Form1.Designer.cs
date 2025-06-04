@@ -48,7 +48,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             CantCardapio = new ListBox();
             CantCarrinho = new ListBox();
-            label1 = new Label();
             CtnLblTotal = new Label();
             pictureBox1 = new PictureBox();
             label3 = new Label();
@@ -68,10 +67,10 @@
             // 
             CantCardapio.BorderStyle = BorderStyle.None;
             CantCardapio.DrawMode = DrawMode.OwnerDrawFixed;
-            CantCardapio.Font = new Font("Inter", 12F);
+            CantCardapio.Font = new Font("Inter Medium", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             CantCardapio.FormattingEnabled = true;
             CantCardapio.ItemHeight = 23;
-            CantCardapio.Location = new Point(21, 96);
+            CantCardapio.Location = new Point(21, 115);
             CantCardapio.Name = "CantCardapio";
             CantCardapio.Size = new Size(369, 276);
             CantCardapio.TabIndex = 0;
@@ -82,26 +81,14 @@
             // 
             CantCarrinho.BorderStyle = BorderStyle.None;
             CantCarrinho.DrawMode = DrawMode.OwnerDrawFixed;
-            CantCarrinho.Font = new Font("Inter", 12F);
+            CantCarrinho.Font = new Font("Inter Medium", 12F, FontStyle.Bold);
             CantCarrinho.FormattingEnabled = true;
             CantCarrinho.ItemHeight = 19;
-            CantCarrinho.Location = new Point(420, 96);
+            CantCarrinho.Location = new Point(420, 115);
             CantCarrinho.Name = "CantCarrinho";
             CantCarrinho.Size = new Size(481, 152);
             CantCarrinho.TabIndex = 1;
             CantCarrinho.DrawItem += CantCarrinho_DrawItem;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold);
-            label1.ForeColor = Color.Black;
-            label1.Location = new Point(21, 57);
-            label1.Name = "label1";
-            label1.Size = new Size(136, 25);
-            label1.TabIndex = 4;
-            label1.Text = "\U0001f956 Produtos";
             // 
             // CtnLblTotal
             // 
@@ -109,9 +96,9 @@
             CtnLblTotal.BackColor = SystemColors.Window;
             CtnLblTotal.Font = new Font("Inter", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             CtnLblTotal.ForeColor = Color.Black;
-            CtnLblTotal.Location = new Point(754, 338);
+            CtnLblTotal.Location = new Point(754, 357);
             CtnLblTotal.Name = "CtnLblTotal";
-            CtnLblTotal.Size = new Size(68, 19);
+            CtnLblTotal.Size = new Size(69, 23);
             CtnLblTotal.TabIndex = 7;
             CtnLblTotal.Text = "R$0,00";
             CtnLblTotal.Click += CtnLblTotal_Click;
@@ -119,7 +106,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.bolt;
-            pictureBox1.Location = new Point(21, 12);
+            pictureBox1.Location = new Point(21, 31);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(137, 42);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -131,11 +118,11 @@
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
             label3.FlatStyle = FlatStyle.Flat;
-            label3.Font = new Font("Microsoft Sans Serif", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Font = new Font("Agrandir Narrow", 27.75F, FontStyle.Bold);
             label3.ForeColor = Color.Black;
-            label3.Location = new Point(164, 4);
+            label3.Location = new Point(153, 24);
             label3.Name = "label3";
-            label3.Size = new Size(174, 42);
+            label3.Size = new Size(156, 50);
             label3.TabIndex = 18;
             label3.Text = "| Vendas";
             // 
@@ -153,7 +140,7 @@
             CantBtnAdd.Font = new Font("Inter", 12F, FontStyle.Bold);
             CantBtnAdd.ForeColor = Color.Black;
             CantBtnAdd.Image = Properties.Resources.adicionar;
-            CantBtnAdd.Location = new Point(420, 254);
+            CantBtnAdd.Location = new Point(420, 273);
             CantBtnAdd.Name = "CantBtnAdd";
             CantBtnAdd.PressedColor = Color.FromArgb(230, 255, 0);
             CantBtnAdd.ShadowDecoration.CustomizableEdges = customizableEdges2;
@@ -176,7 +163,7 @@
             CantBtnRemover.Font = new Font("Inter", 12F, FontStyle.Bold);
             CantBtnRemover.ForeColor = Color.Black;
             CantBtnRemover.Image = Properties.Resources.remover_carronhp;
-            CantBtnRemover.Location = new Point(680, 254);
+            CantBtnRemover.Location = new Point(680, 273);
             CantBtnRemover.Name = "CantBtnRemover";
             CantBtnRemover.PressedColor = Color.FromArgb(230, 255, 0);
             CantBtnRemover.ShadowDecoration.CustomizableEdges = customizableEdges4;
@@ -200,7 +187,7 @@
             btnFinalizarPedido.Font = new Font("Inter", 12F, FontStyle.Bold);
             btnFinalizarPedido.ForeColor = Color.Black;
             btnFinalizarPedido.Image = Properties.Resources.finalizaer;
-            btnFinalizarPedido.Location = new Point(420, 324);
+            btnFinalizarPedido.Location = new Point(420, 343);
             btnFinalizarPedido.Name = "btnFinalizarPedido";
             btnFinalizarPedido.PressedColor = SystemColors.Control;
             btnFinalizarPedido.ShadowDecoration.CustomizableEdges = customizableEdges6;
@@ -223,11 +210,11 @@
             guna2Button1.Font = new Font("Inter", 12F, FontStyle.Bold);
             guna2Button1.ForeColor = Color.Black;
             guna2Button1.Image = Properties.Resources.apagar;
-            guna2Button1.Location = new Point(719, 57);
+            guna2Button1.Location = new Point(719, 67);
             guna2Button1.Name = "guna2Button1";
             guna2Button1.PressedColor = Color.FromArgb(230, 255, 0);
             guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2Button1.Size = new Size(182, 33);
+            guna2Button1.Size = new Size(182, 42);
             guna2Button1.TabIndex = 25;
             guna2Button1.Text = " Limpar Carrinho";
             // 
@@ -272,7 +259,7 @@
             guna2TextBox2.ForeColor = Color.Black;
             guna2TextBox2.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox2.IconLeft = Properties.Resources.hamburger_soda;
-            guna2TextBox2.Location = new Point(21, 60);
+            guna2TextBox2.Location = new Point(21, 79);
             guna2TextBox2.Margin = new Padding(5);
             guna2TextBox2.Name = "guna2TextBox2";
             guna2TextBox2.PlaceholderForeColor = Color.Transparent;
@@ -302,7 +289,7 @@
             guna2TextBox1.ForeColor = Color.Black;
             guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox1.IconLeft = Properties.Resources.Carrinho;
-            guna2TextBox1.Location = new Point(420, 60);
+            guna2TextBox1.Location = new Point(420, 79);
             guna2TextBox1.Margin = new Padding(5);
             guna2TextBox1.Name = "guna2TextBox1";
             guna2TextBox1.PlaceholderForeColor = Color.Transparent;
@@ -329,7 +316,7 @@
             guna2TextBox3.Font = new Font("Inter", 12F, FontStyle.Bold);
             guna2TextBox3.ForeColor = Color.Black;
             guna2TextBox3.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox3.Location = new Point(680, 325);
+            guna2TextBox3.Location = new Point(680, 344);
             guna2TextBox3.Margin = new Padding(4);
             guna2TextBox3.Name = "guna2TextBox3";
             guna2TextBox3.PlaceholderText = "";
@@ -361,7 +348,6 @@
             Controls.Add(CantBtnAdd);
             Controls.Add(pictureBox1);
             Controls.Add(CtnLblTotal);
-            Controls.Add(label1);
             Controls.Add(CantCarrinho);
             Controls.Add(CantCardapio);
             Controls.Add(label3);
@@ -381,7 +367,6 @@
 
         private ListBox CantCardapio;
         private ListBox CantCarrinho;
-        private Label label1;
         private Label CtnLblTotal;
         private PictureBox pictureBox1;
         private Label label3;

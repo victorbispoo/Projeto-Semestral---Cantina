@@ -8,8 +8,10 @@ namespace Projeto_Semestral___Cantina
 {
     internal class PersistenciaPedido
     {
+        public static List<Produto> produtosEstoque = new List<Produto>();
         public static List<Pedido> pedidos = new List<Pedido>();
         public static List<Pedido> pedidosProntos = new List<Pedido>();
         public static List<Pedido> pedidosEntregues = new List<Pedido>();
+        public static List<Logins> usuarios = new List<Logins>();
     }
 }

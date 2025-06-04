@@ -67,6 +67,7 @@
             btnFinalizarPedido = new Guna.UI2.WinForms.Guna2Button();
             guna2Transition1 = new Guna.UI2.WinForms.Guna2Transition();
             guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
+            label3 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             guna2GroupBox1.SuspendLayout();
             guna2GroupBox2.SuspendLayout();
@@ -76,10 +77,10 @@
             // 
             guna2Transition1.SetDecoration(pictureBox1, Guna.UI2.AnimatorNS.DecorationType.None);
             pictureBox1.Image = Properties.Resources.bolt;
-            pictureBox1.Location = new Point(35, 35);
+            pictureBox1.Location = new Point(35, 38);
             pictureBox1.Margin = new Padding(5);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(175, 49);
+            pictureBox1.Size = new Size(135, 47);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 12;
             pictureBox1.TabStop = false;
@@ -478,12 +479,27 @@
             guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
+            guna2Transition1.SetDecoration(label3, Guna.UI2.AnimatorNS.DecorationType.None);
+            label3.FlatStyle = FlatStyle.Flat;
+            label3.Font = new Font("Agrandir Narrow", 27.75F, FontStyle.Bold);
+            label3.ForeColor = Color.Black;
+            label3.Location = new Point(172, 33);
+            label3.Name = "label3";
+            label3.Size = new Size(225, 50);
+            label3.TabIndex = 28;
+            label3.Text = "| Pagamento";
+            // 
             // Concluindo_pedido
             // 
             AutoScaleDimensions = new SizeF(12F, 24F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(243, 241, 238);
             ClientSize = new Size(949, 467);
+            Controls.Add(label3);
             Controls.Add(guna2GroupBox1);
             Controls.Add(btnFinalizarPedido);
             Controls.Add(guna2TextBox2);
@@ -504,6 +520,7 @@
             guna2GroupBox2.ResumeLayout(false);
             guna2GroupBox2.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -527,5 +544,6 @@
         private Guna.UI2.WinForms.Guna2Button btnFinalizarPedido;
         private Guna.UI2.WinForms.Guna2Transition guna2Transition1;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
+        private Label label3;
     }
 }

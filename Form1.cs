@@ -90,17 +90,10 @@ namespace Projeto_Semestral___Cantina
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
-            CantCardapio.Items.Add(new Produto(1, "Pão de Queijo", 3.50, 0, false));
-            CantCardapio.Items.Add(new Produto(2, "Coxinha", 5.00, 0, false));
-            CantCardapio.Items.Add(new Produto(3, "Pastel de Carne", 6.00, 0, true));
-            CantCardapio.Items.Add(new Produto(4, "Pastel de  Queijo", 5.50, 0, true));
-            CantCardapio.Items.Add(new Produto(5, "Suco Natural", 4.00, 0, false));
-            CantCardapio.Items.Add(new Produto(6, "Refrigerante Lata", 4.50, 0, false));
-            CantCardapio.Items.Add(new Produto(7, "Hamburguer Simples", 8.00, 0, true));
-            CantCardapio.Items.Add(new Produto(8, "Hamburguer com Queijo", 9.00, 0, true));
-            CantCardapio.Items.Add(new Produto(9, "X-Tudo", 12.00, 0, true));
-            CantCardapio.Items.Add(new Produto(10, "Água Mineral", 2.50, 0, false));
+        foreach (Produto produto in PersistenciaPedido.produtosEstoque)
+            {
+                CantCardapio.Items.Add(produto);
+            }
         }
         public double total { get; private set; } = 0;
         private void CantBtnAdd_Click(object sender, EventArgs e)
@@ -108,11 +101,23 @@ namespace Projeto_Semestral___Cantina
             bool encontrado = false;
             if (CantCardapio.SelectedItem is Produto produtoSelecionado)
             {
+                if (produtoSelecionado.Quantidade <= 0)
+                {
+                    MessageBox.Show("Produto sem estoque!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
                 foreach (Produto item in CantCarrinho.Items)
                 {
                     if (item.Nome == produtoSelecionado.Nome)
                     {
+                        if (produtoSelecionado.Quantidade <= 0)
+                        {
+                            MessageBox.Show("Produto sem estoque!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return;
+                        }
                         item.Quantidade++;
+                        produtoSelecionado.Quantidade--;
+
                         encontrado = true;
 
                         int index = CantCarrinho.Items.IndexOf(item);
@@ -125,8 +130,10 @@ namespace Projeto_Semestral___Cantina
                 {
                     Produto novoItem = new Produto(produtoSelecionado.Id, produtoSelecionado.Nome, produtoSelecionado.Preco, 1, produtoSelecionado.IsChapa);
                     CantCarrinho.Items.Add(novoItem);
+                    produtoSelecionado.Quantidade--;
                 }
-                total = 0;
+                int idx = CantCardapio.SelectedIndex;
+                CantCardapio.Items[idx] = produtoSelecionado;
                 foreach (Produto item in CantCarrinho.Items)
                 {
                     total += item.Preco * item.Quantidade;
@@ -158,9 +165,25 @@ namespace Projeto_Semestral___Cantina
             }
             if (CantCarrinho.SelectedItem is Produto produtoSelecionado)
             {
+                Produto produtoEstoque = null;
+                foreach (Produto p in CantCardapio.Items)
+                {
+                    if (p.Id == produtoSelecionado.Id)
+                    {
+                        produtoEstoque = p;
+                        break;
+                    }
+                }
                 if (produtoSelecionado.Quantidade > 1)
                 {
                     produtoSelecionado.Quantidade--;
+                    if (produtoEstoque != null)
+                    {
+                        produtoEstoque.Quantidade++;
+                      
+                        int idx = CantCardapio.Items.IndexOf(produtoEstoque);
+                        CantCardapio.Items[idx] = produtoEstoque;
+                    }
                     int index = CantCarrinho.Items.IndexOf(produtoSelecionado);
                     CantCarrinho.Items.RemoveAt(index);
                     CantCarrinho.Items.Insert(index, produtoSelecionado);
@@ -168,6 +191,12 @@ namespace Projeto_Semestral___Cantina
                 }
                 else
                 {
+                    if (produtoEstoque != null)
+                    {
+                        produtoEstoque.Quantidade++;
+                        int idx = CantCardapio.Items.IndexOf(produtoEstoque);
+                        CantCardapio.Items[idx] = produtoEstoque;
+                    }
                     CantCarrinho.Items.RemoveAt(CantCarrinho.SelectedIndex);
                     total -= produtoSelecionado.Preco;
                 }
@@ -247,6 +276,12 @@ namespace Projeto_Semestral___Cantina
 
                     CantCarrinho.Items.Clear();
                     CantCarrinho.ClearSelected();
+                    PersistenciaPedido.produtosEstoque.Clear();
+                    foreach(Produto produto in CantCardapio.Items)
+                    {
+                        Produto estoqueProduto = new Produto(produto.Id, produto.Nome, produto.Preco, produto.Quantidade, produto.IsChapa);
+                        PersistenciaPedido.produtosEstoque.Add(estoqueProduto);
+                    }
                 }
                 else
                 {

@@ -12,9 +12,11 @@ namespace Projeto_Semestral___Cantina
 {
     public partial class Menu : Form
     {
-        public Menu()
+        private string tipoUsuario;
+        public Menu(string tipo)
         {
             InitializeComponent();
+            tipoUsuario = tipo;
         }
 
         private void btnTelaVendas_Click(object sender, EventArgs e)
@@ -43,6 +45,22 @@ namespace Projeto_Semestral___Cantina
             TelaoRetirada telaoRetirada = new TelaoRetirada();
             telaoRetirada.Show();
             this.Hide();
+        }
+
+        private void btnEstoque_Click(object sender, EventArgs e)
+        {
+            Estoque estoque = new Estoque();
+            estoque.Show();
+            this.Hide();
+        }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+            if (tipoUsuario == "Cozinheiro")
+            {
+
+            }
+            
         }
     }
 }
