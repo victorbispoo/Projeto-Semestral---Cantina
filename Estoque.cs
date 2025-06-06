@@ -12,9 +12,11 @@ namespace Projeto_Semestral___Cantina
 {
     public partial class Estoque : Form
     {
-        public Estoque()
+        private string tipoPedido;
+        public Estoque(string tipo)
         {
             InitializeComponent();
+            tipoPedido = tipo;
         }
         public static void alterarFundodaLista(object sender, DrawItemEventArgs e)
         {
@@ -135,7 +137,7 @@ namespace Projeto_Semestral___Cantina
             {
                 isChapa = true;
             }
-            else if (!isChapaInput.Equals("Não", StringComparison.OrdinalIgnoreCase))
+            else if (!isChapaInput.Equals("Não", StringComparison.OrdinalIgnoreCase)||!isChapaInput.Equals("Nao", StringComparison.OrdinalIgnoreCase))
             {
                 MessageBox.Show("Entrada inválida. Por favor, responda com 'Sim' ou 'Não'.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -159,7 +161,7 @@ namespace Projeto_Semestral___Cantina
 
         private void btnVoltarMenu_Click(object sender, EventArgs e)
         {
-            Menu menu = new Menu();
+            Menu menu = new Menu(tipoPedido);
             menu.Show();
             this.Hide();
         }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projeto_Semestral___Cantina
 {
-    internal class PersistenciaPedido
+    internal static class PersistenciaPedido
     {
         public static List<Produto> produtosEstoque = new List<Produto>();
         public static List<Pedido> pedidos = new List<Pedido>();

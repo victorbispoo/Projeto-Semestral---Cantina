@@ -21,35 +21,35 @@ namespace Projeto_Semestral___Cantina
 
         private void btnTelaVendas_Click(object sender, EventArgs e)
         {
-            Form1 form1 = new Form1();
+            Form1 form1 = new Form1(tipoUsuario);
             form1.Show();
             this.Hide();
         }
 
         private void BtnCozinha_Click(object sender, EventArgs e)
         {
-            Cozinha cozinha = new Cozinha();
+            Cozinha cozinha = new Cozinha(tipoUsuario);
             cozinha.Show();
             this.Hide();
         }
 
         private void BtnBalcao_Click(object sender, EventArgs e)
         {
-            Balcao balcao = new Balcao();
+            Balcao balcao = new Balcao(tipoUsuario);
             balcao.Show();
             this.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            TelaoRetirada telaoRetirada = new TelaoRetirada();
+            TelaoRetirada telaoRetirada = new TelaoRetirada(tipoUsuario);
             telaoRetirada.Show();
             this.Hide();
         }
 
         private void btnEstoque_Click(object sender, EventArgs e)
         {
-            Estoque estoque = new Estoque();
+            Estoque estoque = new Estoque(tipoUsuario);
             estoque.Show();
             this.Hide();
         }
@@ -58,9 +58,30 @@ namespace Projeto_Semestral___Cantina
         {
             if (tipoUsuario == "Cozinheiro")
             {
-
+                new Cozinha(tipoUsuario).Show();
+                this.Close();
             }
-            
+            else if (tipoUsuario == "Balcão")
+            {
+                new Balcao(tipoUsuario).Show();
+                this.Close();
+            }
+            else if (tipoUsuario == "Cantineiro")
+            {
+                new Form1(tipoUsuario).Show();
+                this.Close();
+            }
+            else if (tipoUsuario == "Telão")
+            {
+                new TelaoRetirada(tipoUsuario).Show();
+                this.Close();
+            }
+            else { }
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

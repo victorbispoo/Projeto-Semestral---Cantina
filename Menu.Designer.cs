@@ -29,37 +29,34 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             pictureBox1 = new PictureBox();
             label1 = new Label();
             button1 = new Guna.UI2.WinForms.Guna2Button();
             btnEstoque = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            BtnCozinha = new Guna.UI2.WinForms.Guna2Button();
             BtnBalcao = new Guna.UI2.WinForms.Guna2Button();
             btnTelaVendas = new Guna.UI2.WinForms.Guna2Button();
             guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
-            guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.bolt;
-            pictureBox1.Location = new Point(302, 12);
+            pictureBox1.Location = new Point(347, 41);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(266, 82);
+            pictureBox1.Size = new Size(189, 58);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 3;
             pictureBox1.TabStop = false;
@@ -81,7 +78,7 @@
             button1.BorderRadius = 15;
             button1.BorderThickness = 1;
             button1.Cursor = Cursors.Hand;
-            button1.CustomizableEdges = customizableEdges1;
+            button1.CustomizableEdges = customizableEdges11;
             button1.DisabledState.BorderColor = Color.DarkGray;
             button1.DisabledState.CustomBorderColor = Color.DarkGray;
             button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -94,7 +91,7 @@
             button1.Location = new Point(574, 155);
             button1.Name = "button1";
             button1.PressedColor = Color.FromArgb(230, 255, 0);
-            button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            button1.ShadowDecoration.CustomizableEdges = customizableEdges12;
             button1.Size = new Size(275, 84);
             button1.TabIndex = 20;
             button1.Text = " Telão Pedidos";
@@ -111,7 +108,7 @@
             btnEstoque.Cursor = Cursors.Hand;
             btnEstoque.CustomImages.ImageAlign = HorizontalAlignment.Center;
             btnEstoque.CustomImages.ImageSize = new Size(200, 200);
-            btnEstoque.CustomizableEdges = customizableEdges3;
+            btnEstoque.CustomizableEdges = customizableEdges13;
             btnEstoque.DisabledState.BorderColor = Color.DarkGray;
             btnEstoque.DisabledState.CustomBorderColor = Color.DarkGray;
             btnEstoque.DisabledState.FillColor = Color.DarkGray;
@@ -125,37 +122,37 @@
             btnEstoque.Location = new Point(293, 277);
             btnEstoque.Name = "btnEstoque";
             btnEstoque.PressedColor = Color.FromArgb(230, 255, 0);
-            btnEstoque.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnEstoque.ShadowDecoration.CustomizableEdges = customizableEdges14;
             btnEstoque.Size = new Size(275, 84);
             btnEstoque.TabIndex = 21;
             btnEstoque.Text = " Estoque";
             btnEstoque.Click += btnEstoque_Click;
             // 
-            // guna2Button1
+            // BtnCozinha
             // 
-            guna2Button1.Animated = true;
-            guna2Button1.BorderColor = SystemColors.Window;
-            guna2Button1.BorderRadius = 15;
-            guna2Button1.BorderThickness = 1;
-            guna2Button1.Cursor = Cursors.Hand;
-            guna2Button1.CustomizableEdges = customizableEdges5;
-            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.FillColor = SystemColors.Window;
-            guna2Button1.FocusedColor = Color.FromArgb(230, 255, 0);
-            guna2Button1.Font = new Font("Inter", 18F, FontStyle.Bold);
-            guna2Button1.ForeColor = Color.FromArgb(17, 25, 12);
-            guna2Button1.Image = Properties.Resources.cozinha;
-            guna2Button1.Location = new Point(293, 155);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.PressedColor = Color.FromArgb(230, 255, 0);
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2Button1.Size = new Size(275, 84);
-            guna2Button1.TabIndex = 22;
-            guna2Button1.Text = " Cozinha";
-            guna2Button1.Click += BtnCozinha_Click;
+            BtnCozinha.Animated = true;
+            BtnCozinha.BorderColor = SystemColors.Window;
+            BtnCozinha.BorderRadius = 15;
+            BtnCozinha.BorderThickness = 1;
+            BtnCozinha.Cursor = Cursors.Hand;
+            BtnCozinha.CustomizableEdges = customizableEdges15;
+            BtnCozinha.DisabledState.BorderColor = Color.DarkGray;
+            BtnCozinha.DisabledState.CustomBorderColor = Color.DarkGray;
+            BtnCozinha.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            BtnCozinha.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            BtnCozinha.FillColor = SystemColors.Window;
+            BtnCozinha.FocusedColor = Color.FromArgb(230, 255, 0);
+            BtnCozinha.Font = new Font("Inter", 18F, FontStyle.Bold);
+            BtnCozinha.ForeColor = Color.FromArgb(17, 25, 12);
+            BtnCozinha.Image = Properties.Resources.cozinha;
+            BtnCozinha.Location = new Point(293, 155);
+            BtnCozinha.Name = "BtnCozinha";
+            BtnCozinha.PressedColor = Color.FromArgb(230, 255, 0);
+            BtnCozinha.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            BtnCozinha.Size = new Size(275, 84);
+            BtnCozinha.TabIndex = 22;
+            BtnCozinha.Text = " Cozinha";
+            BtnCozinha.Click += BtnCozinha_Click;
             // 
             // BtnBalcao
             // 
@@ -164,7 +161,7 @@
             BtnBalcao.BorderRadius = 15;
             BtnBalcao.BorderThickness = 1;
             BtnBalcao.Cursor = Cursors.Hand;
-            BtnBalcao.CustomizableEdges = customizableEdges7;
+            BtnBalcao.CustomizableEdges = customizableEdges17;
             BtnBalcao.DisabledState.BorderColor = Color.DarkGray;
             BtnBalcao.DisabledState.CustomBorderColor = Color.DarkGray;
             BtnBalcao.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -177,7 +174,7 @@
             BtnBalcao.Location = new Point(12, 155);
             BtnBalcao.Name = "BtnBalcao";
             BtnBalcao.PressedColor = Color.FromArgb(230, 255, 0);
-            BtnBalcao.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            BtnBalcao.ShadowDecoration.CustomizableEdges = customizableEdges18;
             BtnBalcao.Size = new Size(275, 84);
             BtnBalcao.TabIndex = 23;
             BtnBalcao.Text = " Balcão";
@@ -190,7 +187,7 @@
             btnTelaVendas.BorderRadius = 15;
             btnTelaVendas.BorderThickness = 1;
             btnTelaVendas.Cursor = Cursors.Hand;
-            btnTelaVendas.CustomizableEdges = customizableEdges9;
+            btnTelaVendas.CustomizableEdges = customizableEdges19;
             btnTelaVendas.DisabledState.BorderColor = Color.DarkGray;
             btnTelaVendas.DisabledState.CustomBorderColor = Color.DarkGray;
             btnTelaVendas.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -203,7 +200,7 @@
             btnTelaVendas.Location = new Point(12, 277);
             btnTelaVendas.Name = "btnTelaVendas";
             btnTelaVendas.PressedColor = Color.FromArgb(230, 255, 0);
-            btnTelaVendas.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            btnTelaVendas.ShadowDecoration.CustomizableEdges = customizableEdges20;
             btnTelaVendas.Size = new Size(275, 84);
             btnTelaVendas.TabIndex = 24;
             btnTelaVendas.Text = " Vendas";
@@ -215,46 +212,15 @@
             guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
-            // guna2Button2
-            // 
-            guna2Button2.Animated = true;
-            guna2Button2.AnimatedGIF = true;
-            guna2Button2.BackColor = Color.Transparent;
-            guna2Button2.BorderColor = Color.White;
-            guna2Button2.BorderRadius = 15;
-            guna2Button2.CausesValidation = false;
-            guna2Button2.Cursor = Cursors.Hand;
-            guna2Button2.CustomImages.ImageAlign = HorizontalAlignment.Center;
-            guna2Button2.CustomImages.ImageSize = new Size(200, 200);
-            guna2Button2.CustomizableEdges = customizableEdges11;
-            guna2Button2.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button2.DisabledState.FillColor = Color.DarkGray;
-            guna2Button2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button2.DisabledState.Image = Properties.Resources._2356480_stock_photo_smiley;
-            guna2Button2.FillColor = SystemColors.Window;
-            guna2Button2.FocusedColor = Color.FromArgb(230, 255, 0);
-            guna2Button2.Font = new Font("Inter", 18F, FontStyle.Bold);
-            guna2Button2.ForeColor = Color.FromArgb(17, 25, 12);
-            guna2Button2.Image = Properties.Resources.user;
-            guna2Button2.Location = new Point(575, 277);
-            guna2Button2.Name = "guna2Button2";
-            guna2Button2.PressedColor = Color.FromArgb(230, 255, 0);
-            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            guna2Button2.Size = new Size(275, 84);
-            guna2Button2.TabIndex = 25;
-            guna2Button2.Text = " Logins";
-            // 
             // Menu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(243, 241, 238);
             ClientSize = new Size(862, 445);
-            Controls.Add(guna2Button2);
             Controls.Add(btnTelaVendas);
             Controls.Add(BtnBalcao);
-            Controls.Add(guna2Button1);
+            Controls.Add(BtnCozinha);
             Controls.Add(button1);
             Controls.Add(label1);
             Controls.Add(pictureBox1);
@@ -275,12 +241,11 @@
         private Label label1;
         private Guna.UI2.WinForms.Guna2Button button1;
         private Guna.UI2.WinForms.Guna2Button btnEstoque;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button BtnCozinha;
         private Guna.UI2.WinForms.Guna2Button BtnBalcao;
         private Guna.UI2.WinForms.Guna2Button btnTelaVendas;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
         private Guna.UI2.WinForms.Guna2WinProgressIndicator guna2WinProgressIndicator1;
         private PictureBox pictureBox2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
     }
 }

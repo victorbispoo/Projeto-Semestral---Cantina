@@ -151,6 +151,7 @@
             btnVoltarMenu.Size = new Size(124, 39);
             btnVoltarMenu.TabIndex = 18;
             btnVoltarMenu.Text = " Voltar";
+            btnVoltarMenu.Visible = false;
             btnVoltarMenu.Click += btnVoltarMenu_Click;
             // 
             // btnFinalizarPedido

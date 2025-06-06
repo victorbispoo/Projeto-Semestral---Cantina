@@ -33,6 +33,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             bypass = new Button();
             guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
@@ -42,6 +43,8 @@
             pictureBox2 = new PictureBox();
             pictureBox3 = new PictureBox();
             guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
+            button1 = new Button();
+            verSenha = new Guna.UI2.WinForms.Guna2ImageCheckBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -60,7 +63,7 @@
             bypass.Name = "bypass";
             bypass.Size = new Size(208, 58);
             bypass.TabIndex = 0;
-            bypass.Text = "Abrir menu";
+            bypass.Text = "Entrar";
             bypass.TextImageRelation = TextImageRelation.ImageAboveText;
             bypass.UseVisualStyleBackColor = false;
             bypass.Click += bypass_Click;
@@ -85,6 +88,7 @@
             guna2TextBox1.TabIndex = 2;
             guna2TextBox1.TextChanged += guna2TextBox1_TextChanged;
             guna2TextBox1.Click += guna2TextBox1_Click;
+            guna2TextBox1.Leave += guna2TextBox1_Leave;
             // 
             // guna2TextBox2
             // 
@@ -104,7 +108,9 @@
             guna2TextBox2.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2TextBox2.Size = new Size(430, 36);
             guna2TextBox2.TabIndex = 3;
+            guna2TextBox2.TextChanged += guna2TextBox2_TextChanged;
             guna2TextBox2.Click += guna2TextBox2_Click;
+            guna2TextBox2.Leave += guna2TextBox2_Leave;
             // 
             // guna2HtmlLabel2
             // 
@@ -162,12 +168,47 @@
             guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
+            // button1
+            // 
+            button1.AllowDrop = true;
+            button1.AutoSize = true;
+            button1.BackColor = SystemColors.Control;
+            button1.Cursor = Cursors.Hand;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.System;
+            button1.Font = new Font("Inter", 15.75F, FontStyle.Bold);
+            button1.Location = new Point(593, 12);
+            button1.Name = "button1";
+            button1.Size = new Size(143, 39);
+            button1.TabIndex = 10;
+            button1.Text = "Abrir menu";
+            button1.TextImageRelation = TextImageRelation.ImageAboveText;
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
+            // verSenha
+            // 
+            verSenha.BackColor = Color.Transparent;
+            verSenha.CheckedState.Image = Properties.Resources.eye_crossed;
+            verSenha.Image = Properties.Resources.eye;
+            verSenha.ImageOffset = new Point(0, 0);
+            verSenha.ImageRotate = 0F;
+            verSenha.Location = new Point(558, 268);
+            verSenha.Name = "verSenha";
+            verSenha.ShadowDecoration.CustomizableEdges = customizableEdges5;
+            verSenha.Size = new Size(26, 25);
+            verSenha.TabIndex = 12;
+            verSenha.UseTransparentBackground = true;
+            verSenha.CheckedChanged += verSenha_CheckedChanged;
+            // 
             // telaDeLogin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
             ClientSize = new Size(748, 454);
+            Controls.Add(verSenha);
+            Controls.Add(button1);
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
@@ -199,5 +240,7 @@
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
+        private Button button1;
+        private Guna.UI2.WinForms.Guna2ImageCheckBox verSenha;
     }
 }

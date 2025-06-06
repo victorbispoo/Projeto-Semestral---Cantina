@@ -12,9 +12,11 @@ namespace Projeto_Semestral___Cantina
 {
     public partial class Balcao : Form
     {
-        public Balcao()
+        private string tipoUsuario;
+        public Balcao(string tipo)
         {
             InitializeComponent();
+            tipoUsuario = tipo;
         }
         public static void alterarFundodaLista(object sender, DrawItemEventArgs e)
         {
@@ -108,6 +110,14 @@ namespace Projeto_Semestral___Cantina
 
         private void Balcao_Load(object sender, EventArgs e)
         {
+            if (tipoUsuario == "Administrador")
+            {
+                btnVoltarMenu.Visible = true;
+            }
+            else
+            {
+                btnVoltarMenu.Visible = false;
+            }
             listBoxPedidospraEntrega.Items.Clear();
             foreach (Pedido pedido in PersistenciaPedido.pedidosProntos)
             {
@@ -171,7 +181,7 @@ namespace Projeto_Semestral___Cantina
 
         private void btnVoltarMenu_Click(object sender, EventArgs e)
         {
-            Menu menu = new Menu();
+            Menu menu = new Menu(tipoUsuario);
             menu.Show();
             this.Hide();
         }

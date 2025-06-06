@@ -36,16 +36,14 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             CantCardapio = new ListBox();
             CantCarrinho = new ListBox();
             CtnLblTotal = new Label();
@@ -54,7 +52,6 @@
             CantBtnAdd = new Guna.UI2.WinForms.Guna2Button();
             CantBtnRemover = new Guna.UI2.WinForms.Guna2Button();
             btnFinalizarPedido = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             btnVoltarMenu = new Guna.UI2.WinForms.Guna2Button();
             guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
             guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
@@ -196,34 +193,12 @@
             btnFinalizarPedido.Text = " Meios de pagamento";
             btnFinalizarPedido.Click += CantBtnFin_Click;
             // 
-            // guna2Button1
-            // 
-            guna2Button1.Animated = true;
-            guna2Button1.BorderRadius = 8;
-            guna2Button1.Cursor = Cursors.Hand;
-            guna2Button1.CustomizableEdges = customizableEdges7;
-            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.FillColor = SystemColors.Window;
-            guna2Button1.Font = new Font("Inter", 12F, FontStyle.Bold);
-            guna2Button1.ForeColor = Color.Black;
-            guna2Button1.Image = Properties.Resources.apagar;
-            guna2Button1.Location = new Point(719, 67);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.PressedColor = Color.FromArgb(230, 255, 0);
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2Button1.Size = new Size(182, 42);
-            guna2Button1.TabIndex = 25;
-            guna2Button1.Text = " Limpar Carrinho";
-            // 
             // btnVoltarMenu
             // 
             btnVoltarMenu.Animated = true;
             btnVoltarMenu.BorderRadius = 15;
             btnVoltarMenu.Cursor = Cursors.Hand;
-            btnVoltarMenu.CustomizableEdges = customizableEdges9;
+            btnVoltarMenu.CustomizableEdges = customizableEdges7;
             btnVoltarMenu.DisabledState.BorderColor = Color.DarkGray;
             btnVoltarMenu.DisabledState.CustomBorderColor = Color.DarkGray;
             btnVoltarMenu.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -235,7 +210,7 @@
             btnVoltarMenu.Location = new Point(21, 410);
             btnVoltarMenu.Name = "btnVoltarMenu";
             btnVoltarMenu.PressedColor = Color.FromArgb(230, 255, 0);
-            btnVoltarMenu.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            btnVoltarMenu.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btnVoltarMenu.Size = new Size(135, 36);
             btnVoltarMenu.TabIndex = 26;
             btnVoltarMenu.Text = " Voltar";
@@ -246,7 +221,7 @@
             guna2TextBox2.Animated = true;
             guna2TextBox2.BorderThickness = 0;
             guna2TextBox2.CausesValidation = false;
-            guna2TextBox2.CustomizableEdges = customizableEdges11;
+            guna2TextBox2.CustomizableEdges = customizableEdges9;
             guna2TextBox2.DefaultText = " Produtos";
             guna2TextBox2.DisabledState.BorderColor = SystemColors.Control;
             guna2TextBox2.DisabledState.FillColor = SystemColors.Control;
@@ -266,7 +241,7 @@
             guna2TextBox2.PlaceholderText = "";
             guna2TextBox2.ReadOnly = true;
             guna2TextBox2.SelectedText = "";
-            guna2TextBox2.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            guna2TextBox2.ShadowDecoration.CustomizableEdges = customizableEdges10;
             guna2TextBox2.Size = new Size(248, 27);
             guna2TextBox2.TabIndex = 27;
             guna2TextBox2.TabStop = false;
@@ -276,7 +251,7 @@
             guna2TextBox1.Animated = true;
             guna2TextBox1.BorderThickness = 0;
             guna2TextBox1.CausesValidation = false;
-            guna2TextBox1.CustomizableEdges = customizableEdges13;
+            guna2TextBox1.CustomizableEdges = customizableEdges11;
             guna2TextBox1.DefaultText = " Carrinho";
             guna2TextBox1.DisabledState.BorderColor = SystemColors.Control;
             guna2TextBox1.DisabledState.FillColor = SystemColors.Control;
@@ -296,7 +271,7 @@
             guna2TextBox1.PlaceholderText = "";
             guna2TextBox1.ReadOnly = true;
             guna2TextBox1.SelectedText = "";
-            guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges12;
             guna2TextBox1.Size = new Size(132, 27);
             guna2TextBox1.TabIndex = 28;
             guna2TextBox1.TabStop = false;
@@ -305,7 +280,7 @@
             // 
             guna2TextBox3.BorderRadius = 15;
             guna2TextBox3.BorderThickness = 0;
-            guna2TextBox3.CustomizableEdges = customizableEdges15;
+            guna2TextBox3.CustomizableEdges = customizableEdges13;
             guna2TextBox3.DefaultText = "";
             guna2TextBox3.DisabledState.BorderColor = SystemColors.Control;
             guna2TextBox3.DisabledState.FillColor = Color.White;
@@ -322,7 +297,7 @@
             guna2TextBox3.PlaceholderText = "";
             guna2TextBox3.ReadOnly = true;
             guna2TextBox3.SelectedText = "";
-            guna2TextBox3.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            guna2TextBox3.ShadowDecoration.CustomizableEdges = customizableEdges14;
             guna2TextBox3.Size = new Size(221, 47);
             guna2TextBox3.TabIndex = 29;
             guna2TextBox3.TabStop = false;
@@ -342,7 +317,6 @@
             Controls.Add(guna2TextBox1);
             Controls.Add(guna2TextBox2);
             Controls.Add(btnVoltarMenu);
-            Controls.Add(guna2Button1);
             Controls.Add(btnFinalizarPedido);
             Controls.Add(CantBtnRemover);
             Controls.Add(CantBtnAdd);
@@ -373,7 +347,6 @@
         private Guna.UI2.WinForms.Guna2Button CantBtnAdd;
         private Guna.UI2.WinForms.Guna2Button CantBtnRemover;
         private Guna.UI2.WinForms.Guna2Button btnFinalizarPedido;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2Button btnVoltarMenu;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;

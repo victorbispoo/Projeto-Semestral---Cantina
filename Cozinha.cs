@@ -12,11 +12,11 @@ namespace Projeto_Semestral___Cantina
 {
     public partial class Cozinha : Form
     {
-       
-        public Cozinha()
+        private string tipoUsuario;
+        public Cozinha(string tipo)
         {
             InitializeComponent();
-
+            tipoUsuario = tipo;
         }
         public static void alterarFundodaLista(object sender, DrawItemEventArgs e)
         {
@@ -94,6 +94,14 @@ namespace Projeto_Semestral___Cantina
         }
         private void Cozinha_Load(object sender, EventArgs e)
         {
+            if (tipoUsuario == "Administrador")
+            {
+                btnVoltarMenu.Visible = true;
+            }
+            else
+            {
+                btnVoltarMenu.Visible = false;
+            }
             foreach (Pedido pedido in PersistenciaPedido.pedidos)
             {
                 if (pedido.IsChapa == true)
@@ -123,7 +131,7 @@ namespace Projeto_Semestral___Cantina
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Menu menu = new Menu();
+            Menu menu = new Menu(tipoUsuario);
             menu.Show();
             this.Hide();
         }

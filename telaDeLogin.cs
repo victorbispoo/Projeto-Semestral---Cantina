@@ -34,6 +34,7 @@ namespace Projeto_Semestral___Cantina
 
             if (login != null && login.ValidarSenha(senhaDigitada))
             {
+
                 Menu menu = new Menu(login.Tipo);
                 menu.Show();
                 this.Hide();
@@ -57,21 +58,92 @@ namespace Projeto_Semestral___Cantina
             PersistenciaPedido.produtosEstoque.Add(new Produto(8, "Hamburguer com Queijo", 9.00, 0, true));
             PersistenciaPedido.produtosEstoque.Add(new Produto(9, "X-Tudo", 12.00, 0, true));
             PersistenciaPedido.produtosEstoque.Add(new Produto(10, "Água Mineral", 2.50, 0, false));
+
+            PersistenciaPedido.usuarios.Add(new Logins("admin", "BoltAdmin", "Administrador"));
+            PersistenciaPedido.usuarios.Add(new Logins("cozinha", "BoltCozinha", "Cozinheiro"));
+            PersistenciaPedido.usuarios.Add(new Logins("balcao", "BoltBalcao", "Balcão"));
+            PersistenciaPedido.usuarios.Add(new Logins("cantina", "BoltCantina", "Cantineiro"));
+            PersistenciaPedido.usuarios.Add(new Logins("telao", "BoltTelao", "Telão"));
+
         }
 
         private void guna2TextBox1_TextChanged(object sender, EventArgs e)
         {
-
+            if (guna2TextBox1.Text == "Usuário")
+            {
+                guna2TextBox1.ForeColor = Color.FromArgb(125, 137, 149);
+            }
+            else
+            {
+                guna2TextBox1.ForeColor = Color.Black;
+            }
         }
 
         private void guna2TextBox1_Click(object sender, EventArgs e)
         {
-            guna2TextBox1.Text = "";
+            if (guna2TextBox1.Text == "Usuário")
+            {
+                guna2TextBox1.Text = "";
+            }
         }
 
         private void guna2TextBox2_Click(object sender, EventArgs e)
         {
-            guna2TextBox2.Text = "";
+            if (guna2TextBox2.Text == "Senha")
+            {
+                guna2TextBox2.Text = "";
+                guna2TextBox2.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                guna2TextBox2.UseSystemPasswordChar = !verSenha.Checked;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void verSenha_CheckedChanged(object sender, EventArgs e)
+        {
+            if (guna2TextBox2.Text=="Senha")
+            {
+                guna2TextBox2.UseSystemPasswordChar=false;
+            }
+            else
+            {
+                guna2TextBox2.UseSystemPasswordChar = !verSenha.Checked;
+            }
+        }
+
+        private void guna2TextBox2_TextChanged(object sender, EventArgs e)
+        {
+            if (guna2TextBox2.Text == "Senha")
+            {
+                guna2TextBox2.ForeColor = Color.FromArgb(125, 137, 149);
+            }
+            else
+            {
+                guna2TextBox2.ForeColor = Color.Black;
+            }
+        }
+
+        private void guna2TextBox2_Leave(object sender, EventArgs e)
+        {
+            if (guna2TextBox2.Text == "")
+            {
+                guna2TextBox2.Text = "Senha";
+                guna2TextBox2.ForeColor = Color.FromArgb(125, 137, 149);
+            }
+        }
+
+        private void guna2TextBox1_Leave(object sender, EventArgs e)
+        {
+            if (guna2TextBox1.Text == "")
+            {
+                guna2TextBox1.Text = "Usuário";
+                guna2TextBox1.ForeColor = Color.FromArgb(125, 137, 149);
+            }
         }
     }
 }

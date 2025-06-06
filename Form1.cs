@@ -5,9 +5,11 @@ namespace Projeto_Semestral___Cantina
 {
     public partial class Form1 : Form
     {
-        public Form1()
+        private string tipoPedido;
+        public Form1(string tipo)
         {
             InitializeComponent();
+            tipoPedido = tipo;
         }
         public static void alterarFundodaLista(object sender, DrawItemEventArgs e)
         {
@@ -90,7 +92,15 @@ namespace Projeto_Semestral___Cantina
 
         private void Form1_Load(object sender, EventArgs e)
         {
-        foreach (Produto produto in PersistenciaPedido.produtosEstoque)
+            if (tipoPedido == "Administrador")
+            {
+                btnVoltarMenu.Visible = true;
+            }
+            else
+            {
+                btnVoltarMenu.Visible = false;
+            }
+            foreach (Produto produto in PersistenciaPedido.produtosEstoque)
             {
                 CantCardapio.Items.Add(produto);
             }
@@ -131,6 +141,10 @@ namespace Projeto_Semestral___Cantina
                     Produto novoItem = new Produto(produtoSelecionado.Id, produtoSelecionado.Nome, produtoSelecionado.Preco, 1, produtoSelecionado.IsChapa);
                     CantCarrinho.Items.Add(novoItem);
                     produtoSelecionado.Quantidade--;
+                }
+                if (produtoSelecionado.Quantidade >0 && produtoSelecionado.Quantidade<5 )
+                {
+                    MessageBox.Show("Estoque baixo para o produto: " + produtoSelecionado.Nome, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 int idx = CantCardapio.SelectedIndex;
                 CantCardapio.Items[idx] = produtoSelecionado;
@@ -295,20 +309,12 @@ namespace Projeto_Semestral___Cantina
 
         private void CantLimparCarrinho_Click(object sender, EventArgs e)
         {
-            if (CantCarrinho.Items.Count == 0)
-            {
-                MessageBox.Show("O carrinho já está vazio!", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            CantCarrinho.Items.Clear();
-            CantCarrinho.ClearSelected();
-            total = 0;
-            CtnLblTotal.Text = "R$" + total.ToString("F2");
+
         }
 
         private void BtnVoltar_Click(object sender, EventArgs e)
         {
-            Menu menu = new Menu();
+            Menu menu = new Menu(tipoPedido);
             menu.Show();
             this.Hide();
         }
