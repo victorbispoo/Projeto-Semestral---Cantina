@@ -1,4 +1,5 @@
-﻿using Guna.UI2.WinForms;
+﻿using System.Drawing.Text;
+using Guna.UI2.WinForms;
 using MaterialSkin.Controls;
 
 namespace Projeto_Semestral___Cantina
@@ -89,9 +90,10 @@ namespace Projeto_Semestral___Cantina
         {
 
         }
-
+        private string caminhoProdutos = PersistenciaPedido.caminhoProdutos;
         private void Form1_Load(object sender, EventArgs e)
         {
+
             if (tipoPedido == "Administrador")
             {
                 btnVoltarMenu.Visible = true;
@@ -100,6 +102,8 @@ namespace Projeto_Semestral___Cantina
             {
                 btnVoltarMenu.Visible = false;
             }
+            
+            PersistenciaPedido.CarregarProdutosEstoque(caminhoProdutos);
             foreach (Produto produto in PersistenciaPedido.produtosEstoque)
             {
                 CantCardapio.Items.Add(produto);
@@ -230,7 +234,7 @@ namespace Projeto_Semestral___Cantina
             {
                 string nomeCliente = Microsoft.VisualBasic.Interaction.InputBox("Digite o nome do usuário", "Cadastro", "Insira o nome do cliente");
 
-                if (string.IsNullOrWhiteSpace(nomeCliente) || nomeCliente == "Insira o nome do cliente" || nomeCliente.Length > 15)
+                if (string.IsNullOrWhiteSpace(nomeCliente) || nomeCliente == "Insira o nome do cliente" || nomeCliente.Length > 20)
                 {
                     MessageBox.Show("Operação cancelada ou nome inválido!", "Cancelado", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
@@ -290,8 +294,9 @@ namespace Projeto_Semestral___Cantina
 
                     CantCarrinho.Items.Clear();
                     CantCarrinho.ClearSelected();
+                    PersistenciaPedido.SalvarProdutosEstoque(caminhoProdutos);  
                     PersistenciaPedido.produtosEstoque.Clear();
-                    foreach(Produto produto in CantCardapio.Items)
+                    foreach (Produto produto in CantCardapio.Items)
                     {
                         Produto estoqueProduto = new Produto(produto.Id, produto.Nome, produto.Preco, produto.Quantidade, produto.IsChapa);
                         PersistenciaPedido.produtosEstoque.Add(estoqueProduto);

@@ -57,8 +57,9 @@
             listPedidosProntos.Font = new Font("Inter Medium", 12F, FontStyle.Bold);
             listPedidosProntos.ForeColor = Color.FromArgb(17, 25, 12);
             listPedidosProntos.FormattingEnabled = true;
+            listPedidosProntos.HorizontalScrollbar = true;
             listPedidosProntos.ItemHeight = 23;
-            listPedidosProntos.Location = new Point(428, 171);
+            listPedidosProntos.Location = new Point(428, 187);
             listPedidosProntos.Name = "listPedidosProntos";
             listPedidosProntos.SelectionMode = SelectionMode.None;
             listPedidosProntos.Size = new Size(361, 253);
@@ -75,8 +76,9 @@
             listPedidosPreparo.Font = new Font("Inter Medium", 12F, FontStyle.Bold);
             listPedidosPreparo.ForeColor = Color.FromArgb(17, 25, 12);
             listPedidosPreparo.FormattingEnabled = true;
+            listPedidosPreparo.HorizontalScrollbar = true;
             listPedidosPreparo.ItemHeight = 23;
-            listPedidosPreparo.Location = new Point(849, 171);
+            listPedidosPreparo.Location = new Point(849, 187);
             listPedidosPreparo.Name = "listPedidosPreparo";
             listPedidosPreparo.SelectionMode = SelectionMode.None;
             listPedidosPreparo.Size = new Size(344, 253);
@@ -92,8 +94,9 @@
             listPedidosEntregues.Font = new Font("Inter Medium", 12F, FontStyle.Bold);
             listPedidosEntregues.ForeColor = Color.FromArgb(17, 25, 12);
             listPedidosEntregues.FormattingEnabled = true;
+            listPedidosEntregues.HorizontalScrollbar = true;
             listPedidosEntregues.ItemHeight = 23;
-            listPedidosEntregues.Location = new Point(25, 171);
+            listPedidosEntregues.Location = new Point(25, 187);
             listPedidosEntregues.Name = "listPedidosEntregues";
             listPedidosEntregues.SelectionMode = SelectionMode.None;
             listPedidosEntregues.Size = new Size(340, 253);
@@ -106,7 +109,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.bolt;
-            pictureBox1.Location = new Point(481, 29);
+            pictureBox1.Location = new Point(481, 47);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(262, 79);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -129,7 +132,7 @@
             guna2TextBox3.ForeColor = Color.FromArgb(17, 25, 12);
             guna2TextBox3.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox3.IconLeft = Properties.Resources.pedidos_prontos;
-            guna2TextBox3.Location = new Point(25, 130);
+            guna2TextBox3.Location = new Point(25, 146);
             guna2TextBox3.Margin = new Padding(20, 19, 20, 19);
             guna2TextBox3.Name = "guna2TextBox3";
             guna2TextBox3.PlaceholderText = "";
@@ -156,7 +159,7 @@
             guna2TextBox1.ForeColor = Color.FromArgb(17, 25, 12);
             guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox1.IconLeft = Properties.Resources.Recibo;
-            guna2TextBox1.Location = new Point(428, 130);
+            guna2TextBox1.Location = new Point(428, 146);
             guna2TextBox1.Margin = new Padding(20, 19, 20, 19);
             guna2TextBox1.Name = "guna2TextBox1";
             guna2TextBox1.PlaceholderText = "";
@@ -183,7 +186,7 @@
             guna2TextBox2.ForeColor = Color.FromArgb(17, 25, 12);
             guna2TextBox2.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox2.IconLeft = Properties.Resources.loading;
-            guna2TextBox2.Location = new Point(849, 130);
+            guna2TextBox2.Location = new Point(849, 146);
             guna2TextBox2.Margin = new Padding(20, 19, 20, 19);
             guna2TextBox2.Name = "guna2TextBox2";
             guna2TextBox2.PlaceholderText = "";

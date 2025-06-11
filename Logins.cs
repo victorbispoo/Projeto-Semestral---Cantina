@@ -14,6 +14,8 @@ namespace Projeto_Semestral___Cantina
         public string SenhaHash { get; set; }
         public string Tipo { get; set; }
 
+        public Logins() { }
+
         public Logins(string usuario, string senha, string tipo)
         {
             Usuario = usuario;

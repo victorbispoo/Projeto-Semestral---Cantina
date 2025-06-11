@@ -62,6 +62,7 @@
             listBoxPedidospraEntrega.Font = new Font("Inter Medium", 12F, FontStyle.Bold);
             listBoxPedidospraEntrega.ForeColor = Color.FromArgb(17, 25, 12);
             listBoxPedidospraEntrega.FormattingEnabled = true;
+            listBoxPedidospraEntrega.HorizontalScrollbar = true;
             listBoxPedidospraEntrega.ItemHeight = 23;
             listBoxPedidospraEntrega.Location = new Point(47, 108);
             listBoxPedidospraEntrega.Margin = new Padding(4);
@@ -79,6 +80,7 @@
             listBoxComanda.Font = new Font("Inter Medium", 12F, FontStyle.Bold);
             listBoxComanda.ForeColor = Color.FromArgb(17, 25, 12);
             listBoxComanda.FormattingEnabled = true;
+            listBoxComanda.HorizontalScrollbar = true;
             listBoxComanda.ItemHeight = 23;
             listBoxComanda.Location = new Point(711, 108);
             listBoxComanda.Margin = new Padding(4);
@@ -96,6 +98,7 @@
             listBoxPedidosEntregues.Font = new Font("Inter Medium", 12F, FontStyle.Bold);
             listBoxPedidosEntregues.ForeColor = Color.FromArgb(17, 25, 12);
             listBoxPedidosEntregues.FormattingEnabled = true;
+            listBoxPedidosEntregues.HorizontalScrollbar = true;
             listBoxPedidosEntregues.ItemHeight = 23;
             listBoxPedidosEntregues.Location = new Point(47, 304);
             listBoxPedidosEntregues.Margin = new Padding(4);

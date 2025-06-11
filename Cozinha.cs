@@ -109,6 +109,8 @@ namespace Projeto_Semestral___Cantina
                     listBoxPedidos.Items.Add(pedido);
                 }
             }
+
+
             foreach (Pedido pedido in PersistenciaPedido.pedidosProntos)
             {
                 if (pedido.IsChapa == true)

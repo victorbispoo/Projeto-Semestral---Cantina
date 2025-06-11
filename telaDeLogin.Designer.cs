@@ -33,7 +33,9 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             bypass = new Button();
             guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
@@ -43,8 +45,8 @@
             pictureBox2 = new PictureBox();
             pictureBox3 = new PictureBox();
             guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
-            button1 = new Button();
             verSenha = new Guna.UI2.WinForms.Guna2ImageCheckBox();
+            BtnEntrar = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -54,16 +56,15 @@
             // 
             bypass.AllowDrop = true;
             bypass.AutoSize = true;
-            bypass.BackColor = SystemColors.Control;
+            bypass.BackColor = SystemColors.ActiveCaptionText;
             bypass.Cursor = Cursors.Hand;
             bypass.FlatAppearance.BorderSize = 0;
-            bypass.FlatStyle = FlatStyle.System;
-            bypass.Font = new Font("Inter", 15.75F, FontStyle.Bold);
-            bypass.Location = new Point(269, 326);
+            bypass.FlatStyle = FlatStyle.Flat;
+            bypass.Location = new Point(439, 35);
             bypass.Name = "bypass";
-            bypass.Size = new Size(208, 58);
+            bypass.Size = new Size(69, 25);
             bypass.TabIndex = 0;
-            bypass.Text = "Entrar";
+            bypass.Text = "bypass";
             bypass.TextImageRelation = TextImageRelation.ImageAboveText;
             bypass.UseVisualStyleBackColor = false;
             bypass.Click += bypass_Click;
@@ -110,6 +111,7 @@
             guna2TextBox2.TabIndex = 3;
             guna2TextBox2.TextChanged += guna2TextBox2_TextChanged;
             guna2TextBox2.Click += guna2TextBox2_Click;
+            guna2TextBox2.Enter += guna2TextBox2_Enter;
             guna2TextBox2.Leave += guna2TextBox2_Leave;
             // 
             // guna2HtmlLabel2
@@ -168,38 +170,45 @@
             guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
-            // button1
-            // 
-            button1.AllowDrop = true;
-            button1.AutoSize = true;
-            button1.BackColor = SystemColors.Control;
-            button1.Cursor = Cursors.Hand;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.System;
-            button1.Font = new Font("Inter", 15.75F, FontStyle.Bold);
-            button1.Location = new Point(593, 12);
-            button1.Name = "button1";
-            button1.Size = new Size(143, 39);
-            button1.TabIndex = 10;
-            button1.Text = "Abrir menu";
-            button1.TextImageRelation = TextImageRelation.ImageAboveText;
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
-            // 
             // verSenha
             // 
             verSenha.BackColor = Color.Transparent;
             verSenha.CheckedState.Image = Properties.Resources.eye_crossed;
+            verSenha.Cursor = Cursors.Hand;
             verSenha.Image = Properties.Resources.eye;
             verSenha.ImageOffset = new Point(0, 0);
             verSenha.ImageRotate = 0F;
             verSenha.Location = new Point(558, 268);
             verSenha.Name = "verSenha";
-            verSenha.ShadowDecoration.CustomizableEdges = customizableEdges5;
+            verSenha.ShadowDecoration.CustomizableEdges = customizableEdges7;
             verSenha.Size = new Size(26, 25);
             verSenha.TabIndex = 12;
             verSenha.UseTransparentBackground = true;
             verSenha.CheckedChanged += verSenha_CheckedChanged;
+            // 
+            // BtnEntrar
+            // 
+            BtnEntrar.Animated = true;
+            BtnEntrar.BorderColor = SystemColors.Window;
+            BtnEntrar.BorderRadius = 15;
+            BtnEntrar.Cursor = Cursors.Hand;
+            BtnEntrar.CustomizableEdges = customizableEdges5;
+            BtnEntrar.DisabledState.BorderColor = Color.DarkGray;
+            BtnEntrar.DisabledState.CustomBorderColor = Color.DarkGray;
+            BtnEntrar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            BtnEntrar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            BtnEntrar.FillColor = Color.FromArgb(230, 255, 0);
+            BtnEntrar.Font = new Font("Inter", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            BtnEntrar.ForeColor = Color.FromArgb(17, 25, 12);
+            BtnEntrar.Image = Properties.Resources.enter;
+            BtnEntrar.Location = new Point(264, 328);
+            BtnEntrar.Name = "BtnEntrar";
+            BtnEntrar.PressedColor = SystemColors.Control;
+            BtnEntrar.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            BtnEntrar.Size = new Size(215, 63);
+            BtnEntrar.TabIndex = 28;
+            BtnEntrar.Text = " Entrar";
+            BtnEntrar.Click += BtnEntrar_Click;
             // 
             // telaDeLogin
             // 
@@ -207,15 +216,15 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
             ClientSize = new Size(748, 454);
+            Controls.Add(BtnEntrar);
             Controls.Add(verSenha);
-            Controls.Add(button1);
-            Controls.Add(pictureBox3);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
             Controls.Add(guna2HtmlLabel3);
             Controls.Add(guna2HtmlLabel2);
             Controls.Add(guna2TextBox2);
             Controls.Add(guna2TextBox1);
+            Controls.Add(pictureBox3);
             Controls.Add(bypass);
             ForeColor = SystemColors.ControlText;
             FormBorderStyle = FormBorderStyle.None;
@@ -240,7 +249,7 @@
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
-        private Button button1;
         private Guna.UI2.WinForms.Guna2ImageCheckBox verSenha;
+        private Guna.UI2.WinForms.Guna2Button BtnEntrar;
     }
 }

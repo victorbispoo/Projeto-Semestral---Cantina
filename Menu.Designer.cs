@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             pictureBox1 = new PictureBox();
             label1 = new Label();
@@ -54,9 +54,9 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.bolt;
-            pictureBox1.Location = new Point(347, 41);
+            pictureBox1.Location = new Point(293, 44);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(189, 58);
+            pictureBox1.Size = new Size(236, 76);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 3;
             pictureBox1.TabStop = false;
@@ -65,7 +65,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Inter", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(353, 102);
+            label1.Location = new Point(328, 123);
             label1.Name = "label1";
             label1.Size = new Size(176, 39);
             label1.TabIndex = 7;
@@ -78,7 +78,7 @@
             button1.BorderRadius = 15;
             button1.BorderThickness = 1;
             button1.Cursor = Cursors.Hand;
-            button1.CustomizableEdges = customizableEdges11;
+            button1.CustomizableEdges = customizableEdges1;
             button1.DisabledState.BorderColor = Color.DarkGray;
             button1.DisabledState.CustomBorderColor = Color.DarkGray;
             button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -88,11 +88,11 @@
             button1.Font = new Font("Inter", 18F, FontStyle.Bold);
             button1.ForeColor = Color.FromArgb(17, 25, 12);
             button1.Image = Properties.Resources.telão;
-            button1.Location = new Point(574, 155);
+            button1.Location = new Point(561, 180);
             button1.Name = "button1";
             button1.PressedColor = Color.FromArgb(230, 255, 0);
-            button1.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            button1.Size = new Size(275, 84);
+            button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            button1.Size = new Size(243, 84);
             button1.TabIndex = 20;
             button1.Text = " Telão Pedidos";
             button1.Click += button1_Click;
@@ -108,7 +108,7 @@
             btnEstoque.Cursor = Cursors.Hand;
             btnEstoque.CustomImages.ImageAlign = HorizontalAlignment.Center;
             btnEstoque.CustomImages.ImageSize = new Size(200, 200);
-            btnEstoque.CustomizableEdges = customizableEdges13;
+            btnEstoque.CustomizableEdges = customizableEdges3;
             btnEstoque.DisabledState.BorderColor = Color.DarkGray;
             btnEstoque.DisabledState.CustomBorderColor = Color.DarkGray;
             btnEstoque.DisabledState.FillColor = Color.DarkGray;
@@ -119,11 +119,11 @@
             btnEstoque.Font = new Font("Inter", 18F, FontStyle.Bold);
             btnEstoque.ForeColor = Color.FromArgb(17, 25, 12);
             btnEstoque.Image = Properties.Resources.estoque;
-            btnEstoque.Location = new Point(293, 277);
+            btnEstoque.Location = new Point(289, 302);
             btnEstoque.Name = "btnEstoque";
             btnEstoque.PressedColor = Color.FromArgb(230, 255, 0);
-            btnEstoque.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            btnEstoque.Size = new Size(275, 84);
+            btnEstoque.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnEstoque.Size = new Size(243, 84);
             btnEstoque.TabIndex = 21;
             btnEstoque.Text = " Estoque";
             btnEstoque.Click += btnEstoque_Click;
@@ -135,7 +135,7 @@
             BtnCozinha.BorderRadius = 15;
             BtnCozinha.BorderThickness = 1;
             BtnCozinha.Cursor = Cursors.Hand;
-            BtnCozinha.CustomizableEdges = customizableEdges15;
+            BtnCozinha.CustomizableEdges = customizableEdges5;
             BtnCozinha.DisabledState.BorderColor = Color.DarkGray;
             BtnCozinha.DisabledState.CustomBorderColor = Color.DarkGray;
             BtnCozinha.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -145,11 +145,11 @@
             BtnCozinha.Font = new Font("Inter", 18F, FontStyle.Bold);
             BtnCozinha.ForeColor = Color.FromArgb(17, 25, 12);
             BtnCozinha.Image = Properties.Resources.cozinha;
-            BtnCozinha.Location = new Point(293, 155);
+            BtnCozinha.Location = new Point(289, 180);
             BtnCozinha.Name = "BtnCozinha";
             BtnCozinha.PressedColor = Color.FromArgb(230, 255, 0);
-            BtnCozinha.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            BtnCozinha.Size = new Size(275, 84);
+            BtnCozinha.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            BtnCozinha.Size = new Size(243, 84);
             BtnCozinha.TabIndex = 22;
             BtnCozinha.Text = " Cozinha";
             BtnCozinha.Click += BtnCozinha_Click;
@@ -161,7 +161,7 @@
             BtnBalcao.BorderRadius = 15;
             BtnBalcao.BorderThickness = 1;
             BtnBalcao.Cursor = Cursors.Hand;
-            BtnBalcao.CustomizableEdges = customizableEdges17;
+            BtnBalcao.CustomizableEdges = customizableEdges7;
             BtnBalcao.DisabledState.BorderColor = Color.DarkGray;
             BtnBalcao.DisabledState.CustomBorderColor = Color.DarkGray;
             BtnBalcao.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -171,11 +171,11 @@
             BtnBalcao.Font = new Font("Inter", 18F, FontStyle.Bold);
             BtnBalcao.ForeColor = Color.FromArgb(17, 25, 12);
             BtnBalcao.Image = Properties.Resources.Loja;
-            BtnBalcao.Location = new Point(12, 155);
+            BtnBalcao.Location = new Point(15, 180);
             BtnBalcao.Name = "BtnBalcao";
             BtnBalcao.PressedColor = Color.FromArgb(230, 255, 0);
-            BtnBalcao.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            BtnBalcao.Size = new Size(275, 84);
+            BtnBalcao.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            BtnBalcao.Size = new Size(243, 84);
             BtnBalcao.TabIndex = 23;
             BtnBalcao.Text = " Balcão";
             BtnBalcao.Click += BtnBalcao_Click;
@@ -187,7 +187,7 @@
             btnTelaVendas.BorderRadius = 15;
             btnTelaVendas.BorderThickness = 1;
             btnTelaVendas.Cursor = Cursors.Hand;
-            btnTelaVendas.CustomizableEdges = customizableEdges19;
+            btnTelaVendas.CustomizableEdges = customizableEdges9;
             btnTelaVendas.DisabledState.BorderColor = Color.DarkGray;
             btnTelaVendas.DisabledState.CustomBorderColor = Color.DarkGray;
             btnTelaVendas.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -197,11 +197,11 @@
             btnTelaVendas.Font = new Font("Inter", 18F, FontStyle.Bold);
             btnTelaVendas.ForeColor = Color.FromArgb(17, 25, 12);
             btnTelaVendas.Image = Properties.Resources.vendas;
-            btnTelaVendas.Location = new Point(12, 277);
+            btnTelaVendas.Location = new Point(15, 302);
             btnTelaVendas.Name = "btnTelaVendas";
             btnTelaVendas.PressedColor = Color.FromArgb(230, 255, 0);
-            btnTelaVendas.ShadowDecoration.CustomizableEdges = customizableEdges20;
-            btnTelaVendas.Size = new Size(275, 84);
+            btnTelaVendas.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            btnTelaVendas.Size = new Size(243, 84);
             btnTelaVendas.TabIndex = 24;
             btnTelaVendas.Text = " Vendas";
             btnTelaVendas.Click += btnTelaVendas_Click;
@@ -217,7 +217,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(243, 241, 238);
-            ClientSize = new Size(862, 445);
+            ClientSize = new Size(826, 454);
             Controls.Add(btnTelaVendas);
             Controls.Add(BtnBalcao);
             Controls.Add(BtnCozinha);

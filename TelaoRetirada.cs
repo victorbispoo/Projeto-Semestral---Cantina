@@ -23,6 +23,8 @@ namespace Projeto_Semestral___Cantina
         {
         }
 
+        private string caminhoPedidos = PersistenciaPedido.caminhoPedidos;
+
         private void TelaoRetirada_Load(object sender, EventArgs e)
         {
             if (tipoUsuario== "Administrador")
@@ -40,7 +42,12 @@ namespace Projeto_Semestral___Cantina
                     listPedidosPreparo.Items.Add($"ID: {pedido.Id} | Cliente: {pedido.NomeCliente} | Tipo: {pedido.TipoPedido}");
                 }
             }
-            foreach (Pedido pedido in PersistenciaPedido.pedidosEntregues)
+            PersistenciaPedido.CarregarPedidosEntregues(caminhoPedidos);
+            var ultimos5 = PersistenciaPedido.pedidosEntregues
+            .OrderByDescending(p => p.DataHora)
+            .Take(5)
+            .ToList();
+            foreach (var pedido in ultimos5)
             {
                 listPedidosEntregues.Items.Add($"ID: {pedido.Id} | Cliente:  {pedido.NomeCliente}  | Tipo: {pedido.TipoPedido}");
             }

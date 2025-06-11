@@ -133,11 +133,15 @@ namespace Projeto_Semestral___Cantina
 
             bool isChapa = false;
             string isChapaInput = Microsoft.VisualBasic.Interaction.InputBox("O produto é da chapa? (Sim/Não)", "Adicionar Produto", "", -1, -1);
-            if (isChapaInput.Equals("Sim", StringComparison.OrdinalIgnoreCase))
+            if (isChapaInput.Equals("Sim", StringComparison.OrdinalIgnoreCase)||isChapaInput.Equals("s", StringComparison.OrdinalIgnoreCase))
             {
                 isChapa = true;
             }
-            else if (!isChapaInput.Equals("Não", StringComparison.OrdinalIgnoreCase)||!isChapaInput.Equals("Nao", StringComparison.OrdinalIgnoreCase))
+            else if (isChapaInput.Equals("Não", StringComparison.OrdinalIgnoreCase)|| isChapaInput.Equals("Nao", StringComparison.OrdinalIgnoreCase)||isChapaInput.Equals("n", StringComparison.OrdinalIgnoreCase))
+            {
+                isChapa = false;
+            }
+            else
             {
                 MessageBox.Show("Entrada inválida. Por favor, responda com 'Sim' ou 'Não'.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -147,16 +151,18 @@ namespace Projeto_Semestral___Cantina
             PersistenciaPedido.produtosEstoque.Add(novoProduto);
             listProdutosEstoque.Items.Add(novoProduto);
             MessageBox.Show("Produto adicionado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            PersistenciaPedido.SalvarProdutosEstoque(caminhoProdutos);
 
         }
-
+        public string caminhoProdutos = PersistenciaPedido.caminhoProdutos;
         private void Estoque_Load(object sender, EventArgs e)
         {
-
+            PersistenciaPedido.CarregarProdutosEstoque(caminhoProdutos);
             foreach (Produto produto in PersistenciaPedido.produtosEstoque)
             {
-                listProdutosEstoque.Items.Add(produto);
+                listProdutosEstoque.Items.Add($"ID: {produto.Id} - Nome: {produto.Nome} - Qtd: {produto.Quantidade} - Preço: R${produto.Preco:F2}");
             }
+
         }
 
         private void btnVoltarMenu_Click(object sender, EventArgs e)
@@ -235,7 +241,7 @@ namespace Projeto_Semestral___Cantina
             {
                 MessageBox.Show("Erro ao editar o produto.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
+            PersistenciaPedido.SalvarProdutosEstoque(caminhoProdutos);
         }
 
         private void btnRemover_Click(object sender, EventArgs e)
@@ -255,6 +261,7 @@ namespace Projeto_Semestral___Cantina
                     MessageBox.Show("Produto removido com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
+            PersistenciaPedido.SalvarProdutosEstoque(caminhoProdutos);
         }
 
         private void btnAlterar_Click(object sender, EventArgs e)
@@ -279,6 +286,12 @@ namespace Projeto_Semestral___Cantina
             listProdutosEstoque.Items[idx] = produtoSelecionado;
 
             MessageBox.Show("Quantidade alterada com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            PersistenciaPedido.SalvarProdutosEstoque(caminhoProdutos);
+        }
+
+        private void Estoque_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            
         }
     }
 }

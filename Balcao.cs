@@ -107,7 +107,7 @@ namespace Projeto_Semestral___Cantina
                 }
             }
         }
-
+        private string caminhoPedidos = PersistenciaPedido.caminhoPedidos;
         private void Balcao_Load(object sender, EventArgs e)
         {
             if (tipoUsuario == "Administrador")
@@ -124,7 +124,12 @@ namespace Projeto_Semestral___Cantina
                 listBoxPedidospraEntrega.Items.Add(pedido);
             }
             listBoxPedidosEntregues.Items.Clear();
-            foreach (Pedido pedido in PersistenciaPedido.pedidosEntregues)
+            PersistenciaPedido.CarregarPedidosEntregues(caminhoPedidos);
+            var ultimos5 = PersistenciaPedido.pedidosEntregues
+            .OrderByDescending(p => p.DataHora)
+            .Take(5)
+            .ToList();
+            foreach (var pedido in ultimos5)
             {
                 listBoxPedidosEntregues.Items.Add(pedido);
             }
@@ -150,7 +155,7 @@ namespace Projeto_Semestral___Cantina
 
                 listBoxComanda.Items.Clear();
                 MessageBox.Show("Pedido finalizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                PersistenciaPedido.SalvarPedidosEntregues(caminhoPedidos);
             }
             else
             {

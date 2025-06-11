@@ -66,6 +66,7 @@
             listBoxPedidos.Font = new Font("Inter Medium", 12F, FontStyle.Bold);
             listBoxPedidos.ForeColor = Color.FromArgb(17, 25, 12);
             listBoxPedidos.FormattingEnabled = true;
+            listBoxPedidos.HorizontalScrollbar = true;
             listBoxPedidos.ItemHeight = 23;
             listBoxPedidos.Location = new Point(37, 91);
             listBoxPedidos.Name = "listBoxPedidos";
@@ -91,6 +92,7 @@
             listBoxComanda.Font = new Font("Inter Medium", 12F, FontStyle.Bold);
             listBoxComanda.ForeColor = Color.FromArgb(17, 25, 12);
             listBoxComanda.FormattingEnabled = true;
+            listBoxComanda.HorizontalScrollbar = true;
             listBoxComanda.ItemHeight = 23;
             listBoxComanda.Location = new Point(724, 91);
             listBoxComanda.Name = "listBoxComanda";
@@ -107,6 +109,7 @@
             listPedidosProntos.Font = new Font("Inter Medium", 12F, FontStyle.Bold);
             listPedidosProntos.ForeColor = Color.FromArgb(17, 25, 12);
             listPedidosProntos.FormattingEnabled = true;
+            listPedidosProntos.HorizontalScrollbar = true;
             listPedidosProntos.ItemHeight = 23;
             listPedidosProntos.Location = new Point(37, 295);
             listPedidosProntos.Name = "listPedidosProntos";

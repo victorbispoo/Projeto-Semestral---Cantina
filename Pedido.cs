@@ -12,6 +12,7 @@ namespace Projeto_Semestral___Cantina
         public DateTime DataHora { get; set; }
         public bool IsChapa { get; set; } = false;
         public string TipoPedido { get; set; } = "";
+        public Pedido() { }
         public Pedido(int id, string nomeCliente, string status, List<Produto> produtos,DateTime dataHora,bool isChapa,string tipoPedido)
         {
             Id = id;
@@ -25,7 +26,7 @@ namespace Projeto_Semestral___Cantina
 
         public override string ToString()
         {
-            return $"Pedido ID: {Id} | Cliente: {NomeCliente}  | Tipo: {TipoPedido} | Status: {Status} |  {DataHora:HH:mm}";
+            return $"Pedido ID: {Id} - Cliente: {NomeCliente}  - Tipo: {TipoPedido} - Status: {Status} -  {DataHora:HH:mm}";
         }
     }
 }
