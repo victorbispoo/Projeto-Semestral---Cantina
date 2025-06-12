@@ -31,11 +31,11 @@ namespace Projeto_Semestral___Cantina
             {
                 btnVoltarMenu.Visible = true;
             }
-            foreach (Pedido pedido in PersistenciaPedido.pedidosProntos)
+            foreach (Pedido pedido in PersistenciaPedido.pedidosProntos.OrderBy(p => p.DataHora))
             {
                 listPedidosProntos.Items.Add($"ID: {pedido.Id} | Cliente: {pedido.NomeCliente} | Tipo: {pedido.TipoPedido}");
             }
-            foreach (Pedido pedido in PersistenciaPedido.pedidos)
+            foreach (Pedido pedido in PersistenciaPedido.pedidos.OrderBy(p => p.DataHora))
             {
                 if (pedido.IsChapa == true)
                 {

@@ -104,10 +104,7 @@ namespace Projeto_Semestral___Cantina
             }
             
             PersistenciaPedido.CarregarProdutosEstoque(caminhoProdutos);
-            foreach (Produto produto in PersistenciaPedido.produtosEstoque)
-            {
-                CantCardapio.Items.Add(produto);
-            }
+            AtualizarListaProdutos();
         }
         public double total { get; private set; } = 0;
         private void CantBtnAdd_Click(object sender, EventArgs e)
@@ -120,17 +117,34 @@ namespace Projeto_Semestral___Cantina
                     MessageBox.Show("Produto sem estoque!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
+                string quantidadeInput = Microsoft.VisualBasic.Interaction.InputBox(
+                    $"Digite a quantidade para '{produtoSelecionado.Nome}' (máx: {produtoSelecionado.Quantidade}):",
+                    "Quantidade",
+                    "1"
+                );
+
+                if (!int.TryParse(quantidadeInput, out int quantidadeDesejada) || quantidadeDesejada <= 0)
+                {
+                    MessageBox.Show("Quantidade inválida.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                if (quantidadeDesejada > produtoSelecionado.Quantidade)
+                {
+                    MessageBox.Show("Quantidade maior que o estoque disponível.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
                 foreach (Produto item in CantCarrinho.Items)
                 {
                     if (item.Nome == produtoSelecionado.Nome)
                     {
-                        if (produtoSelecionado.Quantidade <= 0)
+                        if (produtoSelecionado.Quantidade < quantidadeDesejada)
                         {
-                            MessageBox.Show("Produto sem estoque!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            MessageBox.Show("Estoque insuficiente!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             return;
                         }
-                        item.Quantidade++;
-                        produtoSelecionado.Quantidade--;
+                        item.Quantidade += quantidadeDesejada;
+                        produtoSelecionado.Quantidade -= quantidadeDesejada;
 
                         encontrado = true;
 
@@ -142,16 +156,17 @@ namespace Projeto_Semestral___Cantina
                 }
                 if (!encontrado)
                 {
-                    Produto novoItem = new Produto(produtoSelecionado.Id, produtoSelecionado.Nome, produtoSelecionado.Preco, 1, produtoSelecionado.IsChapa);
+                    Produto novoItem = new Produto(produtoSelecionado.Id, produtoSelecionado.Nome, produtoSelecionado.Preco, quantidadeDesejada, produtoSelecionado.IsChapa);
                     CantCarrinho.Items.Add(novoItem);
-                    produtoSelecionado.Quantidade--;
+                    produtoSelecionado.Quantidade -= quantidadeDesejada;
                 }
-                if (produtoSelecionado.Quantidade >0 && produtoSelecionado.Quantidade<5 )
+                if (produtoSelecionado.Quantidade >= 0 && produtoSelecionado.Quantidade < 5)
                 {
                     MessageBox.Show("Estoque baixo para o produto: " + produtoSelecionado.Nome, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 int idx = CantCardapio.SelectedIndex;
                 CantCardapio.Items[idx] = produtoSelecionado;
+                total = 0;
                 foreach (Produto item in CantCarrinho.Items)
                 {
                     total += item.Preco * item.Quantidade;
@@ -183,6 +198,22 @@ namespace Projeto_Semestral___Cantina
             }
             if (CantCarrinho.SelectedItem is Produto produtoSelecionado)
             {
+                string quantidadeInput = Microsoft.VisualBasic.Interaction.InputBox(
+                    $"Digite a quantidade para remover de '{produtoSelecionado.Nome}' (máx: {produtoSelecionado.Quantidade}):",
+                    "Remover Quantidade",
+                    "1"
+                );
+
+                if (!int.TryParse(quantidadeInput, out int quantidadeRemover) || quantidadeRemover <= 0)
+                {
+                    MessageBox.Show("Quantidade inválida.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                if (quantidadeRemover > produtoSelecionado.Quantidade)
+                {
+                    MessageBox.Show("Quantidade maior que a existente no carrinho.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 Produto produtoEstoque = null;
                 foreach (Produto p in CantCardapio.Items)
                 {
@@ -192,34 +223,33 @@ namespace Projeto_Semestral___Cantina
                         break;
                     }
                 }
-                if (produtoSelecionado.Quantidade > 1)
+
+                produtoSelecionado.Quantidade -= quantidadeRemover;
+                if (produtoEstoque != null)
                 {
-                    produtoSelecionado.Quantidade--;
-                    if (produtoEstoque != null)
-                    {
-                        produtoEstoque.Quantidade++;
-                      
-                        int idx = CantCardapio.Items.IndexOf(produtoEstoque);
-                        CantCardapio.Items[idx] = produtoEstoque;
-                    }
+                    produtoEstoque.Quantidade += quantidadeRemover;
+                    int idx = CantCardapio.Items.IndexOf(produtoEstoque);
+                    CantCardapio.Items[idx] = produtoEstoque;
+                }
+
+                if (produtoSelecionado.Quantidade > 0)
+                {
                     int index = CantCarrinho.Items.IndexOf(produtoSelecionado);
                     CantCarrinho.Items.RemoveAt(index);
                     CantCarrinho.Items.Insert(index, produtoSelecionado);
-                    total -= produtoSelecionado.Preco;
                 }
                 else
                 {
-                    if (produtoEstoque != null)
-                    {
-                        produtoEstoque.Quantidade++;
-                        int idx = CantCardapio.Items.IndexOf(produtoEstoque);
-                        CantCardapio.Items[idx] = produtoEstoque;
-                    }
                     CantCarrinho.Items.RemoveAt(CantCarrinho.SelectedIndex);
-                    total -= produtoSelecionado.Preco;
                 }
+
+                total = 0;
+                foreach (Produto item in CantCarrinho.Items)
+                {
+                    total += item.Preco * item.Quantidade;
+                }
+                CtnLblTotal.Text = "R$" + total.ToString("F2");
             }
-            CtnLblTotal.Text = "R$" + total.ToString("F2");
         }
 
         private void CantBtnFin_Click(object sender, EventArgs e)
@@ -311,10 +341,26 @@ namespace Projeto_Semestral___Cantina
 
             }
         }
-
+        private void AtualizarListaProdutos()
+        {
+            CantCardapio.Items.Clear();
+            foreach (Produto produto in PersistenciaPedido.produtosEstoque.OrderBy(p => p.Id)) 
+            {
+                CantCardapio.Items.Add(produto);
+            }
+        }
         private void CantLimparCarrinho_Click(object sender, EventArgs e)
         {
 
+        }
+        private Color GetQuantidadeColor(int quantidade)
+        {
+            if (quantidade < 5)
+                return Color.Red;
+            else if (quantidade < 10)
+                return Color.Orange;
+            else
+                return Color.Black;
         }
 
         private void BtnVoltar_Click(object sender, EventArgs e)
@@ -323,9 +369,35 @@ namespace Projeto_Semestral___Cantina
             menu.Show();
             this.Hide();
         }
-
+        
         private void CantCardapio_DrawItem(object sender, DrawItemEventArgs e)
         {
+            if (e.Index < 0) return;
+
+            string itemText = ((ListBox)sender).Items[e.Index].ToString();
+          
+            int qtdIndex = itemText.IndexOf("Qtd:");
+            int quantidade = 0;
+            if (qtdIndex >= 0)
+            {
+                string qtdStr = itemText.Substring(qtdIndex + 4).Trim();
+                int.TryParse(qtdStr, out quantidade);
+            }
+
+            e.Graphics.FillRectangle(new SolidBrush(e.BackColor), e.Bounds);
+
+            string beforeQtd = qtdIndex >= 0 ? itemText.Substring(0, qtdIndex + 4) : itemText;
+            string qtdValue = qtdIndex >= 0 ? itemText.Substring(qtdIndex + 4).Trim() : "";
+
+            float x = e.Bounds.X;
+            float y = e.Bounds.Y;
+            using (Brush blackBrush = new SolidBrush(Color.Black))
+            using (Brush qtdBrush = new SolidBrush(GetQuantidadeColor(quantidade)))
+            {
+                e.Graphics.DrawString(beforeQtd, e.Font, blackBrush, x, y);
+                x += e.Graphics.MeasureString(beforeQtd, e.Font).Width;
+                e.Graphics.DrawString(qtdValue, e.Font, qtdBrush, x, y);
+            }
             alterarFundodaLista(sender, e);
         }
 

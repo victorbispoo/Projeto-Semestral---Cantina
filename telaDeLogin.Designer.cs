@@ -94,7 +94,7 @@
             // guna2TextBox2
             // 
             guna2TextBox2.CustomizableEdges = customizableEdges3;
-            guna2TextBox2.DefaultText = "Senha";
+            guna2TextBox2.DefaultText = "Insira sua senha";
             guna2TextBox2.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             guna2TextBox2.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             guna2TextBox2.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);

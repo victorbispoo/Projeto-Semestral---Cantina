@@ -15,7 +15,10 @@ namespace Projeto_Semestral___Cantina
         public telaDeLogin()
         {
             InitializeComponent();
-            guna2TextBox2.UseSystemPasswordChar = true;
+            if (guna2TextBox2.Text != "Insira sua senha")
+            {
+                guna2TextBox2.UseSystemPasswordChar = false;
+            }
         }
 
         private void bypass_Click(object sender, EventArgs e)
@@ -53,7 +56,7 @@ namespace Projeto_Semestral___Cantina
 
         private void guna2TextBox2_Click(object sender, EventArgs e)
         {
-            if (guna2TextBox2.Text == "Senha")
+            if (guna2TextBox2.Text == "Insira sua senha")
             {
                 guna2TextBox2.Text = "";
 
@@ -67,28 +70,20 @@ namespace Projeto_Semestral___Cantina
 
         private void verSenha_CheckedChanged(object sender, EventArgs e)
         {
-
-
-            if (guna2TextBox2.Text == "Senha")
-            {
-                guna2TextBox2.UseSystemPasswordChar = false;
-            }
-            else
-            {
                 guna2TextBox2.UseSystemPasswordChar = !verSenha.Checked;
-            }
-
         }
 
         private void guna2TextBox2_TextChanged(object sender, EventArgs e)
         {
-            if (guna2TextBox2.Text == "Senha")
+            if (guna2TextBox2.Text == "Insira sua senha")
             {
                 guna2TextBox2.ForeColor = Color.FromArgb(125, 137, 149);
+                guna2TextBox2.UseSystemPasswordChar = false;
             }
             else
             {
                 guna2TextBox2.ForeColor = Color.Black;
+                guna2TextBox2.UseSystemPasswordChar = !verSenha.Checked;
             }
         }
 
@@ -96,8 +91,9 @@ namespace Projeto_Semestral___Cantina
         {
             if (guna2TextBox2.Text == "")
             {
-                guna2TextBox2.Text = "Senha";
+                guna2TextBox2.Text = "Insira sua senha";
                 guna2TextBox2.ForeColor = Color.FromArgb(125, 137, 149);
+                guna2TextBox2.UseSystemPasswordChar = false;
             }
         }
 
@@ -140,7 +136,7 @@ namespace Projeto_Semestral___Cantina
 
         private void guna2TextBox2_Enter(object sender, EventArgs e)
         {
-            if(guna2TextBox2.Text =="Senha")
+            if(guna2TextBox2.Text =="Insira sua senha")
             {
                 guna2TextBox2.Text = "";
             }

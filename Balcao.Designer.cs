@@ -88,6 +88,7 @@
             listBoxComanda.SelectionMode = SelectionMode.None;
             listBoxComanda.Size = new Size(350, 161);
             listBoxComanda.TabIndex = 5;
+            listBoxComanda.SelectedIndexChanged += listBoxComanda_SelectedIndexChanged;
             // 
             // listBoxPedidosEntregues
             // 

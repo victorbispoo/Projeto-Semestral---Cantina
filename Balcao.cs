@@ -101,7 +101,7 @@ namespace Projeto_Semestral___Cantina
             listBoxComanda.Items.Clear();
             if (listBoxPedidospraEntrega.SelectedItem is Pedido pedidoSelecionado)
             {
-                foreach (Produto prod in pedidoSelecionado.ProdutosPedido)
+                foreach (Produto prod in pedidoSelecionado.ProdutosPedido.OrderBy(p => p.Id))
                 {
                     listBoxComanda.Items.Add($"ID: {prod.Id} | {prod.Nome} | Qtd: {prod.Quantidade}");
                 }
@@ -176,19 +176,24 @@ namespace Projeto_Semestral___Cantina
         {
             alterarFundodaLista(sender, e);
         }
-       
+
 
         private void listBoxPedidosEntregues_DrawItem(object sender, DrawItemEventArgs e)
         {
-           alterarFundodaLista(sender, e);
+            alterarFundodaLista(sender, e);
         }
-   
+
 
         private void btnVoltarMenu_Click(object sender, EventArgs e)
         {
             Menu menu = new Menu(tipoUsuario);
             menu.Show();
             this.Hide();
+        }
+
+        private void listBoxComanda_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

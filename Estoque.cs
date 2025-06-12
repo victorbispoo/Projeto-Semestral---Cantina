@@ -93,6 +93,16 @@ namespace Projeto_Semestral___Cantina
             }
         }
 
+        private void AtualizarListaProdutos()
+        {
+            listProdutosEstoque.Items.Clear();
+            foreach (Produto produto in PersistenciaPedido.produtosEstoque.OrderBy(p => p.Id))
+            {
+                listProdutosEstoque.Items.Add(produto);
+            }
+        }
+
+
         private void btnAdd_Click(object sender, EventArgs e)
         {
             string nomeProduto = Microsoft.VisualBasic.Interaction.InputBox("Digite o nome do produto:", "Adicionar Produto", "", -1, -1);
@@ -150,6 +160,7 @@ namespace Projeto_Semestral___Cantina
             Produto novoProduto = new Produto(id, nomeProduto, preco, quantidade, isChapa);
             PersistenciaPedido.produtosEstoque.Add(novoProduto);
             listProdutosEstoque.Items.Add(novoProduto);
+            AtualizarListaProdutos();
             MessageBox.Show("Produto adicionado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             PersistenciaPedido.SalvarProdutosEstoque(caminhoProdutos);
 
@@ -158,11 +169,7 @@ namespace Projeto_Semestral___Cantina
         private void Estoque_Load(object sender, EventArgs e)
         {
             PersistenciaPedido.CarregarProdutosEstoque(caminhoProdutos);
-            foreach (Produto produto in PersistenciaPedido.produtosEstoque)
-            {
-                listProdutosEstoque.Items.Add($"ID: {produto.Id} - Nome: {produto.Nome} - Qtd: {produto.Quantidade} - Preço: R${produto.Preco:F2}");
-            }
-
+            AtualizarListaProdutos();
         }
 
         private void btnVoltarMenu_Click(object sender, EventArgs e)
@@ -174,6 +181,32 @@ namespace Projeto_Semestral___Cantina
 
         private void listProdutosEstoque_DrawItem(object sender, DrawItemEventArgs e)
         {
+            if (e.Index < 0) return;
+
+            string itemText = ((ListBox)sender).Items[e.Index].ToString();
+           
+            int qtdIndex = itemText.IndexOf("Qtd:");
+            int quantidade = 0;
+            if (qtdIndex >= 0)
+            {
+                string qtdStr = itemText.Substring(qtdIndex + 4).Trim();
+                int.TryParse(qtdStr, out quantidade);
+            }
+
+            e.Graphics.FillRectangle(new SolidBrush(e.BackColor), e.Bounds);
+
+            string beforeQtd = qtdIndex >= 0 ? itemText.Substring(0, qtdIndex + 4) : itemText;
+            string qtdValue = qtdIndex >= 0 ? itemText.Substring(qtdIndex + 4).Trim() : "";
+
+            float x = e.Bounds.X;
+            float y = e.Bounds.Y;
+            using (Brush blackBrush = new SolidBrush(Color.Black))
+            using (Brush qtdBrush = new SolidBrush(GetQuantidadeColor(quantidade)))
+            {
+                e.Graphics.DrawString(beforeQtd, e.Font, blackBrush, x, y);
+                x += e.Graphics.MeasureString(beforeQtd, e.Font).Width;
+                e.Graphics.DrawString(qtdValue, e.Font, qtdBrush, x, y);
+            }
             alterarFundodaLista(sender, e);
         }
 
@@ -196,10 +229,13 @@ namespace Projeto_Semestral___Cantina
             if (!int.TryParse(idInput, out id) || id <= 0)
             {
                 MessageBox.Show("O ID do produto não pode ser vazio ou 0.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+
             }
             if (PersistenciaPedido.produtosEstoque.Any(p => p.Id == id && p != produtoSelecionado))
             {
                 MessageBox.Show("Já existe um produto com este ID. Por favor, escolha outro ID.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
 
             double preco;
@@ -207,6 +243,7 @@ namespace Projeto_Semestral___Cantina
             if (!double.TryParse(precoInput, out preco) || preco < 0)
             {
                 MessageBox.Show("Preço inválido. Por favor, insira um valor numérico válido.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
 
             int quantidade;
@@ -214,6 +251,7 @@ namespace Projeto_Semestral___Cantina
             if (!int.TryParse(quantidadeInput, out quantidade) || quantidade < 0)
             {
                 MessageBox.Show("Quantidade inválida. Por favor, insira um valor numérico válido.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
 
             bool isChapa = false;
@@ -241,6 +279,7 @@ namespace Projeto_Semestral___Cantina
             {
                 MessageBox.Show("Erro ao editar o produto.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            AtualizarListaProdutos();
             PersistenciaPedido.SalvarProdutosEstoque(caminhoProdutos);
         }
 
@@ -277,7 +316,7 @@ namespace Projeto_Semestral___Cantina
             if (!int.TryParse(quantidadeInput, out quantidade) || quantidade < 0)
             {
                 MessageBox.Show("Quantidade inválida. Por favor, insira um valor numérico válido.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                return;
             }
 
             produtoSelecionado.Quantidade = quantidade;

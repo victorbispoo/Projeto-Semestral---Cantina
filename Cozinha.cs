@@ -111,7 +111,7 @@ namespace Projeto_Semestral___Cantina
             }
 
 
-            foreach (Pedido pedido in PersistenciaPedido.pedidosProntos)
+            foreach (Pedido pedido in PersistenciaPedido.pedidosProntos.OrderBy(p => p.DataHora))
             {
                 if (pedido.IsChapa == true)
                 {
