@@ -11,6 +11,7 @@ namespace Projeto_Semestral___Cantina
         {
             InitializeComponent();
             tipoPedido = tipo;
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
         public static void alterarFundodaLista(object sender, DrawItemEventArgs e)
         {
@@ -97,12 +98,14 @@ namespace Projeto_Semestral___Cantina
             if (tipoPedido == "Administrador")
             {
                 btnVoltarMenu.Visible = true;
+                BtnVoltarLogin.Visible = false;
             }
             else
             {
+                BtnVoltarLogin.Visible = true;
                 btnVoltarMenu.Visible = false;
             }
-            
+
             PersistenciaPedido.CarregarProdutosEstoque(caminhoProdutos);
             AtualizarListaProdutos();
         }
@@ -281,7 +284,7 @@ namespace Projeto_Semestral___Cantina
                     {
                         mensagem += $"{produto.Nome} | R${produto.Preco:F2} | Qtd {produto.Quantidade}\n";
                     }
-                    
+
                     MessageBox.Show(
                         $"{horarioPedido}\nExtrato do pedido de {nomeCliente} - {tipodePedido}\n{mensagem}\nTotal: R${total:F2}\nTroco: R${troco:F2}",
                         "Extrato",
@@ -324,7 +327,7 @@ namespace Projeto_Semestral___Cantina
 
                     CantCarrinho.Items.Clear();
                     CantCarrinho.ClearSelected();
-                    PersistenciaPedido.SalvarProdutosEstoque(caminhoProdutos);  
+                    PersistenciaPedido.SalvarProdutosEstoque(caminhoProdutos);
                     PersistenciaPedido.produtosEstoque.Clear();
                     foreach (Produto produto in CantCardapio.Items)
                     {
@@ -344,7 +347,7 @@ namespace Projeto_Semestral___Cantina
         private void AtualizarListaProdutos()
         {
             CantCardapio.Items.Clear();
-            foreach (Produto produto in PersistenciaPedido.produtosEstoque.OrderBy(p => p.Id)) 
+            foreach (Produto produto in PersistenciaPedido.produtosEstoque.OrderBy(p => p.Id))
             {
                 CantCardapio.Items.Add(produto);
             }
@@ -353,15 +356,6 @@ namespace Projeto_Semestral___Cantina
         {
 
         }
-        private Color GetQuantidadeColor(int quantidade)
-        {
-            if (quantidade < 5)
-                return Color.Red;
-            else if (quantidade < 10)
-                return Color.Orange;
-            else
-                return Color.Black;
-        }
 
         private void BtnVoltar_Click(object sender, EventArgs e)
         {
@@ -369,41 +363,22 @@ namespace Projeto_Semestral___Cantina
             menu.Show();
             this.Hide();
         }
-        
+
         private void CantCardapio_DrawItem(object sender, DrawItemEventArgs e)
         {
-            if (e.Index < 0) return;
-
-            string itemText = ((ListBox)sender).Items[e.Index].ToString();
-          
-            int qtdIndex = itemText.IndexOf("Qtd:");
-            int quantidade = 0;
-            if (qtdIndex >= 0)
-            {
-                string qtdStr = itemText.Substring(qtdIndex + 4).Trim();
-                int.TryParse(qtdStr, out quantidade);
-            }
-
-            e.Graphics.FillRectangle(new SolidBrush(e.BackColor), e.Bounds);
-
-            string beforeQtd = qtdIndex >= 0 ? itemText.Substring(0, qtdIndex + 4) : itemText;
-            string qtdValue = qtdIndex >= 0 ? itemText.Substring(qtdIndex + 4).Trim() : "";
-
-            float x = e.Bounds.X;
-            float y = e.Bounds.Y;
-            using (Brush blackBrush = new SolidBrush(Color.Black))
-            using (Brush qtdBrush = new SolidBrush(GetQuantidadeColor(quantidade)))
-            {
-                e.Graphics.DrawString(beforeQtd, e.Font, blackBrush, x, y);
-                x += e.Graphics.MeasureString(beforeQtd, e.Font).Width;
-                e.Graphics.DrawString(qtdValue, e.Font, qtdBrush, x, y);
-            }
             alterarFundodaLista(sender, e);
         }
 
         private void CantCarrinho_DrawItem(object sender, DrawItemEventArgs e)
         {
             alterarFundodaLista(sender, e);
+        }
+
+        private void BtnVoltarLogin_Click(object sender, EventArgs e)
+        {
+            telaDeLogin telaDeLogin = new telaDeLogin();
+            telaDeLogin.Show();
+            this.Hide();
         }
     }
 }

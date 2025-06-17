@@ -56,11 +56,11 @@
             // 
             bypass.AllowDrop = true;
             bypass.AutoSize = true;
-            bypass.BackColor = SystemColors.ActiveCaptionText;
+            bypass.BackColor = Color.Transparent;
             bypass.Cursor = Cursors.Hand;
             bypass.FlatAppearance.BorderSize = 0;
             bypass.FlatStyle = FlatStyle.Flat;
-            bypass.Location = new Point(439, 35);
+            bypass.Location = new Point(439, 33);
             bypass.Name = "bypass";
             bypass.Size = new Size(69, 25);
             bypass.TabIndex = 0;
@@ -205,7 +205,7 @@
             BtnEntrar.Name = "BtnEntrar";
             BtnEntrar.PressedColor = SystemColors.Control;
             BtnEntrar.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            BtnEntrar.Size = new Size(215, 63);
+            BtnEntrar.Size = new Size(204, 51);
             BtnEntrar.TabIndex = 28;
             BtnEntrar.Text = " Entrar";
             BtnEntrar.Click += BtnEntrar_Click;

@@ -17,6 +17,7 @@ namespace Projeto_Semestral___Cantina
         {
             InitializeComponent();
             tipoUsuario = tipo;
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void btnTelaVendas_Click(object sender, EventArgs e)
@@ -82,6 +83,13 @@ namespace Projeto_Semestral___Cantina
         private void guna2Button2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void BtnVoltarLogin_Click(object sender, EventArgs e)
+        {
+            telaDeLogin login = new telaDeLogin();
+            login.Show();
+            this.Close();
         }
     }
 }

@@ -22,6 +22,7 @@ namespace Projeto_Semestral___Cantina
             gunaRbtConsumo.Checked = true;
             Debito.Checked = true;
             totalPedido = total;
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void Concluindo_pedido_Load(object sender, EventArgs e)

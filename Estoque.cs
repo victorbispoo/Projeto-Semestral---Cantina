@@ -17,6 +17,7 @@ namespace Projeto_Semestral___Cantina
         {
             InitializeComponent();
             tipoPedido = tipo;
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
         public static void alterarFundodaLista(object sender, DrawItemEventArgs e)
         {
@@ -143,11 +144,11 @@ namespace Projeto_Semestral___Cantina
 
             bool isChapa = false;
             string isChapaInput = Microsoft.VisualBasic.Interaction.InputBox("O produto é da chapa? (Sim/Não)", "Adicionar Produto", "", -1, -1);
-            if (isChapaInput.Equals("Sim", StringComparison.OrdinalIgnoreCase)||isChapaInput.Equals("s", StringComparison.OrdinalIgnoreCase))
+            if (isChapaInput.Equals("Sim", StringComparison.OrdinalIgnoreCase) || isChapaInput.Equals("s", StringComparison.OrdinalIgnoreCase))
             {
                 isChapa = true;
             }
-            else if (isChapaInput.Equals("Não", StringComparison.OrdinalIgnoreCase)|| isChapaInput.Equals("Nao", StringComparison.OrdinalIgnoreCase)||isChapaInput.Equals("n", StringComparison.OrdinalIgnoreCase))
+            else if (isChapaInput.Equals("Não", StringComparison.OrdinalIgnoreCase) || isChapaInput.Equals("Nao", StringComparison.OrdinalIgnoreCase) || isChapaInput.Equals("n", StringComparison.OrdinalIgnoreCase))
             {
                 isChapa = false;
             }
@@ -181,32 +182,6 @@ namespace Projeto_Semestral___Cantina
 
         private void listProdutosEstoque_DrawItem(object sender, DrawItemEventArgs e)
         {
-            if (e.Index < 0) return;
-
-            string itemText = ((ListBox)sender).Items[e.Index].ToString();
-           
-            int qtdIndex = itemText.IndexOf("Qtd:");
-            int quantidade = 0;
-            if (qtdIndex >= 0)
-            {
-                string qtdStr = itemText.Substring(qtdIndex + 4).Trim();
-                int.TryParse(qtdStr, out quantidade);
-            }
-
-            e.Graphics.FillRectangle(new SolidBrush(e.BackColor), e.Bounds);
-
-            string beforeQtd = qtdIndex >= 0 ? itemText.Substring(0, qtdIndex + 4) : itemText;
-            string qtdValue = qtdIndex >= 0 ? itemText.Substring(qtdIndex + 4).Trim() : "";
-
-            float x = e.Bounds.X;
-            float y = e.Bounds.Y;
-            using (Brush blackBrush = new SolidBrush(Color.Black))
-            using (Brush qtdBrush = new SolidBrush(GetQuantidadeColor(quantidade)))
-            {
-                e.Graphics.DrawString(beforeQtd, e.Font, blackBrush, x, y);
-                x += e.Graphics.MeasureString(beforeQtd, e.Font).Width;
-                e.Graphics.DrawString(qtdValue, e.Font, qtdBrush, x, y);
-            }
             alterarFundodaLista(sender, e);
         }
 
@@ -253,7 +228,8 @@ namespace Projeto_Semestral___Cantina
                 MessageBox.Show("Quantidade inválida. Por favor, insira um valor numérico válido.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
+            if (quantidade <= 5)
+            { MessageBox.Show("Quantidade baixa.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information); }
             bool isChapa = false;
             string isChapaInput = Microsoft.VisualBasic.Interaction.InputBox("O produto é da chapa? (Sim/Não)", "Editar Produto", produtoSelecionado.IsChapa ? "Sim" : "Não", -1, -1);
             if (isChapaInput.Equals("Sim", StringComparison.OrdinalIgnoreCase))
@@ -318,19 +294,25 @@ namespace Projeto_Semestral___Cantina
                 MessageBox.Show("Quantidade inválida. Por favor, insira um valor numérico válido.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
+     
+     
             produtoSelecionado.Quantidade = quantidade;
-
             int idx = listProdutosEstoque.SelectedIndex;
             listProdutosEstoque.Items[idx] = produtoSelecionado;
-
             MessageBox.Show("Quantidade alterada com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (quantidade <= 5)
+            { MessageBox.Show("Quantidade baixa.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
             PersistenciaPedido.SalvarProdutosEstoque(caminhoProdutos);
         }
 
         private void Estoque_FormClosed(object sender, FormClosedEventArgs e)
         {
-            
+
+        }
+
+        private void BtnVoltarLogin_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

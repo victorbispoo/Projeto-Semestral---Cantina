@@ -38,6 +38,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaoRetirada));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             listPedidosProntos = new ListBox();
             listPedidosPreparo = new ListBox();
             listPedidosEntregues = new ListBox();
@@ -47,6 +49,7 @@
             guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
             btnVoltarMenu = new Guna.UI2.WinForms.Guna2Button();
             guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
+            BtnVoltarLogin = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -54,15 +57,15 @@
             // 
             listPedidosProntos.BorderStyle = BorderStyle.None;
             listPedidosProntos.Cursor = Cursors.No;
-            listPedidosProntos.Font = new Font("Inter Medium", 12F, FontStyle.Bold);
+            listPedidosProntos.Font = new Font("Inter", 16F, FontStyle.Bold);
             listPedidosProntos.ForeColor = Color.FromArgb(17, 25, 12);
             listPedidosProntos.FormattingEnabled = true;
             listPedidosProntos.HorizontalScrollbar = true;
-            listPedidosProntos.ItemHeight = 23;
+            listPedidosProntos.ItemHeight = 30;
             listPedidosProntos.Location = new Point(428, 187);
             listPedidosProntos.Name = "listPedidosProntos";
             listPedidosProntos.SelectionMode = SelectionMode.None;
-            listPedidosProntos.Size = new Size(361, 253);
+            listPedidosProntos.Size = new Size(314, 240);
             listPedidosProntos.Sorted = true;
             listPedidosProntos.TabIndex = 2;
             listPedidosProntos.TabStop = false;
@@ -73,15 +76,15 @@
             // 
             listPedidosPreparo.BorderStyle = BorderStyle.None;
             listPedidosPreparo.Cursor = Cursors.No;
-            listPedidosPreparo.Font = new Font("Inter Medium", 12F, FontStyle.Bold);
+            listPedidosPreparo.Font = new Font("Inter", 16F, FontStyle.Bold);
             listPedidosPreparo.ForeColor = Color.FromArgb(17, 25, 12);
             listPedidosPreparo.FormattingEnabled = true;
             listPedidosPreparo.HorizontalScrollbar = true;
-            listPedidosPreparo.ItemHeight = 23;
+            listPedidosPreparo.ItemHeight = 30;
             listPedidosPreparo.Location = new Point(849, 187);
             listPedidosPreparo.Name = "listPedidosPreparo";
             listPedidosPreparo.SelectionMode = SelectionMode.None;
-            listPedidosPreparo.Size = new Size(344, 253);
+            listPedidosPreparo.Size = new Size(297, 240);
             listPedidosPreparo.Sorted = true;
             listPedidosPreparo.TabIndex = 3;
             listPedidosPreparo.TabStop = false;
@@ -91,15 +94,15 @@
             // 
             listPedidosEntregues.BorderStyle = BorderStyle.None;
             listPedidosEntregues.Cursor = Cursors.No;
-            listPedidosEntregues.Font = new Font("Inter Medium", 12F, FontStyle.Bold);
+            listPedidosEntregues.Font = new Font("Inter", 16F, FontStyle.Bold);
             listPedidosEntregues.ForeColor = Color.FromArgb(17, 25, 12);
             listPedidosEntregues.FormattingEnabled = true;
             listPedidosEntregues.HorizontalScrollbar = true;
-            listPedidosEntregues.ItemHeight = 23;
+            listPedidosEntregues.ItemHeight = 30;
             listPedidosEntregues.Location = new Point(25, 187);
             listPedidosEntregues.Name = "listPedidosEntregues";
             listPedidosEntregues.SelectionMode = SelectionMode.None;
-            listPedidosEntregues.Size = new Size(340, 253);
+            listPedidosEntregues.Size = new Size(293, 240);
             listPedidosEntregues.Sorted = true;
             listPedidosEntregues.TabIndex = 5;
             listPedidosEntregues.TabStop = false;
@@ -211,7 +214,7 @@
             btnVoltarMenu.Font = new Font("Inter", 12F, FontStyle.Bold);
             btnVoltarMenu.ForeColor = Color.FromArgb(17, 25, 12);
             btnVoltarMenu.Image = (Image)resources.GetObject("btnVoltarMenu.Image");
-            btnVoltarMenu.Location = new Point(25, 454);
+            btnVoltarMenu.Location = new Point(25, 447);
             btnVoltarMenu.Margin = new Padding(4);
             btnVoltarMenu.Name = "btnVoltarMenu";
             btnVoltarMenu.PressedColor = Color.FromArgb(230, 255, 0);
@@ -227,12 +230,37 @@
             guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
+            // BtnVoltarLogin
+            // 
+            BtnVoltarLogin.Animated = true;
+            BtnVoltarLogin.BorderRadius = 15;
+            BtnVoltarLogin.Cursor = Cursors.Hand;
+            BtnVoltarLogin.CustomizableEdges = customizableEdges9;
+            BtnVoltarLogin.DisabledState.BorderColor = Color.DarkGray;
+            BtnVoltarLogin.DisabledState.CustomBorderColor = Color.DarkGray;
+            BtnVoltarLogin.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            BtnVoltarLogin.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            BtnVoltarLogin.FillColor = SystemColors.Window;
+            BtnVoltarLogin.Font = new Font("Inter", 12F, FontStyle.Bold);
+            BtnVoltarLogin.ForeColor = Color.FromArgb(17, 25, 12);
+            BtnVoltarLogin.Image = (Image)resources.GetObject("BtnVoltarLogin.Image");
+            BtnVoltarLogin.Location = new Point(25, 447);
+            BtnVoltarLogin.Margin = new Padding(4);
+            BtnVoltarLogin.Name = "BtnVoltarLogin";
+            BtnVoltarLogin.PressedColor = Color.FromArgb(230, 255, 0);
+            BtnVoltarLogin.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            BtnVoltarLogin.Size = new Size(132, 36);
+            BtnVoltarLogin.TabIndex = 27;
+            BtnVoltarLogin.Text = " Voltar";
+            BtnVoltarLogin.Click += BtnVoltarLogin_Click;
+            // 
             // TelaoRetirada
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
-            ClientSize = new Size(1215, 510);
+            ClientSize = new Size(1185, 510);
+            Controls.Add(BtnVoltarLogin);
             Controls.Add(btnVoltarMenu);
             Controls.Add(guna2TextBox2);
             Controls.Add(guna2TextBox1);
@@ -259,5 +287,6 @@
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
         private Guna.UI2.WinForms.Guna2Button btnVoltarMenu;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
+        private Guna.UI2.WinForms.Guna2Button BtnVoltarLogin;
     }
 }

@@ -17,6 +17,7 @@ namespace Projeto_Semestral___Cantina
         {
             InitializeComponent();
             tipoUsuario = tipo;
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
         public static void alterarFundodaLista(object sender, DrawItemEventArgs e)
         {
@@ -125,6 +126,7 @@ namespace Projeto_Semestral___Cantina
             }
             listBoxPedidosEntregues.Items.Clear();
             PersistenciaPedido.CarregarPedidosEntregues(caminhoPedidos);
+            PersistenciaPedido.LimparPedidosEntreguesAntigos();
             var ultimos5 = PersistenciaPedido.pedidosEntregues
             .OrderByDescending(p => p.DataHora)
             .Take(5)

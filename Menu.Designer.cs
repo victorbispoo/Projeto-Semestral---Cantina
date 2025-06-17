@@ -39,7 +39,9 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             pictureBox1 = new PictureBox();
             label1 = new Label();
             button1 = new Guna.UI2.WinForms.Guna2Button();
@@ -48,13 +50,14 @@
             BtnBalcao = new Guna.UI2.WinForms.Guna2Button();
             btnTelaVendas = new Guna.UI2.WinForms.Guna2Button();
             guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
+            BtnVoltarLogin = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.bolt;
-            pictureBox1.Location = new Point(293, 44);
+            pictureBox1.Location = new Point(293, 33);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(236, 76);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -65,7 +68,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Inter", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(328, 123);
+            label1.Location = new Point(328, 112);
             label1.Name = "label1";
             label1.Size = new Size(176, 39);
             label1.TabIndex = 7;
@@ -88,7 +91,7 @@
             button1.Font = new Font("Inter", 18F, FontStyle.Bold);
             button1.ForeColor = Color.FromArgb(17, 25, 12);
             button1.Image = Properties.Resources.telão;
-            button1.Location = new Point(561, 180);
+            button1.Location = new Point(561, 169);
             button1.Name = "button1";
             button1.PressedColor = Color.FromArgb(230, 255, 0);
             button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
@@ -119,7 +122,7 @@
             btnEstoque.Font = new Font("Inter", 18F, FontStyle.Bold);
             btnEstoque.ForeColor = Color.FromArgb(17, 25, 12);
             btnEstoque.Image = Properties.Resources.estoque;
-            btnEstoque.Location = new Point(289, 302);
+            btnEstoque.Location = new Point(289, 291);
             btnEstoque.Name = "btnEstoque";
             btnEstoque.PressedColor = Color.FromArgb(230, 255, 0);
             btnEstoque.ShadowDecoration.CustomizableEdges = customizableEdges4;
@@ -145,7 +148,7 @@
             BtnCozinha.Font = new Font("Inter", 18F, FontStyle.Bold);
             BtnCozinha.ForeColor = Color.FromArgb(17, 25, 12);
             BtnCozinha.Image = Properties.Resources.cozinha;
-            BtnCozinha.Location = new Point(289, 180);
+            BtnCozinha.Location = new Point(289, 169);
             BtnCozinha.Name = "BtnCozinha";
             BtnCozinha.PressedColor = Color.FromArgb(230, 255, 0);
             BtnCozinha.ShadowDecoration.CustomizableEdges = customizableEdges6;
@@ -171,7 +174,7 @@
             BtnBalcao.Font = new Font("Inter", 18F, FontStyle.Bold);
             BtnBalcao.ForeColor = Color.FromArgb(17, 25, 12);
             BtnBalcao.Image = Properties.Resources.Loja;
-            BtnBalcao.Location = new Point(15, 180);
+            BtnBalcao.Location = new Point(15, 169);
             BtnBalcao.Name = "BtnBalcao";
             BtnBalcao.PressedColor = Color.FromArgb(230, 255, 0);
             BtnBalcao.ShadowDecoration.CustomizableEdges = customizableEdges8;
@@ -197,7 +200,7 @@
             btnTelaVendas.Font = new Font("Inter", 18F, FontStyle.Bold);
             btnTelaVendas.ForeColor = Color.FromArgb(17, 25, 12);
             btnTelaVendas.Image = Properties.Resources.vendas;
-            btnTelaVendas.Location = new Point(15, 302);
+            btnTelaVendas.Location = new Point(15, 291);
             btnTelaVendas.Name = "btnTelaVendas";
             btnTelaVendas.PressedColor = Color.FromArgb(230, 255, 0);
             btnTelaVendas.ShadowDecoration.CustomizableEdges = customizableEdges10;
@@ -212,12 +215,36 @@
             guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
+            // BtnVoltarLogin
+            // 
+            BtnVoltarLogin.Animated = true;
+            BtnVoltarLogin.BorderRadius = 15;
+            BtnVoltarLogin.Cursor = Cursors.Hand;
+            BtnVoltarLogin.CustomizableEdges = customizableEdges11;
+            BtnVoltarLogin.DisabledState.BorderColor = Color.DarkGray;
+            BtnVoltarLogin.DisabledState.CustomBorderColor = Color.DarkGray;
+            BtnVoltarLogin.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            BtnVoltarLogin.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            BtnVoltarLogin.FillColor = SystemColors.Window;
+            BtnVoltarLogin.Font = new Font("Inter", 12F, FontStyle.Bold);
+            BtnVoltarLogin.ForeColor = Color.FromArgb(17, 25, 12);
+            BtnVoltarLogin.Image = (Image)resources.GetObject("BtnVoltarLogin.Image");
+            BtnVoltarLogin.Location = new Point(15, 392);
+            BtnVoltarLogin.Name = "BtnVoltarLogin";
+            BtnVoltarLogin.PressedColor = Color.FromArgb(230, 255, 0);
+            BtnVoltarLogin.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            BtnVoltarLogin.Size = new Size(124, 36);
+            BtnVoltarLogin.TabIndex = 28;
+            BtnVoltarLogin.Text = " Voltar";
+            BtnVoltarLogin.Click += BtnVoltarLogin_Click;
+            // 
             // Menu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(243, 241, 238);
             ClientSize = new Size(826, 454);
+            Controls.Add(BtnVoltarLogin);
             Controls.Add(btnTelaVendas);
             Controls.Add(BtnBalcao);
             Controls.Add(BtnCozinha);
@@ -247,5 +274,6 @@
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
         private Guna.UI2.WinForms.Guna2WinProgressIndicator guna2WinProgressIndicator1;
         private PictureBox pictureBox2;
+        private Guna.UI2.WinForms.Guna2Button BtnVoltarLogin;
     }
 }

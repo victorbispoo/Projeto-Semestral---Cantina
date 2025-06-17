@@ -15,10 +15,12 @@ namespace Projeto_Semestral___Cantina
         public telaDeLogin()
         {
             InitializeComponent();
+            
             if (guna2TextBox2.Text != "Insira sua senha")
             {
                 guna2TextBox2.UseSystemPasswordChar = false;
             }
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void bypass_Click(object sender, EventArgs e)
@@ -30,8 +32,8 @@ namespace Projeto_Semestral___Cantina
         private string caminhoLogins = PersistenciaPedido.caminhoLogins;
         private void telaDeLogin_Load(object sender, EventArgs e)
         {
+            
             PersistenciaPedido.CarregarLogins(caminhoLogins);
-            PersistenciaPedido.SalvarLogins(caminhoLogins);
         }
 
         private void guna2TextBox1_TextChanged(object sender, EventArgs e)

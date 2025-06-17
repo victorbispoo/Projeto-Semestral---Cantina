@@ -17,6 +17,7 @@ namespace Projeto_Semestral___Cantina
         {
             InitializeComponent();
             tipoUsuario = tipo;
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -27,29 +28,36 @@ namespace Projeto_Semestral___Cantina
 
         private void TelaoRetirada_Load(object sender, EventArgs e)
         {
-            if (tipoUsuario== "Administrador")
+            if (tipoUsuario == "Administrador")
             {
                 btnVoltarMenu.Visible = true;
+                BtnVoltarLogin.Visible = false;
             }
-            foreach (Pedido pedido in PersistenciaPedido.pedidosProntos.OrderBy(p => p.DataHora))
+            else
             {
-                listPedidosProntos.Items.Add($"ID: {pedido.Id} | Cliente: {pedido.NomeCliente} | Tipo: {pedido.TipoPedido}");
+                btnVoltarMenu.Visible = false;
+                BtnVoltarLogin.Visible = true;
             }
+                foreach (Pedido pedido in PersistenciaPedido.pedidosProntos.OrderBy(p => p.DataHora))
+                {
+                    listPedidosProntos.Items.Add($"ID: {pedido.Id} |  {pedido.NomeCliente}");
+                }
             foreach (Pedido pedido in PersistenciaPedido.pedidos.OrderBy(p => p.DataHora))
             {
                 if (pedido.IsChapa == true)
                 {
-                    listPedidosPreparo.Items.Add($"ID: {pedido.Id} | Cliente: {pedido.NomeCliente} | Tipo: {pedido.TipoPedido}");
+                    listPedidosPreparo.Items.Add($"ID: {pedido.Id} |  {pedido.NomeCliente}");
                 }
             }
             PersistenciaPedido.CarregarPedidosEntregues(caminhoPedidos);
+            PersistenciaPedido.LimparPedidosEntreguesAntigos();
             var ultimos5 = PersistenciaPedido.pedidosEntregues
             .OrderByDescending(p => p.DataHora)
             .Take(5)
             .ToList();
             foreach (var pedido in ultimos5)
             {
-                listPedidosEntregues.Items.Add($"ID: {pedido.Id} | Cliente:  {pedido.NomeCliente}  | Tipo: {pedido.TipoPedido}");
+                listPedidosEntregues.Items.Add($"ID: {pedido.Id} |  {pedido.NomeCliente}");
             }
         }
 
@@ -81,7 +89,14 @@ namespace Projeto_Semestral___Cantina
 
         private void listPedidosProntos_DrawItem(object sender, DrawItemEventArgs e)
         {
-         
+
+        }
+
+        private void BtnVoltarLogin_Click(object sender, EventArgs e)
+        {
+            telaDeLogin login = new telaDeLogin();
+            login.Show();
+            this.Hide();
         }
     }
 }

@@ -44,6 +44,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             CantCardapio = new ListBox();
             CantCarrinho = new ListBox();
             CtnLblTotal = new Label();
@@ -57,6 +59,7 @@
             guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
             guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
+            BtnVoltarLogin = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -64,7 +67,7 @@
             // 
             CantCardapio.BorderStyle = BorderStyle.None;
             CantCardapio.DrawMode = DrawMode.OwnerDrawFixed;
-            CantCardapio.Font = new Font("Inter Medium", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            CantCardapio.Font = new Font("Inter Medium", 12F, FontStyle.Bold);
             CantCardapio.FormattingEnabled = true;
             CantCardapio.HorizontalScrollbar = true;
             CantCardapio.ItemHeight = 23;
@@ -310,12 +313,36 @@
             guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
+            // BtnVoltarLogin
+            // 
+            BtnVoltarLogin.Animated = true;
+            BtnVoltarLogin.BorderRadius = 15;
+            BtnVoltarLogin.Cursor = Cursors.Hand;
+            BtnVoltarLogin.CustomizableEdges = customizableEdges15;
+            BtnVoltarLogin.DisabledState.BorderColor = Color.DarkGray;
+            BtnVoltarLogin.DisabledState.CustomBorderColor = Color.DarkGray;
+            BtnVoltarLogin.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            BtnVoltarLogin.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            BtnVoltarLogin.FillColor = SystemColors.Window;
+            BtnVoltarLogin.Font = new Font("Inter", 12F, FontStyle.Bold);
+            BtnVoltarLogin.ForeColor = Color.Black;
+            BtnVoltarLogin.Image = (Image)resources.GetObject("BtnVoltarLogin.Image");
+            BtnVoltarLogin.Location = new Point(21, 410);
+            BtnVoltarLogin.Name = "BtnVoltarLogin";
+            BtnVoltarLogin.PressedColor = Color.FromArgb(230, 255, 0);
+            BtnVoltarLogin.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            BtnVoltarLogin.Size = new Size(135, 36);
+            BtnVoltarLogin.TabIndex = 30;
+            BtnVoltarLogin.Text = " Voltar";
+            BtnVoltarLogin.Click += BtnVoltarLogin_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(243, 241, 238);
             ClientSize = new Size(977, 471);
+            Controls.Add(BtnVoltarLogin);
             Controls.Add(guna2TextBox1);
             Controls.Add(guna2TextBox2);
             Controls.Add(btnVoltarMenu);
@@ -354,5 +381,6 @@
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
+        private Guna.UI2.WinForms.Guna2Button BtnVoltarLogin;
     }
 }

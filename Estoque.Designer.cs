@@ -69,7 +69,7 @@
             listProdutosEstoque.ItemHeight = 23;
             listProdutosEstoque.Location = new Point(39, 107);
             listProdutosEstoque.Name = "listProdutosEstoque";
-            listProdutosEstoque.Size = new Size(593, 276);
+            listProdutosEstoque.Size = new Size(500, 276);
             listProdutosEstoque.TabIndex = 0;
             listProdutosEstoque.DrawItem += listProdutosEstoque_DrawItem;
             // 
@@ -113,7 +113,7 @@
             btnAdd.Font = new Font("Inter", 16F, FontStyle.Bold);
             btnAdd.ForeColor = Color.FromArgb(17, 25, 12);
             btnAdd.Image = Properties.Resources.add;
-            btnAdd.Location = new Point(666, 107);
+            btnAdd.Location = new Point(560, 107);
             btnAdd.Name = "btnAdd";
             btnAdd.PressedColor = Color.FromArgb(230, 255, 0);
             btnAdd.ShadowDecoration.CustomizableEdges = customizableEdges10;
@@ -138,7 +138,7 @@
             btnRemover.Font = new Font("Inter", 16F, FontStyle.Bold);
             btnRemover.ForeColor = Color.FromArgb(17, 25, 12);
             btnRemover.Image = Properties.Resources.trash;
-            btnRemover.Location = new Point(667, 203);
+            btnRemover.Location = new Point(561, 203);
             btnRemover.Name = "btnRemover";
             btnRemover.PressedColor = Color.FromArgb(230, 255, 0);
             btnRemover.ShadowDecoration.CustomizableEdges = customizableEdges8;
@@ -163,7 +163,7 @@
             btnAlterar.Font = new Font("Inter", 16F, FontStyle.Bold);
             btnAlterar.ForeColor = Color.FromArgb(17, 25, 12);
             btnAlterar.Image = Properties.Resources.replace;
-            btnAlterar.Location = new Point(955, 203);
+            btnAlterar.Location = new Point(849, 203);
             btnAlterar.Name = "btnAlterar";
             btnAlterar.PressedColor = Color.FromArgb(230, 255, 0);
             btnAlterar.ShadowDecoration.CustomizableEdges = customizableEdges6;
@@ -212,7 +212,7 @@
             btnEditar.Font = new Font("Inter", 16F, FontStyle.Bold);
             btnEditar.ForeColor = Color.FromArgb(17, 25, 12);
             btnEditar.Image = Properties.Resources.text_box_edit;
-            btnEditar.Location = new Point(956, 107);
+            btnEditar.Location = new Point(850, 107);
             btnEditar.Name = "btnEditar";
             btnEditar.PressedColor = Color.FromArgb(230, 255, 0);
             btnEditar.ShadowDecoration.CustomizableEdges = customizableEdges2;
@@ -225,7 +225,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1256, 469);
+            ClientSize = new Size(1154, 469);
             Controls.Add(btnEditar);
             Controls.Add(btnVoltarMenu);
             Controls.Add(btnAlterar);

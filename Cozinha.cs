@@ -17,6 +17,7 @@ namespace Projeto_Semestral___Cantina
         {
             InitializeComponent();
             tipoUsuario = tipo;
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
         public static void alterarFundodaLista(object sender, DrawItemEventArgs e)
         {
@@ -97,10 +98,12 @@ namespace Projeto_Semestral___Cantina
             if (tipoUsuario == "Administrador")
             {
                 btnVoltarMenu.Visible = true;
+                BtnVoltarLogin.Visible = false;
             }
             else
             {
                 btnVoltarMenu.Visible = false;
+                BtnVoltarLogin.Visible = true;
             }
             foreach (Pedido pedido in PersistenciaPedido.pedidos)
             {
@@ -207,12 +210,18 @@ namespace Projeto_Semestral___Cantina
 
         }
 
-     
+
         private void listPedidosProntos_DrawItem(object sender, DrawItemEventArgs e)
         {
             alterarFundodaLista(sender, e);
         }
 
+        private void BtnVoltarLogin_Click(object sender, EventArgs e)
+        {
+            telaDeLogin login = new telaDeLogin();
+            login.Show();
+            this.Hide();
+        }
     }
 
 }

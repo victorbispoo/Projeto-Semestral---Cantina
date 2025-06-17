@@ -25,6 +25,7 @@ namespace Projeto_Semestral___Cantina
             File.WriteAllText(caminhoProdutos, json);
         }
 
+
         public static void CarregarProdutosEstoque(string caminhoProdutos)
         {
             if (File.Exists(caminhoProdutos))
@@ -66,5 +67,15 @@ namespace Projeto_Semestral___Cantina
                     usuarios = lista;
             }
         }
+
+        public static void LimparPedidosEntreguesAntigos()
+        {
+            // Mantém apenas os pedidos entregues de hoje
+            pedidosEntregues = pedidosEntregues
+                .Where(p => p.DataHora.Date == DateTime.Today)
+                .ToList();
+            SalvarPedidosEntregues(caminhoPedidos);
+        }
     }
 }
+    
